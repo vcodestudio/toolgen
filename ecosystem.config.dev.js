@@ -12,7 +12,7 @@ module.exports = {
       cwd: "./back",
       restartDelay: 3000,
       env: {
-        NODE_ENV: "production",
+        NODE_ENV: "development",
         port: 1337,
         APP_KEYS: [...Array(2)].map((a) => rn()),
         API_TOKEN_SALT: rn(),
@@ -30,7 +30,7 @@ module.exports = {
     {
       name: "frontend",
       script: "npm",
-      args: "run dev --host",
+      args: "run dev",
       cwd: "./web",
       restartDelay: 3000,
       env: {
