@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "stop": "pm2 stop ecosystem.config.js",
-    "start": "pm2 stop ecosystem.config.js; pm2 start ecosystem.config.js"
+    "start": "pm2 start ecosystem.config.js",
+    "logs": "pm2 logs"
   },
   "keywords": [],
   "author": "",
