@@ -30,7 +30,7 @@ module.exports = {
     {
       name: "frontend",
       script: "npm",
-      args: "run dev --host",
+      args: "run start",
       cwd: "./web",
       restartDelay: 3000,
       env: {
