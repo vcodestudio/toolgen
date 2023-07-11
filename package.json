@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "stop": "pm2 stop ecosystem.config.js",
+    "start": "pm2 stop ecosystem.config.js; pm2 start ecosystem.config.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "crypto": "^1.0.1"
+  }
 }
