@@ -34,7 +34,7 @@ module.exports = {
       cwd: "./web",
       restartDelay: 3000,
       env: {
-        NODE_ENV: "development",
+        NODE_ENV: "production",
       },
     },
   ],
