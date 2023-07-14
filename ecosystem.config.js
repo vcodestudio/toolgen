@@ -8,7 +8,7 @@ module.exports = {
     {
       name: "backend",
       script: "npm",
-      args: "run develop",
+      args: "start",
       cwd: "./back",
       restartDelay: 3000,
       env: {
@@ -30,7 +30,7 @@ module.exports = {
     {
       name: "frontend",
       script: "npm",
-      args: "run start",
+      args: "start",
       cwd: "./web",
       restartDelay: 3000,
       env: {

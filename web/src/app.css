@@ -3,4 +3,59 @@
 @tailwind utilities;
 
 @layer components {
+  .section-content {
+    @apply grid grid-cols-1 gap-6;
+  }
+  .news-card {
+    @apply p-6 rounded-md;
+    border: 1px solid var(--line-10);
+    max-width: 480px;
+  }
+  .overlay {
+    @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 z-50 flex items-center justify-center;
+    z-index: 1000;
+  }
+
+  .overlay .panel {
+    @apply bg-white relative;
+  }
+  .overlay .exit {
+    @apply absolute right-0 top-0 -translate-y-full pb-4;
+  }
+  .content {
+    @apply p-10 overflow-y-scroll relative z-10;
+    max-width: calc(100vw - 32px);
+    width: 32rem;
+    line-height: 1.8em;
+    max-height: calc(100vh - 150px);
+  }
+  .bottom-banner {
+    @apply w-full py-24 bg-cover bg-center text-white;
+    min-height: 350px;
+  }
+  .dim {
+    @apply absolute left-0 top-0 h-full w-1/2;
+    opacity: 0.6;
+    background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+    background-blend-mode: overlay;
+  }
+  .profiles {
+    @apply grid grid-cols-4 gap-6 gap-y-10 text-white;
+  }
+  .pop-profile {
+    max-width: calc(100vw - 32px);
+    width: 760px;
+  }
+  .board {
+    @apply border-t border-gray-200;
+  }
+  .board .item {
+    @apply block grid grid-cols-[1fr,5fr,1fr,2fr,1fr]  py-3 border-b border-gray-300 text-center;
+  }
+  .pagination .item {
+    @apply flex justify-center items-center w-[3em] h-[3em] text-[1rem];
+  }
+  .pagination .item svg {
+    @apply w-[1em] h-[1em];
+  }
 }
