@@ -40,7 +40,7 @@ let ts = true;
 <section>
 	<div class="w-limit section-content">
 		<div class="grid grid-cols-1 gap-2">
-			<p class="text16-700 color-blue" use:mclass={"color-black"}>What We Do</p>
+			<p class="text16-700 color-blue">What We Do</p>
 			<h3>For better health, happier life</h3>
 			<p>
 				<b>툴젠(ToolGen)</b>은 세계 최고수준의 유전자교정 전문기업으로 1999년 설립이래 ZFN(Zinc Finger Nuclease) 유전자가위, TALEN(Transcription Activator Like Effector Nuclease) 유전자가위 개발에 이어, CRISPR 유전자가위를 개발하여 특허수익화사업, 치료제사업, 종자사업을 영위하고 있습니다.
