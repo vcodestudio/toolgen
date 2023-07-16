@@ -85,9 +85,9 @@
 		</div>
 	</div>
 	<div class="w-limit py-3 flex item-center mob">
-		<div class="flex-none flex items-center"><Logo/></div>
-		<div class="flex-auto flex justify-end hambug">
-			<button class="clean w-10 h-10" class:active={menuActive} on:click={()=>{menuActive = !menuActive}}>
+		<div class="flex-none flex items-center "><Logo/></div>
+		<div class="flex-auto flex justify-end items-center hambug">
+			<button class="clean ham_btn" class:active={menuActive} on:click={()=>{menuActive = !menuActive}}>
 			{#if menuActive}
 			<svg class=" w-2/3 h-2/3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5858 12.0001L2.29297 20.293L3.70718 21.7072L12 13.4143L20.293 21.7073L21.7072 20.2931L13.4142 12.0001L21.7072 3.70718L20.293 2.29297L12 10.5859L3.70718 2.29306L2.29297 3.70728L10.5858 12.0001Z" fill="currentColor"/>

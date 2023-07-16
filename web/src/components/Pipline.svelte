@@ -8,7 +8,7 @@ import {popup} from "$lib/screen";
     <p class="fg-sub">{title}</p>
     {/if}
     <div class="grid gap-20">
-        <div class="grid gap-10 overflow-x-scroll">
+        <div class="grid gap-10 m:scroll-x">
             {#each items as item, idx}
                 <div class="grid gap-4 pipline-item">
                     <div class="w-full flex gap-4 items-center">

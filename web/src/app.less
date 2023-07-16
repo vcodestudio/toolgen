@@ -1,8 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind screens;
+
+@import '/src/variables.less';
 
 @layer components {
+  @import '/src/typo.less';
+  .scroll-x {
+    @apply ~"-ml-[16px] px-[16px] pr-[32px] w-[calc(100%+32px)]" overflow-x-auto;
+    &:after {
+      content: '';
+    }
+  }
+  .ham_btn {
+    @apply w-10 h-10 justify-end !important;
+  }
   .section-content {
     @apply grid grid-cols-1 gap-6;
   }
@@ -43,19 +56,19 @@
     @apply grid grid-cols-4 gap-6 gap-y-10 text-white;
   }
   .pop-profile {
-    max-width: calc(100vw - 32px);
+    max-width: calc(~'100vw - 32px');
     width: 760px;
   }
   .board {
     @apply border-t border-gray-200;
   }
   .board .item {
-    @apply block grid grid-cols-[1fr,5fr,1fr,2fr,1fr]  py-3 border-b border-gray-300 text-center;
+    @apply ~"block grid grid-cols-[1fr,5fr,1fr,2fr,1fr] py-3 border-b border-gray-300 text-center";
   }
   .pagination .item {
-    @apply flex justify-center items-center w-[3em] h-[3em] text-[1rem];
+    @apply flex justify-center items-center ~"w-[3em] h-[3em] text-[1rem] m:w-[32px] m:h-[32px]";
   }
   .pagination .item svg {
-    @apply w-[1em] h-[1em];
+    @apply ~"w-[1em] h-[1em]";
   }
 }

@@ -2,6 +2,7 @@
     import {popup} from "$lib/screen";
     import Pagination from "./Pagination.svelte"
     import Table from "./Table.svelte"
+
 </script>
 {#if $popup}
 <div class="overlay" tabindex="0" role="button" on:click|self={()=>{popup.set(false)}} on:keydown|self={(e) => {if (e.key === 'Enter' || e.key === ' ') {popup.set(false)}}}>

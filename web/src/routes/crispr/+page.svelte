@@ -115,11 +115,20 @@ const generateData = (country) => {
                 <button class="navy absolute right-0 top-0" on:click={()=>{popup.set({type:"pct"})}}>PCT 출원 리스트</button>
                 {/if}
             </div>
-            <div class="flex gap-4 flex-wrap">
+            <div>
+                {#if tab == 2}
+                <button class="navy" on:click={()=>{popup.set({type:"pct"})}}>PCT 출원 리스트</button>
+                {/if}
+            </div>
+            <div class="flex gap-4 flex-wrap m:scroll-x m:flex-nowrap">
                 <button class:fill={selectedCountry == "all"} on:click={()=>{selectedCountry = "all"}}>전체</button>
                 {#each countries as country}
                 <button class:fill={country.slug == selectedCountry} on:click={()=>{selectedCountry = country.slug}}>{country.name}</button>
                 {/each}
+            </div>
+
+            <div class="flex justify-end">
+                <p class="fg-sub single-line">출원: 0건 | 등록: 0건</p>
             </div>
             <Table data={
                 [

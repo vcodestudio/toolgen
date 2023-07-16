@@ -22,7 +22,7 @@
     <title>{menus.find(a=>a.selected)?.name}</title>
 </svelte:head>
 <PageMarginTop/>
-<Section>
+<Section class_="m:pb-0">
     <div class="grid gap-[6rem]">
         <SubMenus menus={menus}/>
     </div>

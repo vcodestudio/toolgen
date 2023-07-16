@@ -1,4 +1,4 @@
-<div class="flex gap-20">
+<div class="flex gap-20 m:flex-col m:gap-4">
     <h3 class="flex-1 leading-8">
         Overview
     </h3>

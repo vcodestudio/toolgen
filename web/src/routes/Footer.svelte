@@ -4,17 +4,17 @@
 </script>
 
 <footer class="fill-sub p-20 pl-0 pr-0">
-<div class="w-limit grid gap-6">
-    <div class="flex">
+<div class="w-limit flex flex-col gap-6">
+    <div class="flex m:flex-col m:gap-[1rem]">
         <div class="flex-none">
             <Logo/>
         </div>    
-        <div class="flex-auto flex justify-end gap-6">
+        <div class="flex-auto flex pc:justify-end gap-6">
             <a href="/policy" class="text16-underline"><b>개인정보취급방침</b></a>
             <a href="/policy/rules" class="text16-underline"><b>내부정보관리규정</b></a>
         </div>
     </div>
-    <div class="grid gap-2">
+    <div class="flex flex-col gap-2">
         <div class="divider">
             <p>서울 강서구 마곡중앙로 172 8층 (07789)</p>
             <p><b>업무시간</b> 08:30 ~ 17:30 (주말, 공휴일 휴무)</p>

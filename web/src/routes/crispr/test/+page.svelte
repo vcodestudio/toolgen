@@ -24,7 +24,7 @@
         </div>
         <hr/>
         <div class="flex flex-col gap-8">
-            <div class="grid grid-cols-2 gap-6">
+            <div class="grid grid-cols-2 gap-6 m:grid-cols-1">
                 <div class="flex flex-col gap-2">
                     <p class="text18-700">툴젠의 저촉심사 현황</p>
                     <p>툴젠은 브로드 연구소 그룹(‘Broad’) 및 캘리포니아 대학교 그룹(‘CVC’)과 각각 저촉심사를 진행하고 있으며, CRISPR/Cas9 시스템을 진핵세포에서 유전자 가위로 사용하는 기술에 대한 특허에 대하여 선발명여부를 다투고 있습니다.</p>

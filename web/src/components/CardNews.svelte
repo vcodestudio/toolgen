@@ -23,7 +23,7 @@
         <div class="flex-auto"></div>
         <a href={listUrl} class="flex items-center">
             <button class="clean">
-                <span>
+                <span class=" m:text14-700">
                     모두보기
                 </span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,8 +35,8 @@
     <div class="w-full h-full" bind:this={slide}>
         <div class="swiper-wrapper">
             {#each posts as post}
-            <a href="/post" class="swiper-slide news-card">
-                <div class="flex flex-col gap-4">
+            <a href="/post" class="swiper-slide news-card m:p-4 m:w-[280px]">
+                <div class="flex flex-col gap-4 m:gap-2">
                     <div class="flex gap-4 items-center">
                     {#if post.type}
                     <p class="text16-700 single-line">

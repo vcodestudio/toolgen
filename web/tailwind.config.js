@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     screens: {
-      lg: '1080px',
-      sm: '480px',
+      pc: '1081px',
+      m: { max: '1080px' },
     },
   },
   plugins: [

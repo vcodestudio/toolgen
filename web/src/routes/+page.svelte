@@ -30,7 +30,7 @@ let ts = true;
 			<img class="block w-full h-auto mob" src="https://s3-alpha-sig.figma.com/img/1497/f613/373da1004309db1dd448c63a00849184?Expires=1690156800&Signature=P3P0pBWWhhv9LCpuzqrVefH8C4QlTDJW1EaxFpbh9YIC3iD8~JPpiu-2jEDsljt6~UB70xFJot9uISTfP2p9bjiXkFkxSXD6ygBcC~hopcUSSFmc1mUg5OnRZzmd9SfMoDeL7i7QEXg~HNUf-D9JP9ZfWO~rJBFg9Xdq9Vx3ILYQUHEeNopoOLQfZYp-rtgJP-l1bGmc9nSzhi7VDHihboiqMdiU3VhR8IPdkkfjN23w4tsKokzNPwsZ9mRLaCPX1j13nLjLfxVtOdOEM2o4Bwr5WrudSRoP1sMgbJQabruENHzp5GHUwqpmaVHkU4ZefdvRP-EbEsGmh3ZomoqikA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
 			<h1>Innovate Genome<br>
 				Edit Your Life</h1>
-			<p>툴젠의 CRISPR 유전자가위 원천특허는<br>진핵세포의 유전자교정에 CRISPR 시스템을 사용한 세계 최초의 특허입니다.</p>
+			<p class="m:-mt-[1rem]">툴젠의 CRISPR 유전자가위 원천특허는<br>진핵세포의 유전자교정에 CRISPR 시스템을 <br class="mob">사용한 세계 최초의 특허입니다.</p>
 			<div class="flex justify-center">
 				<button class="fill">CRISPR-Cas9</button>
 			</div>
@@ -41,12 +41,12 @@ let ts = true;
 	<div class="w-limit section-content">
 		<div class="grid grid-cols-1 gap-2">
 			<p class="text16-700 color-blue">What We Do</p>
-			<h3>For better health, happier life</h3>
+			<h3>For better health, <br class="mob"/>happier life</h3>
 			<p>
 				<b>툴젠(ToolGen)</b>은 세계 최고수준의 유전자교정 전문기업으로 1999년 설립이래 ZFN(Zinc Finger Nuclease) 유전자가위, TALEN(Transcription Activator Like Effector Nuclease) 유전자가위 개발에 이어, CRISPR 유전자가위를 개발하여 특허수익화사업, 치료제사업, 종자사업을 영위하고 있습니다.
 			</p>
 		</div>
-		<div class="flex gap-6">
+		<div class="flex gap-6 m:scroll-x">
 			{#each cards as card}
 			<div class="card" style="background-image:url({card.image})">
 				<div class="text">
@@ -68,7 +68,7 @@ let ts = true;
 			</p>
 		</div>
 		<img src="https://s3-alpha-sig.figma.com/img/c4ae/42a3/ed6f0bb7d170567f3b828aba52367251?Expires=1690156800&Signature=XUTvHKmMLij8ECxR6eFcRbrt0FtVqDGhP~Oq8MdOfZ8wMF3RjiMK0iXu6qjkwwbel-A1i96RjNgup6-lziR--9DTk1UVjVddfgFs7fcqrq1WPrPthpCL5vOOs1JNcWxcqgC0ZZgjDnXs98vTtQ7GDei4~J2mg9KVRzRMJMLwdCLDp-6Vt7ZiwB-KgOboi6LT2sejpTmSj-0k04fwAynKZVXcDpfjoo8THpHESoZ2eZSA2hURWiVQX94qrbGZnXVklDXyhBbXU~uuVabgsZioIMiUipA3cxeFnJHGYxaZZZ4iotYP2GfA6W0SLbE8rIdA1-b9lZ8A5hHX-PXmWi~~qg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt=".."/>
-		<div/>
+		<div class="pc"/>
 		<div class="flex justify-center">
 			<a href="/licensing-partnership">
 				<button>

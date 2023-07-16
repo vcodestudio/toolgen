@@ -16,18 +16,18 @@
 <Section>
     <div class="flex flex-col gap-8">
         <h3>Benefit of CRISPR</h3>
-        <div class="grid grid-cols-2 gap-8">
+        <div class="grid grid-cols-2 gap-8 m:grid-cols-1">
             <div class="grid gap-2">
                 <div class="border-t-2 border-emerald-400 w-4"></div>
                 <p class="text18-700">Convenience</p>
-                <p>
+                <p class="text16-400">
                     ZFN 및 TALEN에 비해 CRISPR의 가장 큰 장점은 사용 편의성이다. 개별 유전자별로 맞춤 설계된 단백질이 필요한 ZFN이나 TALEN과 달리 CRISPR는 특정 유전자를 표적으로 쉽게 조작할 수 있는 RNA 분자와 Cas9 단백질을 사용한다. ZFN과 TALEN에 필요한 단백질을 설계하고 생산하는 과정이 어렵고 복잡한데 비해, CRISPR 시스템은 연구자들이 훨씬 더 접근하기 쉽고 단순하다.
                 </p>
             </div>
             <div class="grid gap-2">
                 <div class="border-t-2 border-emerald-400 w-4"></div>
                 <p class="text18-700">Efficiency</p>
-                <p>
+                <p class="text16-400">
                     CRISPR는 또한 ZFN 및 TALEN보다 훨씬 빠르고 효율적인 것으로 입증되었다. 유전자를 편집하기 위해 CRISPR를 사용하는 과정은 몇 주 만에 완료될 수 있지만, ZFN과 TALEN은 필요한 단백질을 생성하고 편집 과정을 완료하는 데 수개월 또는 심지어 수년이 걸릴 수 있다. 이러한 속도와 효율성 덕분에 CRISPR는 수많은 연구자에게 사용되며 생명공학 분야의 더 빠른 진전을 위한 길을 열었다.                </p>
             </div>
         </div>
@@ -42,7 +42,7 @@
 <hr class="w-limit"/>
 <Section>
     <div class="grid gap-6">
-        <h3>Extended Research</h3>
+        <h3 class="m:text24-700">Extended Research</h3>
         <p>
             CRISPR-Cas9 기술이 유전자 편집 분야에서 유례없는 성공을 거두면서 후속 연구들을 통해 Base editor 및 Prime editor를 포함한 수많은 새로운 CRISPR 기반 도구가 등장하였다. 이러한 도구들은 각각 Cas9을 기반으로 한 응용 도구로서 목적에 따라 유전자 편집을 훨씬 용이하게 할 수 있다. Cas9 기반 도구이므로 CRISPR-Cas9 원천특허가 중요시되며 툴젠은 다양한 원천기술에 대한 확장을 위해 다양한 연구개발 활동이 진행 중이다.
         </p>
