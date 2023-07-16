@@ -2,11 +2,9 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {
-      screens: {
-        lg: { min: '1080px' },
-        sm: { max: '1079px' },
-      },
+    screens: {
+      lg: '1080px',
+      sm: '400px',
     },
   },
   plugins: [

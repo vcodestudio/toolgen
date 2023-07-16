@@ -2,6 +2,7 @@
 	import { hHeight } from "$lib/store";
 	import isPC from "$lib/screen";
     import CardNews from "../components/CardNews.svelte"
+	import {mclass} from "$lib/hooks/preprocess";
 
 	const cards = [
   {
@@ -20,6 +21,7 @@
     desc: "인류가 질병 없는 건강한 삶을 영위할 수 있도록, 유전질환 및 난치질환들의 치료제를 개발하기 위한 연구를 진행합니다."
   }
 ];
+let ts = true;
 </script>
 <div class="main-banner" style="background-image:url(https://s3-alpha-sig.figma.com/img/1497/f613/373da1004309db1dd448c63a00849184?Expires=1690156800&Signature=P3P0pBWWhhv9LCpuzqrVefH8C4QlTDJW1EaxFpbh9YIC3iD8~JPpiu-2jEDsljt6~UB70xFJot9uISTfP2p9bjiXkFkxSXD6ygBcC~hopcUSSFmc1mUg5OnRZzmd9SfMoDeL7i7QEXg~HNUf-D9JP9ZfWO~rJBFg9Xdq9Vx3ILYQUHEeNopoOLQfZYp-rtgJP-l1bGmc9nSzhi7VDHihboiqMdiU3VhR8IPdkkfjN23w4tsKokzNPwsZ9mRLaCPX1j13nLjLfxVtOdOEM2o4Bwr5WrudSRoP1sMgbJQabruENHzp5GHUwqpmaVHkU4ZefdvRP-EbEsGmh3ZomoqikA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4)">
 	<div class="w-full" style:height={$hHeight + "px"}></div>
@@ -38,7 +40,7 @@
 <section>
 	<div class="w-limit section-content">
 		<div class="grid grid-cols-1 gap-2">
-			<p class="text16-700 color-blue">What We Do</p>
+			<p class="text16-700 color-blue" use:mclass={"color-black"}>What We Do</p>
 			<h3>For better health, happier life</h3>
 			<p>
 				<b>툴젠(ToolGen)</b>은 세계 최고수준의 유전자교정 전문기업으로 1999년 설립이래 ZFN(Zinc Finger Nuclease) 유전자가위, TALEN(Transcription Activator Like Effector Nuclease) 유전자가위 개발에 이어, CRISPR 유전자가위를 개발하여 특허수익화사업, 치료제사업, 종자사업을 영위하고 있습니다.
