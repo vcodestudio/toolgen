@@ -5,7 +5,9 @@
     import Overview from "../../components/Overview.svelte";
     import CardPlus from "../../components/CardPlus.svelte";
     import CardNews from "../../components/CardNews.svelte";
+    import MobileHeaderW from "../../components/MobileHeaderW.svelte"
 </script>
+<MobileHeaderW/>
 <Banner src="https://s3-alpha-sig.figma.com/img/ccfa/8ba2/f8710dc13167a75c7c4cc9749f255a3a?Expires=1690156800&Signature=FE7U5Ktd70aeeNOSoCQorMZjGTdY-D9G7Ol51S4C85KdV9Dtaju-JmzYhYtd23ayCY0lyACL1k0gdMOzTaGvJMsvotXjwm8NqQxFhcmzrNXZmdxtppVi8BtFdtHYZcaMByaUegm7lDJZJfVAteyMyDnHf-OXbXJrhXlKdfHyXu3Tj-JNwoVTxpQ4sHA6KFmrEKh5~IWujVVkuv8ynHfjLzRj7sY4XVVyZlL~zKCKo8LBML-J0VC371UInNAYUym9yU-q~-lDYSnmTxAMUB3pMe~W7ay6XdE5GQSGxcg0NFj-SY63SdWX7jCzovqFqfn8R4vMOJBSb3iASYPIrCTvYA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
     <h1>Platform</h1>
     <p class="max-w-[650px] em:leading-7">

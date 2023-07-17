@@ -342,6 +342,12 @@ button {
   background-size: cover;
   @media @mobile {
     min-height: (230/360) * 100vw;
+    // background: var(--fill-navy) !important;
+  }
+  &-front {
+    @media @mobile {
+      background: var(--fill-navy) !important;
+    }
   }
 
   .cont {
@@ -364,14 +370,6 @@ button {
       @media @mobile {
         gap: 1.5rem;
       }
-      h1 {
-        font-size: 4.5rem;
-        font-style: normal;
-        font-weight: 900;
-        line-height: normal;
-        letter-spacing: -0.01875rem;
-        text-transform: uppercase;
-      }
       p {
         font-size: 1.5rem;
         font-style: normal;
@@ -392,7 +390,6 @@ button {
       .banner-content {
         padding-left: 16px;
         padding-right: 16px;
-        background: var(--foreground-navy);
         backdrop-filter: none;
         color: var(--foreground-inverse);
         flex: 1;
@@ -416,18 +413,16 @@ header {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  color: var(--fill-navy, #041e6d);
   font-weight: 700;
-  backdrop-filter: blur(10px);
   z-index: 999;
   transition: 0.3s;
   color: var(--header-color);
   background-color: var(--header-bg);
   backdrop-filter: blur(10px);
   &.active {
+    color: var(--header-active-color);
     background-color: var(--header-active-bg);
     backdrop-filter: none;
-    color: var(--header-active-color);
   }
 }
 .top-bar {

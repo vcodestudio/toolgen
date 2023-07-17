@@ -2,7 +2,7 @@
 	import { hHeight } from "$lib/store";
 	import isPC from "$lib/screen";
     import CardNews from "../components/CardNews.svelte"
-	import {mclass} from "$lib/hooks/preprocess";
+    import MobileHeaderW from "../components/MobileHeaderW.svelte"
 
 	const cards = [
   {
@@ -21,14 +21,14 @@
     desc: "인류가 질병 없는 건강한 삶을 영위할 수 있도록, 유전질환 및 난치질환들의 치료제를 개발하기 위한 연구를 진행합니다."
   }
 ];
-let ts = true;
 </script>
-<div class="main-banner" style="background-image:url(https://s3-alpha-sig.figma.com/img/1497/f613/373da1004309db1dd448c63a00849184?Expires=1690156800&Signature=P3P0pBWWhhv9LCpuzqrVefH8C4QlTDJW1EaxFpbh9YIC3iD8~JPpiu-2jEDsljt6~UB70xFJot9uISTfP2p9bjiXkFkxSXD6ygBcC~hopcUSSFmc1mUg5OnRZzmd9SfMoDeL7i7QEXg~HNUf-D9JP9ZfWO~rJBFg9Xdq9Vx3ILYQUHEeNopoOLQfZYp-rtgJP-l1bGmc9nSzhi7VDHihboiqMdiU3VhR8IPdkkfjN23w4tsKokzNPwsZ9mRLaCPX1j13nLjLfxVtOdOEM2o4Bwr5WrudSRoP1sMgbJQabruENHzp5GHUwqpmaVHkU4ZefdvRP-EbEsGmh3ZomoqikA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4)">
+<MobileHeaderW/>
+<div class="main-banner main-banner-front" style="background-image:url(https://s3-alpha-sig.figma.com/img/1497/f613/373da1004309db1dd448c63a00849184?Expires=1690156800&Signature=P3P0pBWWhhv9LCpuzqrVefH8C4QlTDJW1EaxFpbh9YIC3iD8~JPpiu-2jEDsljt6~UB70xFJot9uISTfP2p9bjiXkFkxSXD6ygBcC~hopcUSSFmc1mUg5OnRZzmd9SfMoDeL7i7QEXg~HNUf-D9JP9ZfWO~rJBFg9Xdq9Vx3ILYQUHEeNopoOLQfZYp-rtgJP-l1bGmc9nSzhi7VDHihboiqMdiU3VhR8IPdkkfjN23w4tsKokzNPwsZ9mRLaCPX1j13nLjLfxVtOdOEM2o4Bwr5WrudSRoP1sMgbJQabruENHzp5GHUwqpmaVHkU4ZefdvRP-EbEsGmh3ZomoqikA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4)">
 	<div class="w-full" style:height={$hHeight + "px"}></div>
 	<div class="w-full cont justify-center items-center">
 		<div class="banner-content">
 			<img class="block w-full h-auto mob" src="https://s3-alpha-sig.figma.com/img/1497/f613/373da1004309db1dd448c63a00849184?Expires=1690156800&Signature=P3P0pBWWhhv9LCpuzqrVefH8C4QlTDJW1EaxFpbh9YIC3iD8~JPpiu-2jEDsljt6~UB70xFJot9uISTfP2p9bjiXkFkxSXD6ygBcC~hopcUSSFmc1mUg5OnRZzmd9SfMoDeL7i7QEXg~HNUf-D9JP9ZfWO~rJBFg9Xdq9Vx3ILYQUHEeNopoOLQfZYp-rtgJP-l1bGmc9nSzhi7VDHihboiqMdiU3VhR8IPdkkfjN23w4tsKokzNPwsZ9mRLaCPX1j13nLjLfxVtOdOEM2o4Bwr5WrudSRoP1sMgbJQabruENHzp5GHUwqpmaVHkU4ZefdvRP-EbEsGmh3ZomoqikA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
-			<h1>Innovate Genome<br>
+			<h1 class="font-[900] em:leading-5">Innovate Genome<br>
 				Edit Your Life</h1>
 			<p class="m:-mt-[1rem]">툴젠의 CRISPR 유전자가위 원천특허는<br>진핵세포의 유전자교정에 CRISPR 시스템을 <br class="mob">사용한 세계 최초의 특허입니다.</p>
 			<div class="flex justify-center">

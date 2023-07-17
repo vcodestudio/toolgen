@@ -6,6 +6,7 @@ export default {
     screens: {
       pc: '1081px',
       m: { max: '1080px' },
+      phone: { max: '740px' },
     },
   },
   plugins: [

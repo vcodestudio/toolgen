@@ -7,7 +7,9 @@
     import CardNews from "../../components/CardNews.svelte";
     import SectionImg from "../../components/SectionImg.svelte"
     import Pipline from "../../components/Pipline.svelte";
+    import MobileHeaderW from "../../components/MobileHeaderW.svelte"
 </script>
+<MobileHeaderW/>
 <Banner src="https://s3-alpha-sig.figma.com/img/5e28/de33/3c32a138f0fbf242c0ea9be52d81b175?Expires=1690156800&Signature=qjRuYwJj1NLf9zRoKZ7AxkMBMr3fQvyu1SN~8H5SsgBg5~~dgwnO90RfkN0okBqgSvKVrISQIWKjqN2xnxC~X0mSPMCtPTlehlo9eS2Y1y2ARu9GR3Z9nFCzrFkF9TSgh3vlhmd~Ofcd9ZRKQlp0ixgL2z-kI7tBaOaB6CN-sQNDIBU5-TuaSm9tK-zMD6zaTntLZnCyL5~rlbOAkE-t6vyaN-8IZ3C989hz7anXpb360vP-rxT3JOV82zoTUADDt0lQNveAbbmRgQpwr8th93BFkJ4bTbQyVndkkBYF74mIIDkgiloJxYMfjmM9jeO2wYXdjRpWYlguXzT2dbEqGA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
     <h1>Therapeutics</h1>
     <p class="max-w-[650px] em:leading-7">

@@ -1,9 +1,11 @@
 <script>
     import DownloadButton from "../../components/DownloadButton.svelte"
+    import MobileHeaderW from "../../components/MobileHeaderW.svelte"
 import Section from "../../components/Section.svelte"
     import SectionImg from "../../components/SectionImg.svelte"
 import Banner from "/src/components/Banner.svelte";
 </script>
+<MobileHeaderW/>
 <Banner src="https://s3-alpha-sig.figma.com/img/5bed/0974/409944d86587f0b2c35f0d9631985fa2?Expires=1690156800&Signature=Eib~q6~rssePoh~XxA3~-s6hqujGh5YsQzGKXpvH-E5SsebGECuW4TfgPq18khje5KEJHY4q-swTd7lTsRA9aKQiLOEEbS3spnkIZgN0jHcTSp1gZKzoxypVBlrbbZoVXhY1V259AvIXE9zrCG3oBnGSNu5RJZpa~TuAlQBu~iMrV0YxFO8tn6jdZY55AC4X-wXmwCw7eN9WlokjL3-4578-8fLcJm89Y0fJPrzHYouzEXqEhi1IbetVD8u7du5GSmVN9R1EpBg~DQykuCan0Jk54PK0ex~lUGtGySipVBvMmtMNt1DNiFxTpTtwTOsuS7tYpxs4tD6VlA76oT7G~w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
 <Section class_="m:pb-0">
     <div class="w-full h-0 relative">
@@ -35,16 +37,50 @@ import Banner from "/src/components/Banner.svelte";
 <Section>
     <div class="grid gap-4">
         <p class="text16-700 color-mint">ToolGen History</p>
-        <div class="grid grid-cols-2 gap-6 m:grid-cols-1">
-            <div class="grid gap-4">
-                <h3 class="color-navy">
-                    1999<br>
-                    툴젠 설립
-                </h3>
-                <p class="max-w-[350px]">1999년 김진수 박사(창업자)가 유전자가위를 개발하고 이를 사업화 하기 위하여 툴젠을 설립하였습니다.</p>
+        <div class="grid gap-12">
+
+            <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
+                <div class="grid gap-4">
+                    <h3 class="color-navy">
+                        1999<br>
+                        툴젠 설립
+                    </h3>
+                    <p class="max-w-[350px]">1999년 김진수 박사(창업자)가 유전자가위를 개발하고 이를 사업화 하기 위하여 툴젠을 설립하였습니다.</p>
+                </div>
+                <div>
+                    <img class="block w-full h-auto" src="/images/about/1.png"/>
+                </div>
             </div>
-            <div>
-                <img class="block w-full h-auto" src="/images/about/1.png"/>
+            <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
+                <div class="grid gap-4">
+                    <h3 class="color-navy">
+                        1
+                    </h3>
+                    <p class="max-w-[350px]">1999년 김진수 박사(창업자)가 유전자가위를 개발하고 이를 사업화 하기 위하여 툴젠을 설립하였습니다.</p>
+                </div>
+                <div>
+                    <img class="block w-full h-auto" src="/images/about/1.png"/>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
+                <div class="grid gap-4">
+                    <h3 class="color-navy">
+                        2
+                    </h3>
+                    <p class="max-w-[350px]">1999년 김진수 박사(창업자)가 유전자가위를 개발하고 이를 사업화 하기 위하여 툴젠을 설립하였습니다.</p>
+                </div>
+                <div>
+                    <img class="block w-full h-auto" src="/images/about/1.png"/>
+                </div>
+            </div>
+            <div class="grid gap-6">
+                <div class="grid gap-4">
+                    <h3 class="color-navy">
+                        3
+                    </h3>
+                    <p class="">1999년 김진수 박사(창업자)가 유전자가위를 개발하고 이를 사업화 하기 위하여 툴젠을 설립하였습니다.</p>
+                    <img class="block w-full h-auto" src="/images/about/1.png"/>
+                </div>
             </div>
         </div>
     </div>
@@ -63,7 +99,7 @@ import Banner from "/src/components/Banner.svelte";
     </div>
 </Section>
 <Section class_="fill-navy text-white relative overflow-hidden">
-    <div class="grid grid-cols-[1fr,2fr] gap-20 relative m:grid-cols-1 m:gap-2">
+    <div class="grid grid-cols-[1fr,2fr] gap-20 relative phone:grid-cols-1 phone:gap-2">
         <div>
             <h3>History</h3>
         </div>
@@ -81,7 +117,7 @@ import Banner from "/src/components/Banner.svelte";
 <Section>
     <div class="grid gap-4 m:gap-2">
         <p class="text16-700 color-mint">ToolGen Location</p>
-        <div class="grid grid-cols-2 gap-8 m:grid-cols-1 m:gap-4">
+        <div class="grid grid-cols-2 gap-8 phone:grid-cols-1 m:gap-4">
             <div class="flex flex-col gap-4 m:gap-2">
                 <h3 class="color-navy">툴젠 본사</h3>
                 <div class="flex gap-8">

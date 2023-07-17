@@ -60,12 +60,13 @@
 
 	let scrollY=0;
 
+	$: isActive = (scrollY > 50) || menuActive;
 	onMount(() => {
 		hHeight.set(header.clientHeight);
 	});
 </script>
 <svelte:window bind:scrollY={scrollY}/>
-<header bind:this={header} class:active={scrollY > 50}>
+<header bind:this={header} class:active={isActive}>
 	<div class="w-limit flex justify-end gap-6 single-line top-bar pc">
 		<a href="/career" class="color-mint">Career</a>
 		<div class="divider single-line">
@@ -74,10 +75,10 @@
 		</div>
 	</div>
 	<div class="w-limit flex gnb pc">
-		<div><Logo color={(scrollY > 50)?[]:[]}/></div>
+		<div><Logo color={(isActive)?[]:["var(--logo-color,#041E6D)","var(--logo-color,#337DD9)","var(--logo-color,#041E6D)"]}/></div>
 		<div class="menu flex-auto flex gap-9 justify-end items-center">
 			{#each menus as menu}
-				<a href={menu.link} class="menu-item" class:selected={menu.selected} on:click={() => {
+				<a href={menu.link} class="menu-item text-center" class:selected={menu.selected} on:click={() => {
 					menus.forEach(m => m.selected = false);
 					menu.selected = true;
 				}}><span class="menu-item-text" style="white-space: pre-line;">{menu.name}</span></a>
@@ -85,7 +86,9 @@
 		</div>
 	</div>
 	<div class="w-limit py-3 flex item-center mob">
-		<div class="flex-none flex items-center "><Logo/></div>
+		<div class="flex-none flex items-center ">
+			<Logo color={(isActive)?[]:["var(--logo-color,#041E6D)","var(--logo-color,#337DD9)","var(--logo-color,#041E6D)"]}/>
+		</div>
 		<div class="flex-auto flex justify-end items-center hambug">
 			<button class="clean ham_btn" class:active={menuActive} on:click={()=>{menuActive = !menuActive}}>
 			{#if menuActive}

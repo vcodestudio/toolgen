@@ -15,6 +15,10 @@
             slidesPerView:"auto",
             spaceBetween:16
         });
+
+        addEventListener("scroll",e=>{
+            slider.update();
+        });
     })
 </script>
 <div class="flex flex-col gap-6">
@@ -33,9 +37,10 @@
         </a>
     </div>
     <div class="w-full h-full" bind:this={slide}>
-        <div class="swiper-wrapper">
-            {#each posts as post}
-            <a href="/post" class="swiper-slide news-card m:p-4 m:w-[280px]">
+        <div class="swiper-wrapper items-center">
+            {#each posts as post, idx}
+            {#if (idx+1) < 5}
+            <a href="/post" class="swiper-slide news-card m:p-4 m:w-[280px] hover:bg-gray-50 transition-colors">
                 <div class="flex flex-col gap-4 m:gap-2">
                     <div class="flex gap-4 items-center">
                     {#if post.type}
@@ -52,6 +57,13 @@
                     </p>
                 </div>
             </a>
+            {:else}
+            <a href={listUrl} class="swiper-slide flex items-center">
+                <div class="rounded-full w-[3rem] h-[3rem] border border-gray-200 flex justify-center items-center hover:bg-gray-50 transition-colors">
+                    <i class="bi bi-three-dots"></i>
+                </div>
+            </a>
+            {/if}
             {/each}
         </div>
     </div>

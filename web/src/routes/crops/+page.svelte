@@ -6,7 +6,9 @@
     import CardNews from "../../components/CardNews.svelte";
     import SectionImg from "../../components/SectionImg.svelte"
     import Pipline from "../../components/Pipline.svelte";
+    import MobileHeaderW from "../../components/MobileHeaderW.svelte"
 </script>
+<MobileHeaderW/>
 <Banner src="https://s3-alpha-sig.figma.com/img/d3c8/9f43/b4b8583d84c9aa2eeb0b578195389086?Expires=1690156800&Signature=JQpKJcsYXX-XkhsJgtyV8SZ24CJD8TBudgwC6cfgR4x-21JAKrY48GUo2omCDUaYmULRxxaHLbzq641sMH54LZlElZXpFeRG7fKF-2Y2w~b91Z1K1v8vaAg8tBYRZdcG52dNc2PLFM8r56N2l7O8r~gjcA7ZnTA4xst~bCGPJZgP2bzxayLH1jSyUYg5X2YX1LX61VZoPGzky9RWR1tYiUkDlaF6ENlLkG3v63PC0PTV3JW~jFyABNVl1z~xmFiB1GA8FfqhVH3SarGPEtcFCcl1hhRrv1-s0v8G7Js1oqxlL7-Gj5Mytc235~cQ92BwzzVHdHj3SOfnc8w5S4oPhw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
     <h1>Crops</h1>
     <p class="max-w-[650px] em:leading-7">

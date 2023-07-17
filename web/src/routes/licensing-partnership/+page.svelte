@@ -22,7 +22,7 @@ import AccordionB from "../../components/AccordionB.svelte"
     </div>
 </Section>
 <Section class_="fill-navy text-white">
-    <div class="w-limit grid grid-cols-2 gap-6">
+    <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
         <div class=" flex flex-col gap-6">
             <h3>라이센싱 문의</h3>
             <p>툴젠의 CRISPR 유전자가위 특허 라이센싱과 관련하여 문의가 있으신 경우,

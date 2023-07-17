@@ -68,7 +68,7 @@ let data = [{
 </script>
 
 <Section>
-    <div class="grid grid-cols-2 gap-x-[5em] gap-y-[2.5em]">
+    <div class="grid grid-cols-2 gap-x-[5em] gap-y-[2.5em] phone:grid-cols-1">
         {#each data as item}
         <Chart
             title={item.title}
