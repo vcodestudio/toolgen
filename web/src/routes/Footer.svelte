@@ -3,7 +3,7 @@
     import Logo from "/src/components/Logo.svelte";
 </script>
 
-<footer class="fill-sub p-20 pl-0 pr-0">
+<footer class="fill-sub p-20 px-0 m:py-[40px]">
 <div class="w-limit flex flex-col gap-6">
     <div class="flex m:flex-col m:gap-[1rem]">
         <div class="flex-none">

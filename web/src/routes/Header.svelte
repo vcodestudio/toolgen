@@ -102,6 +102,7 @@
 			</button>
 		</div>
 	</div>
+	<!-- menu -->
 	{#if menuActive}
 	<div class="absolute top-full left-0 w-full bg-white py-8">
 		<div class="w-limit flex flex-col gap-6">

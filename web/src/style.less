@@ -29,6 +29,10 @@
   --line-blue: #337dd9;
   --line-inverse: #ffffff;
   --line-danger: #ff403e;
+  --header-color: var(--fill-navy);
+  --header-bg: transparent;
+  --header-active-color: var(--fill-navy);
+  --header-active-bg: var(--fill-default);
 
   --content-width: @breakpoint;
 }
@@ -336,6 +340,9 @@ button {
   width: 100%;
   background: url() center center no-repeat;
   background-size: cover;
+  @media @mobile {
+    min-height: (230/360) * 100vw;
+  }
 
   .cont {
     height: 60vh;
@@ -414,15 +421,14 @@ header {
   backdrop-filter: blur(10px);
   z-index: 999;
   transition: 0.3s;
+  color: var(--header-color);
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px);
   &.active {
-    background-color: var(--fill-default);
+    background-color: var(--header-active-bg);
     backdrop-filter: none;
-    color: var(--fill-navy);
+    color: var(--header-active-color);
   }
-
-  color: var(--fill-navy);
-  background-color: var(--fill-default);
-  backdrop-filter: none;
 }
 .top-bar {
   padding: 0.65rem;
