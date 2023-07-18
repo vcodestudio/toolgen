@@ -116,6 +116,13 @@
 					menuActive = false;
 				}}><span class="menu-item-text">{menu.name}</span></a>
 			{/each}
+			<a href="/career" class="color-mint">Career</a>
+			<div class="flex justify-end gap-6">
+				<div class="flex gap-0">
+					<a href="/" class="px-4">한</a>
+					<a href="/" class="color-disable border-l border-gray-200 px-4">A</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	{/if}

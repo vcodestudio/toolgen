@@ -222,7 +222,7 @@ section {
   overflow: hidden;
   @media @mobile {
     height: 26rem;
-    min-width: 240px;
+    max-width: 240px;
   }
   .text {
     display: flex;
@@ -295,44 +295,56 @@ button {
 
   @media @mobile {
     .text16-700;
-    // padding: 0.75em 2em;
     padding: 0.75em 1em;
+  }
+  &:before {
+    content: '';
+    position: absolute;
   }
 
   &:hover {
-    background-color: var(--fill-hover);
-    border-color: var(--fill-hover);
+    span {
+      opacity: 0.8;
+    }
+  }
+  // press
+  &:active {
+    span {
+      opacity: 0.6;
+    }
+  }
+  &.disabled {
+    opacity: 0.5;
   }
 
   &.fill {
     --fill: var(--fill-blue);
-    --fill-hover: var(--foreground-navy);
     --line: var(--fill-blue);
     --color: var(--foreground-inverse);
   }
 
   &.navy {
     --fill: var(--fill-navy);
-    --fill-hover: var(--foreground-navy);
     --line: var(--fill-navy);
     --color: var(--foreground-inverse);
   }
 
+  &.bluegray {
+    --fill: var(--fill-bluegray);
+    --line: var(--fill-bluegray);
+    --color: var(--fill-navy);
+  }
+
   &.lblue {
     --fill: var(--fill-light-blue);
-    --fill-hover: var(var(--fill-bluegray));
     --line: var(--fill-light-blue);
     --color: var(--foreground-default);
   }
 
   &.yellow {
     --fill: var(--fill-yellow);
-    --fill-hover: var(--foreground-navy);
     --line: var(--fill-yellow);
     --color: var(--fill-blue);
-    &:hover {
-      color: var(--fill-yellow);
-    }
   }
 }
 
@@ -578,19 +590,16 @@ textarea {
 }
 
 .accordion-b {
-  .item {
-    padding: 1.5rem;
-    border-radius: 0.25rem;
-    border: 1px solid var(--line-10, rgba(0, 0, 0, 0.1));
-    background: var(--background-default, #fff);
-    display: grid;
-    gap: 1em;
-    .bar {
-      .text16-700;
-    }
-    .cont {
-      line-height: 1.75em;
-    }
+  border-radius: 0.25rem;
+  border: 1px solid var(--line-10, rgba(0, 0, 0, 0.1));
+  background: var(--background-default, #fff);
+  display: grid;
+  gap: 1em;
+  .bar {
+    .text16-700;
+  }
+  .cont {
+    line-height: 1.75em;
   }
 }
 

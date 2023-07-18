@@ -7,8 +7,14 @@
 
 @layer components {
   @import '/src/typo.less';
+  .f-width {
+    @apply ~"-ml-[16px] w-[calc(100%+32px)]";
+  }
   .scroll-x {
-    @apply ~"-ml-[16px] px-[16px] pr-[32px] w-[calc(100%+32px)]" overflow-x-auto;
+    @apply f-width ~"px-[16px] pr-[32px]" overflow-x-auto;
+    & > * {
+      flex: none;
+    }
     &:after {
       content: '';
     }
@@ -43,8 +49,7 @@
     max-height: calc(100vh - 150px);
   }
   .bottom-banner {
-    @apply w-full py-24 bg-cover bg-center text-white;
-    min-height: 350px;
+    @apply w-full py-24 bg-cover bg-center text-white ~"min-h-[350px]" phone:py-12 m:min-h-0;
   }
   .dim {
     @apply absolute left-0 top-0 h-full w-1/2;
@@ -53,7 +58,7 @@
     background-blend-mode: overlay;
   }
   .profiles {
-    @apply grid grid-cols-4 gap-6 gap-y-10 text-white;
+    @apply grid grid-cols-4 gap-6 gap-y-10 text-white m:grid-cols-3 phone:grid-cols-2;
   }
   .pop-profile {
     max-width: calc(~'100vw - 32px');

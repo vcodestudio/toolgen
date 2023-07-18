@@ -6,7 +6,7 @@
 </script>
 <PageMarginTop/>
 <Section>
-    <div class="grid grid-cols-2 gap-8">
+    <div class="grid grid-cols-2 gap-8 phone:grid-cols-1">
         <div class="flex flex-col justify-center gap-4">
             <h1>
                 Join<br>
@@ -19,7 +19,7 @@
         <img src="/images/career/1.png" alt=".."/>
     </div>
 </Section>
-<Section>
+<Section class_="phone:f-width">
     <Slider navigation={false} color={{
         active:"fill-mint",inactive: "fill-navy"
     }}>
@@ -31,11 +31,11 @@
     </Slider>
 </Section>
 <Section class_="fill-navy text-white relative overflow-hidden">
-    <div class="grid grid-cols-[1fr,2fr] gap-20 relative">
+    <div class="grid grid-cols-[1fr,2fr] gap-20 relative phone:grid-cols-1 phone:gap-2">
         <div>
             <h3>인재 DB 등록</h3>
         </div>
-        <div class="grid gap-8">
+        <div class="grid gap-8 phone:gap-2">
             <p class="text18-500">툴젠은 CRISPR 유전자교정 원천특허 기술을 기반으로 인류의 더 나은 삶을 위한 일에 관심과 열정이 있는 인재를 찾고 있습니다.</p>
             <p>
                 •툴젠의 가족이 되기를 희망하시는 분은 입사지원서를 등록해 주시기 바랍니다.<br>
@@ -43,9 +43,11 @@
                 •제출한 입사지원서는 접수일로부터 1년간 보관 후 삭제됩니다.<br>
                 •인재DB에 등록된 지원자도 정기/수시채용에 중복 지원이 가능합니다.
             </p>
-            <div>
+            <div class="flex phone:justify-center phone:pt-4">
                 <button class="fill">
-                    인재 DB 등록하기
+                    <span>
+                        인재 DB 등록하기
+                    </span>
                 </button>
             </div>
         </div>
@@ -54,11 +56,17 @@
 <Section>
     <div class="grid gap-8">
         <h3>채용 중 공고</h3>
-        <div class="flex gap-4">
-            <button class="fill">All Promotion</button>
-            <button class="lblue">All Promotion</button>
-            <button class="lblue">All Promotion</button>
-            <button class="lblue">All Promotion</button>
+        <div class="flex gap-4 flex-nowrap scroll-x">
+                <button class="navy">
+                    <span>
+                        All Promotion
+                    </span>
+                </button>
+                <button class="bluegray">
+                    <span>
+                        All Promotion
+                    </span>
+                </button>
         </div>
         <Department/>
         <Department/>

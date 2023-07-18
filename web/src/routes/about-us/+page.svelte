@@ -54,9 +54,15 @@ import Banner from "/src/components/Banner.svelte";
             <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
                 <div class="grid gap-4">
                     <h3 class="color-navy">
-                        1
+                        2000<br>
+                        ZFN(징크핑거) 개발
                     </h3>
-                    <p class="max-w-[350px]">1999년 김진수 박사(창업자)가 유전자가위를 개발하고 이를 사업화 하기 위하여 툴젠을 설립하였습니다.</p>
+                    <p class="max-w-[350px] whitespace-pre-wrap">
+발명 명칭: Zinc Finger Domains and Methods of Identifying same
+출원일: 2001-02-17
+등록번호: 10-0436869
+등록일: 2004-06-10
+                    </p>
                 </div>
                 <div>
                     <img class="block w-full h-auto" src="/images/about/1.png"/>
@@ -65,9 +71,15 @@ import Banner from "/src/components/Banner.svelte";
             <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
                 <div class="grid gap-4">
                     <h3 class="color-navy">
-                        2
+                        2000<br>
+                        TALEN(탈렌) 개발
                     </h3>
-                    <p class="max-w-[350px]">1999년 김진수 박사(창업자)가 유전자가위를 개발하고 이를 사업화 하기 위하여 툴젠을 설립하였습니다.</p>
+                    <p class="max-w-[350px] whitespace-pre-wrap">
+발명 명칭: Genome Engineering Via Designed TAL Effector Nucleases
+출원일: 2011-01-03
+등록번호: 10-1556359
+등록일: 2015-09-22
+                    </p>
                 </div>
                 <div>
                     <img class="block w-full h-auto" src="/images/about/1.png"/>
@@ -76,9 +88,10 @@ import Banner from "/src/components/Banner.svelte";
             <div class="grid gap-6">
                 <div class="grid gap-4">
                     <h3 class="color-navy">
-                        3
+                        2010<br>
+                        CRISPR-Cas9 개발
                     </h3>
-                    <p class="">1999년 김진수 박사(창업자)가 유전자가위를 개발하고 이를 사업화 하기 위하여 툴젠을 설립하였습니다.</p>
+                    <p class="">CRISPR-Cas 시스템은 원래 박테리아가 외부로부터 침입한 바이러스의 DNA를 기억해두었다가 후에 재침입시 이를 절단함으로써 스스로를 지키는 면역 시스템입니다. CRISPR-Cas 시스템은 가이드 RNA와 Cas단백질로 구성되어 있으며, 가이드 RNA는 바이러스의 DNA (타겟 DNA)에 상보적으로 결합하고, Cas 단백질은 RNA가 결합된 DNA를 자르는 역할을 수행합니다. 따라서, CRISPR-Cas 시스템을 구성하는 가이드 RNA의 염기배열을 원하는 DNA서열에 상보적 결합이 가능하도록 만들어줌으로써 원하는 DNA서열을 자를 수 있는 유전자가위로 사용할 수 있습니다.</p>
                     <img class="block w-full h-auto" src="/images/about/1.png"/>
                 </div>
             </div>

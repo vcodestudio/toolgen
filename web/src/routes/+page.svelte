@@ -17,7 +17,7 @@
   },
   {
     image: "https://s3-alpha-sig.figma.com/img/faef/25c5/30b695f77b9c1f6430cdec0aaa2a1117?Expires=1690156800&Signature=VRnjscTN38mJpDATRuMkkgdVh4Z3onvescr6FAmofUkcf34Bcau0wFqpxZK60ivD-4qRhZDzioa1msbQcg339pl6n5dsAFBX6BJKh6nIu8BtbOAJgPAdmDkvURqhKhh5y4yAG0uzOQZazCC6KbYXdC3dNldQZdz2JHIMHB3ywzMt21VCrItiyHq54MB-88QeQ2iJrmhN8dpS2KWADoiuKjDMNK6JIFpaMMYzjUSIH~wuClbYrVONpdeFJ0iJk7EpOF-1g36mCdEOVBOf1g-fktGhgRGg2ALhFYQtcODZG~5m3FTJYwJOG0mi3uT8a-IbYcov3tJhV1Q4ENbwspqxVA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-    title: "Crop",
+    title: "Crops",
     desc: "인류가 질병 없는 건강한 삶을 영위할 수 있도록, 유전질환 및 난치질환들의 치료제를 개발하기 위한 연구를 진행합니다."
   }
 ];

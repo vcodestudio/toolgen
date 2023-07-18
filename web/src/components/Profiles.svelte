@@ -103,7 +103,7 @@ export let profiles = [
         <div class="thumb">
             <img class="w-full h-full block object-cover" src={item.img} alt={item.name}/>
         </div>
-        <div class="fill-mint desc p-4 py-6 grid gap-0 flex-auto flex flex-col items-start">
+        <div class="fill-blue desc p-4 py-6 grid gap-0 flex-auto flex flex-col items-start">
             <div class="flex gap-2 items-end">
                 <h4 class="text24-500 single-line">{item.name}</h4>
                 <p class="text12-400 single-line">{item.job}</p>
