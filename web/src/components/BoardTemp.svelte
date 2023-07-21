@@ -23,7 +23,7 @@
   </div>
 
   <div class="board">
-    <div class="item fg-sub text16-500">
+    <div class="item fg-sub text16-500 m:hidden">
       <p>번호</p>
       <p>보고서명</p>
       <p>제출인</p>

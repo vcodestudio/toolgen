@@ -119,7 +119,7 @@
           desc: 'CAR-T(면역세포)',
           progress: 50,
           content: `
-          <p><span class="fill-blue font-bold">Engineered immune cell(면역세포)</span><br>
+          <p><span class="color-blue font-bold">Engineered immune cell(면역세포)</span><br>
             툴젠의 Next-generation CAR-T는 유전자교정을 통해 DGK 유전자를 제거하여 항암 기능성을 향상시킨 면역세포치료제 플랫폼입니다. DGK 유전자 제거 CAR-T는 향상된 암세포 제거능(Cytotoxicity)싸이토카인 분비를 보입니다. 또한 면역세포 기능을 제어하기 위해 암이 사용하는 주요 신호 중 일부에 대해 저항성을 갖게 됩니다. DGK 유전자 제거 CAR-T는 또한 암 이식 모델(Xenograft model)마우스에서 치료 기능이 향상되는 것을 확인하였습니다. Next-generation CAR-T는 기능향상 CAR-T플랫폼으로 혈액암 및 고형암에 대한 향상된 기능을 할 것으로 기대되어 사업개발적으로는 국내외 CAR-T/ -NK, TCR-T 기업등과의 협력을 도모하고자 합니다.
             </p>
           `,
