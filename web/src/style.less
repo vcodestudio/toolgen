@@ -218,11 +218,14 @@ section {
   border-radius: 0.5rem;
   background: url() center center no-repeat;
   background-size: cover;
+  background-color: #000000;
   height: 33.9375rem;
   overflow: hidden;
   @media @mobile {
     height: 26rem;
     max-width: 240px;
+  }
+  &:hover {
   }
   .text {
     display: flex;
@@ -233,6 +236,7 @@ section {
     align-self: stretch;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 8.85%, rgba(0, 0, 0, 0.3) 52.08%);
     color: var(--foreground-inverse);
+    transition: 0.3s;
 
     @media @mobile {
       padding: 1rem;
