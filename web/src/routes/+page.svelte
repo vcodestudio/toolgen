@@ -32,7 +32,9 @@
 				Edit Your Life</h1>
 			<p class="m:-mt-[1rem]">툴젠의 CRISPR 유전자가위 원천특허는<br>진핵세포의 유전자교정에 CRISPR 시스템을 <br class="mob">사용한 세계 최초의 특허입니다.</p>
 			<div class="flex justify-center">
-				<button class="fill">CRISPR-Cas9</button>
+				<a href="/crispr">
+					<button class="fill">CRISPR-Cas9</button>
+				</a>
 			</div>
 		</div>
 	</div>

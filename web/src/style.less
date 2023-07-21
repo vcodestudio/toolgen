@@ -431,6 +431,9 @@ header {
   color: var(--header-color);
   background-color: var(--header-bg);
   backdrop-filter: blur(10px);
+  @media @mobile {
+    transition: none;
+  }
   &.active {
     color: var(--header-active-color);
     background-color: var(--header-active-bg);
@@ -447,6 +450,11 @@ header {
 .logo {
   height: 2.75rem;
   display: block;
+}
+.menu {
+  a.selected {
+    color: var(--fill-blue);
+  }
 }
 @media @mobile {
   .logo {
@@ -505,13 +513,28 @@ footer {
       display: flex;
       flex-direction: column;
       gap: 0em;
+      overflow-y: auto;
+
+      &.profile {
+        padding: 0;
+        background: var(--fill-blue);
+        .exit {
+          color: var(--fill-default);
+          background: transparent;
+          &:after {
+            display: none;
+          }
+        }
+      }
       .content {
         padding: 4.5rem 0;
         max-height: 100%;
         flex: auto;
       }
       .exit {
-        position: absolute;
+        position: fixed;
+        top: 0;
+        left: 0;
         transform: translate(0, 0);
         display: flex;
         justify-content: flex-end;

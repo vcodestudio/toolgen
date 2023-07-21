@@ -70,6 +70,11 @@
   .board .item {
     @apply ~"block grid grid-cols-[1fr,5fr,1fr,2fr,1fr] py-3 border-b border-gray-300 text-center";
   }
+  .board-filter {
+    input[type='text'] {
+      @apply m:min-w-0 m:flex-auto;
+    }
+  }
   .pagination .item {
     @apply flex justify-center items-center ~"w-[3em] h-[3em] text-[1rem] m:w-[32px] m:h-[32px]";
   }
