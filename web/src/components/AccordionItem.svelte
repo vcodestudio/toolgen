@@ -4,21 +4,17 @@
   export let open = false
 </script>
 
-<div class="accordion-b p-6 m:p-4">
+<div class="accordion-b p-6 m:p-4" class:fill-light-blue={open}>
   <div class="flex gap-6 items-start">
     <p class="fg-sub text16">{twoDigits(+index + 1)}</p>
     <div class="w-full">
-      <div
-        class="bar flex w-full items-center"
+      <a
+        href="#"
+        class="block bar flex w-full items-center"
         tabindex="0"
         role="button"
-        on:click={() => {
+        on:click|preventDefault={() => {
           open = !open
-        }}
-        on:keydown={event => {
-          if (event.key === 'Enter' || event.key === ' ') {
-            open = !open
-          }
         }}
       >
         <span class="flex-auto pc:text16-700">
@@ -40,7 +36,7 @@
             />
           </svg>
         </div>
-      </div>
+      </a>
       {#if open}
         <div class="cont mt-6">
           <slot />

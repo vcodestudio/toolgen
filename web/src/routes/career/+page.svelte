@@ -3,6 +3,7 @@
   import PageMarginTop from '../../components/PageMarginTop.svelte'
   import Section from '../../components/Section.svelte'
   import Slider from '../../components/Slider.svelte'
+  import { popup } from '$lib/screen'
 
   let jobs = {
     category: [
@@ -19,6 +20,14 @@
       { department: 'Platform B', category: { slug: 'researcher' }, title: 'Project Team Leader, Crop 4', link: '#' },
     ],
   }
+
+  let sliders = [
+    { img: '/images/career-s-1.jpg' },
+    { img: '/images/career-s-2.jpg' },
+    { img: '/images/career-s-3.jpg' },
+    { img: '/images/career-s-4.jpg' },
+    { img: '/images/career-s-5.jpg' },
+  ]
 
   let currentCategory = jobs.category[0]
 </script>
@@ -48,13 +57,14 @@
       inactive: 'fill-navy',
     }}
   >
-    {#each [1, 2, 3] as item}
+    {#each sliders as item}
       <div class="swiper-slide">
-        <img class="block" src="/images/carrer-slide.jpg" alt="..." />
+        <img class="block w-full object-cover h-[550px] m:h-[450px] p:h-[250px]" src={item.img} alt="..." />
       </div>
     {/each}
   </Slider>
 </Section>
+
 <Section class_="fill-navy text-white relative overflow-hidden">
   <div class="grid grid-cols-[1fr,2fr] gap-20 relative phone:grid-cols-1 phone:gap-2">
     <div>
@@ -73,7 +83,12 @@
         •인재DB에 등록된 지원자도 정기/수시채용에 중복 지원이 가능합니다.
       </p>
       <div class="flex phone:justify-center phone:pt-4">
-        <button class="fill">
+        <button
+          class="fill"
+          on:click={() => {
+            popup.set({ type: 'db' })
+          }}
+        >
           <span> 인재 DB 등록하기 </span>
         </button>
       </div>

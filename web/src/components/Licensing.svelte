@@ -52,17 +52,17 @@
 <div class="accordion-a">
   {#each licenses as item, i}
     <div class="item w-full grid gap-1px">
-      <div
+      <a
+        href="./"
         class="bar text18-700 w-full items-center flex gap-4"
         role="button"
         tabindex="0"
-        on:click={() => {
+        on:click|preventDefault={() => {
+          // all close
+          licenses.map(a => {
+            a.open = false
+          })
           item.childs.length ? (item.open = !item.open) : popup.set({ type: 'form' })
-        }}
-        on:keydown={event => {
-          if (event.key === 'Enter' || event.key === ' ') {
-            item.childs.length ? (item.open = 1) : 0
-          }
         }}
       >
         <span class="flex-auto">
@@ -89,7 +89,7 @@
             </svg>
           {/if}
         </div>
-      </div>
+      </a>
       {#if item.open && item.childs.length}
         <div class="buttons grid gap-1px">
           {#each item.childs as child}

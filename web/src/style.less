@@ -515,6 +515,11 @@ footer {
       background-position: right bottom;
       background-color: #fff;
     }
+    &.mint {
+      .panel {
+        background-image: url(/images/popup-back-mint.svg);
+      }
+    }
   }
 }
 
@@ -577,6 +582,7 @@ input {
   &[type='password'],
   &[type='number'],
   &[type='email'],
+  &[type='file'] + label,
   &[type='tel'] {
     display: flex;
     min-width: 15rem;
@@ -590,6 +596,10 @@ input {
     background: var(--fill-light-blue, #ecf3f8);
     line-height: 1em;
     .body16-500;
+  }
+
+  &[type='file'] {
+    display: none;
   }
 }
 textarea {
@@ -630,7 +640,7 @@ textarea {
 .accordion-b {
   border-radius: 0.25rem;
   border: 1px solid var(--line-10, rgba(0, 0, 0, 0.1));
-  background: var(--background-default, #fff);
+  // background: var(--background-default, #fff);
   display: grid;
   gap: 1em;
   .bar {

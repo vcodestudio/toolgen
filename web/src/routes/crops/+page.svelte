@@ -43,7 +43,7 @@
   <div class="grid gap gap-20 m:gap-4">
     <div class="flex gap-20 m:flex-col m:gap-4">
       <div class="flex items-center leading-[1em]">
-        <h3 class="flex-auto">Pipline</h3>
+        <h3 class="flex-auto">Pipeline</h3>
         <div class="flex-none h-[20px] mob">
           <svg class="h-full w-auto" viewBox="0 0 53 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
