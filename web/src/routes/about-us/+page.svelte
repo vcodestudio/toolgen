@@ -31,9 +31,7 @@
 </script>
 
 <MobileHeaderW />
-<Banner
-  src="https://s3-alpha-sig.figma.com/img/5bed/0974/409944d86587f0b2c35f0d9631985fa2?Expires=1690156800&Signature=Eib~q6~rssePoh~XxA3~-s6hqujGh5YsQzGKXpvH-E5SsebGECuW4TfgPq18khje5KEJHY4q-swTd7lTsRA9aKQiLOEEbS3spnkIZgN0jHcTSp1gZKzoxypVBlrbbZoVXhY1V259AvIXE9zrCG3oBnGSNu5RJZpa~TuAlQBu~iMrV0YxFO8tn6jdZY55AC4X-wXmwCw7eN9WlokjL3-4578-8fLcJm89Y0fJPrzHYouzEXqEhi1IbetVD8u7du5GSmVN9R1EpBg~DQykuCan0Jk54PK0ex~lUGtGySipVBvMmtMNt1DNiFxTpTtwTOsuS7tYpxs4tD6VlA76oT7G~w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-/>
+<Banner src="/images/static/frame-10327.jpg" />
 <Section class_="m:pb-0">
   <div class="w-full h-0 relative">
     <div
@@ -58,9 +56,7 @@
       유전자가위 개발에 이어 2012년 CRISPR 유전자가위 개발까지 성공한 유일한 회사이며, CRISPR 유전자가위 원천특허가 주요
       9개 국가(한국, 미국, 유럽, 호주, 중국, 일본, 싱가포르, 인도, 홍콩)에 등록되어 있습니다.
     </p>
-    <SectionImg
-      src="https://s3-alpha-sig.figma.com/img/1d2a/491b/26f98af7e84223b157bd527ca9650659?Expires=1690156800&Signature=Wc9AHLQYNrLPhgwQsYIId3Xgo5om-~5BM26UkmMbZMScyebbA8TigbU4TdBA2CBotxBRtzCGMl~uOcNjL93SYPWBLbDbehbPNjdZXVxsMycPhb3ZSY2kf4VFmGOmDFm-hd1UMhY~8jxEIrGPsLSZjKn5wzcaVRORMdepHclqD6NCr5QV9kXxHcMfkUIDI-~N8~ksUSqQVKnXSV3DC6o~gRQmchlod-Rc0Q2bAUPcbNvkToYbne-hKXqupSVpmnHiEX75Y9KhG4aehE0jestQe9Fpipqu4vHS1J6jxVAF45HWEkrb~Wrg7srYqJlG510KOzRryMjAIZ8LbYd6tYmRuw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-    />
+    <SectionImg src="/images/static/frame-9826.jpg" />
     <div class="flex justify-end m:justify-center">
       <DownloadButton title="CI 다운로드" />
     </div>

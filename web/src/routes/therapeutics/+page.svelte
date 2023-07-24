@@ -10,9 +10,7 @@
 </script>
 
 <MobileHeaderW />
-<Banner
-  src="https://s3-alpha-sig.figma.com/img/5e28/de33/3c32a138f0fbf242c0ea9be52d81b175?Expires=1690156800&Signature=qjRuYwJj1NLf9zRoKZ7AxkMBMr3fQvyu1SN~8H5SsgBg5~~dgwnO90RfkN0okBqgSvKVrISQIWKjqN2xnxC~X0mSPMCtPTlehlo9eS2Y1y2ARu9GR3Z9nFCzrFkF9TSgh3vlhmd~Ofcd9ZRKQlp0ixgL2z-kI7tBaOaB6CN-sQNDIBU5-TuaSm9tK-zMD6zaTntLZnCyL5~rlbOAkE-t6vyaN-8IZ3C989hz7anXpb360vP-rxT3JOV82zoTUADDt0lQNveAbbmRgQpwr8th93BFkJ4bTbQyVndkkBYF74mIIDkgiloJxYMfjmM9jeO2wYXdjRpWYlguXzT2dbEqGA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
->
+<Banner src="/images/static/3c32a138f0fbf242c0ea9be52d81b175.jpg">
   <h1>Therapeutics</h1>
   <p class="max-w-[650px] em:leading-7">
     인류가 질병 없는 건강한 삶을 영위할 수 있도록, 유전자교정 기술을 유전자치료 및 세포치료기술과 접목하여 유전질환 및
