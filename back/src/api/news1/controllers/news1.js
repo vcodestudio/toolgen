@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * map controller
+ * news1 controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::map.map');
+module.exports = createCoreController('api::news1.news1');

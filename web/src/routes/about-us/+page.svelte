@@ -33,7 +33,7 @@
 <MobileHeaderW />
 <Banner src="/images/static/frame-10327.jpg" />
 <Section class_="m:pb-0">
-  <div class="w-full h-0 relative">
+  <div class="relative w-full h-0">
     <div
       class="
         bg-[#001B71] bg-opacity-90 bg-blend-multiply text-white absolute top-0 left-0 rounded-md p-8 translate-y-[-70%]
@@ -125,7 +125,7 @@
             역할을 수행합니다. 따라서, CRISPR-Cas 시스템을 구성하는 가이드 RNA의 염기배열을 원하는 DNA서열에 상보적
             결합이 가능하도록 만들어줌으로써 원하는 DNA서열을 자를 수 있는 유전자가위로 사용할 수 있습니다.
           </p>
-          <div class="flex justify-center items-center">
+          <div class="flex items-center justify-center">
             <img class="block w-auto h-[300px] p:w-full p:h-auto p-6" src="/images/about-d-4.jpg" />
           </div>
         </div>
@@ -156,7 +156,7 @@
     </div>
     <div class="grid gap-8 m:gap-2">
       {#each histories as item, i}
-        <div class="flex gap-4 items-start">
+        <div class="flex items-start gap-4">
           <p class="text16-700 flex-[1]">
             {#if histories[i - 1]?.year !== item.year}
               {item.year}

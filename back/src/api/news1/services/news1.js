@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * map service
+ * news1 service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::map.map');
+module.exports = createCoreService('api::news1.news1');

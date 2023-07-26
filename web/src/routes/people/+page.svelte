@@ -18,18 +18,18 @@
   <Slider>
     {#each [1, 2, 3] as i}
       <div class="swiper-slide">
-        <div class="flex gap-6 items-center phone:flex-col">
+        <div class="flex items-center gap-6 phone:flex-col">
           <div class="thumb relative w-[180px] h-[180px] flex-none">
-            <img class="block w-full h-full object-cover" src="/images/people-s.jpg" alt=".." />
-            <svg class="absolute w-full h-full top-0 left-0 color-yellow" viewBox="0 0 357.14 357.14">
+            <img class="block object-cover w-full h-full" src="/images/people-s.jpg" alt=".." />
+            <svg class="absolute top-0 left-0 w-full h-full color-yellow" viewBox="0 0 357.14 357.14">
               <path
                 fill="currentColor"
                 d="m0,0v357.14h357.14V0H0Zm302.6,219.43l-83.17,83.17c-45.53,45.53-119.35,45.53-164.89,0h0c-45.53-45.53-45.53-119.35,0-164.89l83.17-83.17c45.53-45.53,119.35-45.53,164.89,0h0c45.53,45.53,45.53,119.35,0,164.89Z"
               />
             </svg>
           </div>
-          <div class="flex flex-col gap-6 flex-auto phone:gap-2">
-            <div class="flex gap-2 items-center phone:justify-center">
+          <div class="flex flex-col flex-auto gap-6 phone:gap-2">
+            <div class="flex items-center gap-2 phone:justify-center">
               <p class="text18-700">박진수</p>
               <p>Jinsu</p>
               <p class="fg-sub">/ 소속</p>

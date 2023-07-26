@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "posts",
+  "collectionName": "news2",
   "info": {
-    "singularName": "post",
-    "pluralName": "posts",
-    "displayName": "Notice",
+    "singularName": "news1",
+    "pluralName": "news2",
+    "displayName": "News",
     "description": ""
   },
   "options": {

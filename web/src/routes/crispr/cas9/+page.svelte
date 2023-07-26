@@ -23,7 +23,7 @@
     <h3>Benefit of CRISPR</h3>
     <div class="grid grid-cols-2 gap-8 m:grid-cols-1">
       <div class="grid gap-2">
-        <div class="border-t-2 border-emerald-400 w-4" />
+        <div class="w-4 border-t-2 border-emerald-400" />
         <p class="text18-700">Convenience</p>
         <p class="text16-400">
           ZFN 및 TALEN에 비해 CRISPR의 가장 큰 장점은 사용 편의성이다. 개별 유전자별로 맞춤 설계된 단백질이 필요한
@@ -33,7 +33,7 @@
         </p>
       </div>
       <div class="grid gap-2">
-        <div class="border-t-2 border-emerald-400 w-4" />
+        <div class="w-4 border-t-2 border-emerald-400" />
         <p class="text18-700">Efficiency</p>
         <p class="text16-400">
           CRISPR는 또한 ZFN 및 TALEN보다 훨씬 빠르고 효율적인 것으로 입증되었다. 유전자를 편집하기 위해 CRISPR를
