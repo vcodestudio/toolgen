@@ -29,20 +29,20 @@
   style="background-image:url(/images/static/373da1004309db1dd448c63a00849184.jpg)"
 >
   <div class="w-full" style:height={$hHeight + 'px'} />
-  <div class="w-full cont justify-center items-center">
+  <div class="items-center justify-center w-full cont">
     <div class="banner-content">
       <img class="block w-full h-auto mob" src="/images/static/373da1004309db1dd448c63a00849184.jpg" />
-      <h1 class="font-[900] em:leading-5">
+      <h1 class="font-[900] em:leading-5 uppercase pc:text-[76px]">
         Innovate Genome<br />
         Edit Your Life
       </h1>
-      <p class="m:-mt-[1rem]">
+      <p class="m:-mt-[1rem] leading-[1.5em] text-[20px]">
         툴젠의 CRISPR 유전자가위 원천특허는<br />진핵세포의 유전자교정에 CRISPR 시스템을 <br class="mob" />사용한 세계
         최초의 특허입니다.
       </p>
       <div class="flex justify-center">
         <a href="/crispr">
-          <button class="fill">CRISPR-Cas9</button>
+          <button class="border-none fill hover:bg-navy hover:text-white">CRISPR-Cas9</button>
         </a>
       </div>
     </div>
@@ -87,7 +87,7 @@
     <div class="pc" />
     <div class="flex justify-center">
       <a href="/licensing-partnership">
-        <button>
+        <button class="transition-none hover:bg-navy hover:text-white">
           Licensing 자세히 알아보기
           <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -103,7 +103,7 @@
   </div>
 </section>
 <section>
-  <div class="w-limit section-content gap-20">
+  <div class="gap-20 w-limit section-content">
     <CardNews title="Notice" listUrl="/" />
     <CardNews title="News" listUrl="/" />
   </div>

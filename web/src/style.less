@@ -2,9 +2,16 @@
 
 :root {
   /* Color styles */
-  --background-default: #ffffff;
-  --background-sub: #f6f6f6;
-  --background-inverse: #000000;
+
+  --line-10: rgba(0, 0, 0, 0.1);
+  --line-40: rgba(0, 0, 0, 0.4);
+  --line-100: rgba(0, 0, 0, 1);
+
+  --line-navy: #041e6d;
+  --line-blue: #337dd9;
+  --line-inverse: #ffffff;
+  --line-danger: #ff403e;
+
   --fill-default: #ffffff;
   --fill-sub: #f6f6f6;
   --fill-inverse: #000000;
@@ -14,6 +21,7 @@
   --fill-yellow: #f8db15;
   --fill-bluegray: #bed8e8;
   --fill-light-blue: #ecf3f8;
+
   --foreground-default: #000000;
   --foreground-sub: #888888;
   --foreground-inverse: #ffffff;
@@ -22,13 +30,11 @@
   --foreground-mint: #00a8b7;
   --foreground-disable: #dddddd;
   --foreground-danger: #ff403e;
-  --line-10: rgba(0, 0, 0, 0.1);
-  --line-40: rgba(0, 0, 0, 0.4);
-  --line-100: rgba(0, 0, 0, 1);
-  --line-navy: #041e6d;
-  --line-blue: #337dd9;
-  --line-inverse: #ffffff;
-  --line-danger: #ff403e;
+
+  --background-default: #ffffff;
+  --background-sub: #f6f6f6;
+  --background-inverse: #000000;
+
   --header-color: var(--fill-navy);
   --header-bg: transparent;
   --header-active-color: var(--fill-navy);
@@ -40,7 +46,17 @@
 ::-webkit-scrollbar {
   display: none;
 }
+/* 드래그한 텍스트의 배경색 */
+::selection {
+  background-color: var(--fill-blue);
+  color: var(--fill-default);
+}
 
+/* 드래그한 텍스트의 글자색 */
+::-moz-selection {
+  background-color: var(--fill-blue);
+  color: var(--fill-default);
+}
 @import './typo.less';
 
 html,
@@ -119,7 +135,7 @@ table {
       padding: 0.8em;
       border-bottom: 1px solid var(--line-10, rgba(0, 0, 0, 0.1));
       .text14-500;
-      .fg-sub;
+      .fg(sub);
     }
   }
   tbody {
@@ -378,7 +394,7 @@ button {
     }
     .banner-content {
       display: grid;
-      gap: 1rem;
+      gap: 1.5rem;
       padding: 3rem 8rem;
       color: var(--foreground-navy);
       backdrop-filter: blur(10px);
@@ -387,10 +403,8 @@ button {
         gap: 1.5rem;
       }
       p {
-        font-size: 1.5rem;
         font-style: normal;
         font-weight: 500;
-        line-height: 2.25rem;
         letter-spacing: -0.0125rem;
 
         @media @mobile {
@@ -673,7 +687,7 @@ textarea {
     &:hover,
     &.active {
       .pin {
-        .fill-default;
+        .fill(default);
         width: 1.75rem;
         height: 1.75rem;
       }
@@ -683,9 +697,8 @@ textarea {
     }
   }
   .pin {
-    .fill-navy;
-    .line-blue;
-    border-width: 4px;
+    .fill(navy);
+    .line(4px,blue);
     width: 1.5rem;
     height: 1.5rem;
     transition: 0.3s;

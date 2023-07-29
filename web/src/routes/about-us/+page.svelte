@@ -56,7 +56,7 @@
       유전자가위 개발에 이어 2012년 CRISPR 유전자가위 개발까지 성공한 유일한 회사이며, CRISPR 유전자가위 원천특허가 주요
       9개 국가(한국, 미국, 유럽, 호주, 중국, 일본, 싱가포르, 인도, 홍콩)에 등록되어 있습니다.
     </p>
-    <SectionImg src="/images/static/frame-9826.jpg" />
+    <SectionImg src="/images/static/fcc4e8b33c5441804c7b7c47262add82.jpg" />
     <div class="flex justify-end m:justify-center">
       <DownloadButton title="CI 다운로드" />
     </div>
