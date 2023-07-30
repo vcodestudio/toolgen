@@ -1,0 +1,78 @@
+export function load({ cookies }) {
+  let data = [{ year: 2023 }]
+  data.forEach(async item => {
+    const res = arrangeData(item.year).then(res => {
+      return res
+    })
+    item.data = res ?? {}
+  })
+  return {
+    data,
+  }
+}
+/*
+1분기보고서 : 11013
+반기보고서 : 11012
+3분기보고서 : 11014
+사업보고서 : 11011
+*/
+async function getData(year) {
+  const url = 'https://opendart.fss.or.kr/api/fnlttSinglAcntAll.json'
+  const param = {
+    crtfc_key: '86252bea0cdeb028b25c3b340422cc1b66fe45dc',
+    corp_code: '00547510', // toolgen code
+    reprt_code: '11011',
+    fs_div: 'OFS',
+    bsns_year: year,
+  }
+  let parse = `${url}?${Object.entries(param)
+    .map(a => a.join('='))
+    .join('&')}`
+
+  let res
+  try {
+    res = await fetch(parse)
+  } catch (e) {
+    res = await fetch('/dummy/data.json')
+  }
+  const data = await res.json()
+  return data
+}
+function extractData(data, accountName) {
+  if (!data) return { current: null }
+  for (let item of data) {
+    if (item.account_nm === accountName) {
+      return {
+        current: item.thstrm_amount || null,
+      }
+    }
+  }
+  return {
+    current: null,
+  }
+}
+
+async function arrangeData(year) {
+  const res = await getData(year)
+  const data = res.list
+  // 데이터를 추출하는 함수를 정의합니다.
+
+  // 요청한 항목을 추출합니다.
+  let totalAssets = extractData(data, '자산총계')
+  let totalLiab = extractData(data, '부채총계')
+  let totalEquity = extractData(data, '자본총계')
+  let totalRevenue = extractData(data, '매출액')
+  let operatingIncome = extractData(data, '영업이익(손실)')
+  let netIncome = extractData(data, '당기순이익(손실)')
+
+  // 결과를 출력합니다.
+  const output = [
+    ['자산총계', totalAssets.current],
+    ['부채총계', totalLiab.current],
+    ['자본총계', totalEquity.current],
+    ['매출액', totalRevenue.current],
+    ['영업이익(손실)', operatingIncome.current],
+    ['당기순이익(손실)', netIncome.current],
+  ]
+  return output
+}

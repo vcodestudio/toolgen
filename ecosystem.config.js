@@ -20,5 +20,11 @@ module.exports = {
         NODE_ENV: "production",
       },
     },
+    // {
+    //   name: "frontend",
+    //   script: "npm",
+    //   args: "start",
+    //   cwd: "./web",
+    // },
   ],
 };

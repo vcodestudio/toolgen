@@ -2,9 +2,16 @@
 
 :root {
   /* Color styles */
-  --background-default: #ffffff;
-  --background-sub: #f6f6f6;
-  --background-inverse: #000000;
+
+  --line-10: rgba(0, 0, 0, 0.1);
+  --line-40: rgba(0, 0, 0, 0.4);
+  --line-100: rgba(0, 0, 0, 1);
+
+  --line-navy: #041e6d;
+  --line-blue: #337dd9;
+  --line-inverse: #ffffff;
+  --line-danger: #ff403e;
+
   --fill-default: #ffffff;
   --fill-sub: #f6f6f6;
   --fill-inverse: #000000;
@@ -14,6 +21,7 @@
   --fill-yellow: #f8db15;
   --fill-bluegray: #bed8e8;
   --fill-light-blue: #ecf3f8;
+
   --foreground-default: #000000;
   --foreground-sub: #888888;
   --foreground-inverse: #ffffff;
@@ -22,13 +30,11 @@
   --foreground-mint: #00a8b7;
   --foreground-disable: #dddddd;
   --foreground-danger: #ff403e;
-  --line-10: rgba(0, 0, 0, 0.1);
-  --line-40: rgba(0, 0, 0, 0.4);
-  --line-100: rgba(0, 0, 0, 1);
-  --line-navy: #041e6d;
-  --line-blue: #337dd9;
-  --line-inverse: #ffffff;
-  --line-danger: #ff403e;
+
+  --background-default: #ffffff;
+  --background-sub: #f6f6f6;
+  --background-inverse: #000000;
+
   --header-color: var(--fill-navy);
   --header-bg: transparent;
   --header-active-color: var(--fill-navy);
@@ -40,7 +46,17 @@
 ::-webkit-scrollbar {
   display: none;
 }
+/* 드래그한 텍스트의 배경색 */
+::selection {
+  background-color: var(--fill-blue);
+  color: var(--fill-default);
+}
 
+/* 드래그한 텍스트의 글자색 */
+::-moz-selection {
+  background-color: var(--fill-blue);
+  color: var(--fill-default);
+}
 @import './typo.less';
 
 html,
@@ -119,7 +135,7 @@ table {
       padding: 0.8em;
       border-bottom: 1px solid var(--line-10, rgba(0, 0, 0, 0.1));
       .text14-500;
-      .fg-sub;
+      .fg(sub);
     }
   }
   tbody {
@@ -218,11 +234,14 @@ section {
   border-radius: 0.5rem;
   background: url() center center no-repeat;
   background-size: cover;
+  background-color: #000000;
   height: 33.9375rem;
   overflow: hidden;
   @media @mobile {
     height: 26rem;
     max-width: 240px;
+  }
+  &:hover {
   }
   .text {
     display: flex;
@@ -233,6 +252,7 @@ section {
     align-self: stretch;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 8.85%, rgba(0, 0, 0, 0.3) 52.08%);
     color: var(--foreground-inverse);
+    transition: 0.3s;
 
     @media @mobile {
       padding: 1rem;
@@ -374,7 +394,7 @@ button {
     }
     .banner-content {
       display: grid;
-      gap: 1rem;
+      gap: 1.5rem;
       padding: 3rem 8rem;
       color: var(--foreground-navy);
       backdrop-filter: blur(10px);
@@ -383,10 +403,8 @@ button {
         gap: 1.5rem;
       }
       p {
-        font-size: 1.5rem;
         font-style: normal;
         font-weight: 500;
-        line-height: 2.25rem;
         letter-spacing: -0.0125rem;
 
         @media @mobile {
@@ -431,6 +449,9 @@ header {
   color: var(--header-color);
   background-color: var(--header-bg);
   backdrop-filter: blur(10px);
+  @media @mobile {
+    transition: none;
+  }
   &.active {
     color: var(--header-active-color);
     background-color: var(--header-active-bg);
@@ -447,6 +468,11 @@ header {
 .logo {
   height: 2.75rem;
   display: block;
+}
+.menu {
+  a.selected {
+    color: var(--fill-blue);
+  }
 }
 @media @mobile {
   .logo {
@@ -495,6 +521,22 @@ footer {
   }
 }
 
+.overlay {
+  &.backImg {
+    .panel {
+      background: url(/images/panel-back.svg) center center no-repeat;
+      background-size: auto 250px;
+      background-position: right bottom;
+      background-color: #fff;
+    }
+    &.mint {
+      .panel {
+        background-image: url(/images/popup-back-mint.svg);
+      }
+    }
+  }
+}
+
 @media @mobile {
   .overlay {
     .panel {
@@ -505,13 +547,28 @@ footer {
       display: flex;
       flex-direction: column;
       gap: 0em;
+      overflow-y: auto;
+
+      &.profile {
+        padding: 0;
+        background: var(--fill-blue);
+        .exit {
+          color: var(--fill-default);
+          background: transparent;
+          &:after {
+            display: none;
+          }
+        }
+      }
       .content {
         padding: 4.5rem 0;
         max-height: 100%;
         flex: auto;
       }
       .exit {
-        position: absolute;
+        position: fixed;
+        top: 0;
+        left: 0;
         transform: translate(0, 0);
         display: flex;
         justify-content: flex-end;
@@ -539,6 +596,7 @@ input {
   &[type='password'],
   &[type='number'],
   &[type='email'],
+  &[type='file'] + label,
   &[type='tel'] {
     display: flex;
     min-width: 15rem;
@@ -552,6 +610,10 @@ input {
     background: var(--fill-light-blue, #ecf3f8);
     line-height: 1em;
     .body16-500;
+  }
+
+  &[type='file'] {
+    display: none;
   }
 }
 textarea {
@@ -592,7 +654,7 @@ textarea {
 .accordion-b {
   border-radius: 0.25rem;
   border: 1px solid var(--line-10, rgba(0, 0, 0, 0.1));
-  background: var(--background-default, #fff);
+  // background: var(--background-default, #fff);
   display: grid;
   gap: 1em;
   .bar {
@@ -625,7 +687,7 @@ textarea {
     &:hover,
     &.active {
       .pin {
-        .fill-default;
+        .fill(default);
         width: 1.75rem;
         height: 1.75rem;
       }
@@ -635,9 +697,8 @@ textarea {
     }
   }
   .pin {
-    .fill-navy;
-    .line-blue;
-    border-width: 4px;
+    .fill(navy);
+    .line(4px,blue);
     width: 1.5rem;
     height: 1.5rem;
     transition: 0.3s;
