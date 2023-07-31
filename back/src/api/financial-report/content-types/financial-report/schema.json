@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "financial_reports",
+  "info": {
+    "singularName": "financial-report",
+    "pluralName": "financial-reports",
+    "displayName": "financial-report",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "year": {
+      "type": "string"
+    },
+    "data": {
+      "type": "json"
+    }
+  }
+}
