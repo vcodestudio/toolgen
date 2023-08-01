@@ -81,4 +81,9 @@
   .pagination .item svg {
     @apply ~"w-[1em] h-[1em]";
   }
+  .pagination .item {
+    &.disabled {
+      @apply opacity-50 pointer-events-none;
+    }
+  }
 }
