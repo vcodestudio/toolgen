@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "crispr_cas9_foundational_patents",
+  "info": {
+    "singularName": "crispr-cas9-foundational-patent",
+    "pluralName": "crispr-cas9-foundational-patents",
+    "displayName": "CRISPR-Cas9 Foundational Patent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rights": {
+      "type": "string"
+    },
+    "application_date": {
+      "type": "string"
+    },
+    "application_number": {
+      "type": "string"
+    },
+    "case_stage": {
+      "type": "enumeration",
+      "enum": [
+        "PCT",
+        "E",
+        "X"
+      ]
+    },
+    "country_code": {
+      "type": "enumeration",
+      "enum": [
+        "AU",
+        "BR",
+        "CA",
+        "CN",
+        "DE",
+        "EP",
+        "HK",
+        "IN",
+        "JP",
+        "KR",
+        "SG",
+        "US",
+        "RU",
+        "WO"
+      ]
+    }
+  }
+}

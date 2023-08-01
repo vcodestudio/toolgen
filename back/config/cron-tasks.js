@@ -42,6 +42,15 @@ module.exports = {
       // end: new Date(Date.now() + 2000),
     },
   },
+  playOnce: {
+    task: ({ strapi }) => {
+      //   Add your own logic here (e.g. send a queue of email, create a database backup, etc.).
+      console.log("ddda");
+    },
+    options: {
+      // play once after 10 seconds
+    },
+  },
 };
 
 // 공지사항, 보도자료 마이그레이션 전용 함수. 데이터베이스에 데이터를 넣습니다.
