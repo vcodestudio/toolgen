@@ -4,7 +4,7 @@
 
   const pageSize = 5
   const url = $page.url
-  const params = url.searchParams
+  let params = url.searchParams
   let current = Math.min(maxPages, params.get('page') ?? 1)
   let pages = []
 
@@ -28,15 +28,16 @@
       })
     }
 
+
     // slice pages from pageSize
-    const start = Math.max(current - Math.floor(pageSize / 2), 0)
-    const end = Math.min(start + pageSize, maxPages)
+    let start = Math.max(0, current - 3);
+    let end = Math.min(maxPages - 1, start + pageSize);
+    start = Math.max(0,Math.min(current - 3, end - pageSize));
     pages = pages.slice(start, end)
+
   }
 
   function pgLink(pg_nm) {
-    const url = $page.url
-    const params = url.searchParams
     params.page = pg_nm
     const query = Object.keys(params)
       .map(key => `${key}=${params[key]}`)
@@ -70,7 +71,7 @@
     {#if page.pageNum == current}
       <span class="item color-blue font-[600]">{page.pageNum}</span>
     {:else}
-      <a class="item" href={page.url}>{page.pageNum}</a>
+      <a class="item" href={pgLink(+page.pageNum)}>{page.pageNum}</a>
     {/if}
   {/each}
   <a class="item" href={pgLink(current + 1)} class:disabled={current == maxPages}>
