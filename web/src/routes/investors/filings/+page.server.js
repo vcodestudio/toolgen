@@ -7,7 +7,6 @@ export const load = async ({ url, fetch, params }) => {
   let query = url.searchParams
   // searchparams to json
   query = Object.fromEntries(query.entries())
-  console.log('query', query)
   let queryParams = {
     bgn_de: query.startDate ?? '20000101',
     end_de: query.endDate ?? formatDate(new Date(), 'YYYYMMDD'),
@@ -31,6 +30,7 @@ export const load = async ({ url, fetch, params }) => {
   const res = await fetch(`${path}?${objToQuery(queryParams)}`)
   const data = await res.json()
   return {
+    query,
     body: data,
   }
 }

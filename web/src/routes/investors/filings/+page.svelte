@@ -83,6 +83,6 @@
         </a>
       {/each}
     </div>
-    <Pagination maxPages={data.body.total_page}/>
+    <Pagination maxPages={data.body.total_page} current="1" query={data.query}/>
   </div>
 </Section>

@@ -1,51 +1,41 @@
 <script>
   import { page } from '$app/stores'
   export let maxPages = 20
+  export let current = 1;
+  export let query = {};
 
   const pageSize = 5
-  const url = $page.url
-  let params = url.searchParams
-  let current = Math.min(maxPages, params.get('page') ?? 1)
-  let pages = []
+  const url = $page.url;
 
-  //   whenever get changes
-  $: {
-    current = Math.min(maxPages, $page.url.searchParams.get('page') ?? 1)
-    pages = []
-    // pages length = maxPages
+  function slicePages(pages, current_ = 1) {
+    let start = Math.max(0, current_ - 3);
+    let end = Math.min(pages.length - 1, start + pageSize);
+    start = Math.max(0,Math.min(current_ - 3, end - pageSize));
+    return pages.slice(start, end)
+  }
+
+  function getPages(maxPages, current_) {
+    const pgs = [];
     for (let i = 1; i <= maxPages; i++) {
-      // convert to json
-      params.page = i
-      // convert to query string
-      const query = Object.keys(params)
-        .map(key => `${key}=${params[key]}`)
-        .join('&')
-
-      // set page query
-      pages.push({
-        pageNum: i,
-        url: `${url.pathname}?${query}`,
-      })
+      pgs.push(i);
     }
-
-
-    // slice pages from pageSize
-    let start = Math.max(0, current - 3);
-    let end = Math.min(maxPages - 1, start + pageSize);
-    start = Math.max(0,Math.min(current - 3, end - pageSize));
-    pages = pages.slice(start, end)
-
+    // 아래 주정
+    return [];
   }
 
   function pgLink(pg_nm) {
-    params.page = pg_nm
-    const query = Object.keys(params)
-      .map(key => `${key}=${params[key]}`)
-      .join('&')
-    return `${url.pathname}?${query}`
+    pg_nm = Math.max(1, Math.min(pg_nm, maxPages));
+    const q = {...query};
+    q.page = pg_nm;
+    const query_ = Object.keys(q).map(k => `${k}=${q[k]}`).join('&');
+    return `${url.pathname}?${query_}`
   }
+
+  $: pages = getPages(maxPages, current);
+
 </script>
 
+{#if pages.length > 0}
 <div class="flex justify-center pagination">
   <a class="item" href={pgLink(1)} class:disabled={current == 1}>
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,3 +85,4 @@
     </svg>
   </a>
 </div>
+{/if}
