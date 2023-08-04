@@ -138,7 +138,11 @@
               </p>
             </div>
             <div>
-              <img class="block w-full h-auto" src={posts[2].item[0]?.img?.data.attributes.formats.large.url} />
+              <!-- {posts[2].item[0]?.img?.data.attributes.formats.large.url} -->
+              <img
+                class="block w-full h-auto"
+                src="https://stravelte.s3.ap-northeast-2.amazonaws.com/sl_89c86cf342.jpg"
+              />
             </div>
           </div>
         </div>
@@ -154,7 +158,11 @@
               </p>
             </div>
             <div>
-              <img class="block w-full h-auto" src={posts[2].item[1]?.img?.data.attributes.formats.large.url} />
+              <!-- {posts[2].item[1]?.img?.data.attributes.formats.large.url} -->
+              <img
+                class="block w-full h-auto"
+                src="https://stravelte.s3.ap-northeast-2.amazonaws.com/s2_903faa2a39.jpg"
+              />
             </div>
           </div>
         </div>
@@ -170,7 +178,11 @@
               </p>
             </div>
             <div>
-              <img class="block w-full h-auto" src={posts[2].item[2].img?.data.attributes.formats.large.url} />
+              <!-- {posts[2].item[2].img?.data.attributes.formats.large.url} -->
+              <img
+                class="block w-full h-auto"
+                src="https://stravelte.s3.ap-northeast-2.amazonaws.com/s3_9f832d97bb.jpg"
+              />
             </div>
           </div>
         </div>
@@ -185,9 +197,10 @@
                 {posts[2].item[3].desc}
               </p>
               <div class="flex items-center justify-center">
+                <!-- {posts[2].item[3].img?.data.attributes.formats.large.url} -->
                 <img
                   class="block w-auto h-[300px] p:w-full p:h-auto p-6"
-                  src={posts[2].item[3].img?.data.attributes.formats.large.url}
+                  src="https://stravelte.s3.ap-northeast-2.amazonaws.com/s4_e0a17879ff.jpg"
                 />
               </div>
             </div>

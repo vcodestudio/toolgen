@@ -188,9 +188,10 @@
         <div class="fill-blue pop-profile flex text-white m:flex-col m:py-[60px] m:w-full m:max-w-full">
           <div class="thumb flex-[5] bg-white m:flex-none flex m:bg-transparent justify-center">
             <div class="bg-white">
+              <!-- {$popup.data.detail_image?.data.attributes.url} -->
               <img
                 class="w-full h-full block object-cover m:h-[350px] m:w-auto"
-                src={$popup.data.detail_image?.data.attributes.url}
+                src={$popup.data?.img}
                 alt={$popup.data?.name}
               />
             </div>

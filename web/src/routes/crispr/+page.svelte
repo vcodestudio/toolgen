@@ -6,8 +6,12 @@
   import { popup } from '../../lib/screen'
   import { onMount } from 'svelte'
 
+  import dat1 from '$lib/crispr/01.json'
+  import dat2 from '$lib/crispr/02.json'
+  import dat3 from '$lib/crispr/03.json'
+
   let sims = ['01', '02', '03']
-  let dats = []
+  let dats = [dat1, dat2, dat3]
   export let data
   $: tab = data.tab
   $: posts =
@@ -20,19 +24,14 @@
           .reverse()
       : []
 
-  // const pgSize = 10
-  // $: pg = +$page.url.searchParams.get('page') ?? 1 + 0 * selectedCountry.length
-  // $: maxPg = Math.ceil(posts.length / pgSize)
-  // $: posts_ = posts.slice((pg - 1) * pgSize, pg * pgSize)
-
   onMount(() => {
-    sims.forEach((a, i) => {
-      fetch(`/crispr/${a}.json`)
-        .then(r => r.json())
-        .then(r => {
-          dats[i] = r
-        })
-    })
+    // sims.forEach((a, i) => {
+    //   fetch(`/crispr/${a}.json`)
+    //     .then(r => r.json())
+    //     .then(r => {
+    //       dats[i] = r
+    //     })
+    // })
   })
   let selectedCountry = 'all'
   // 한국, 미국, 일본, 케나다, 브라질, 유럽, 인도

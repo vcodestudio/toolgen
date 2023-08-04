@@ -10,6 +10,64 @@
   export let data
   $: posts = data.page
 
+  let test_sls = [
+    'https://stravelte.s3.ap-northeast-2.amazonaws.com/123_3dfe0acd1c.jpg',
+    'https://stravelte.s3.ap-northeast-2.amazonaws.com/4324_5f1bded53d.jpg',
+    'https://stravelte.s3.ap-northeast-2.amazonaws.com/53252_1fbb2bdb7d.jpg',
+    'https://stravelte.s3.ap-northeast-2.amazonaws.com/2312312_e846cc22bf.jpg',
+  ]
+
+  let test_ports = [
+    [
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_dac082f360.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_826bc4afef.jpg',
+    ],
+    [
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_1_89b84533a4.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_1_8420371590.jpg',
+    ],
+    [
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_2_0210ea9d18.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_2_5e91ef303e.jpg',
+    ],
+    [
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_3_51c9db837d.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_3_a2eebc6575.jpg',
+    ],
+    [
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_4_f7a632dec4.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_4_f2d00d21a9.jpg',
+    ],
+    [
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_5_b67e042887.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_5_d05e9f9fb2.jpg',
+    ],
+    [
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_6_841ba51839.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_6_4cac803f69.jpg',
+    ],
+    [
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_7_66459086bb.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_7_4d97590a1d.jpg',
+    ],
+    [
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_8_898ff33c62.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_9_c28e63e47a.jpg',
+    ],
+    [
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_9_061c680851.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_10_590b002a91.jpg',
+    ],
+    [
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_10_2dc41ba74f.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_11_807a40fe9d.jpg',
+    ],
+    [
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_11_897b689e97.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_8_65126dc886.jpg',
+    ],
+  ]
+
   onMount(() => {
     console.log('page', posts)
   })
@@ -26,16 +84,18 @@
           role="button"
           tabindex="0"
           on:click={() => {
-            popup.set({ type: 'profile', data: item })
+            popup.set({ type: 'profile', data: Object.assign(item, { img: test_ports[i][1] }) })
           }}
           on:keydown={event => {
             if (event.key === 'Enter' || event.key === ' ') {
-              popup.set({ type: 'profile', data: item })
+              popup.set({ type: 'profile', data: Object.assign(item, { img: test_ports[i][1] }) })
             }
           }}
         >
           <div class="thumb">
-            <img class="block object-cover w-full h-full" src={item.thumbnail?.data.attributes.url} alt={item.name} />
+            <!-- test_ports -->
+            <!-- {item.thumbnail?.data.attributes.url} -->
+            <img class="block object-cover w-full h-full" src={test_ports[i][0]} alt={item.name} />
           </div>
           <div class="flex grid flex-col items-start flex-auto gap-0 p-4 py-6 fill-blue desc">
             <div class="flex items-end gap-2">
@@ -56,7 +116,8 @@
       <div class="swiper-slide">
         <div class="flex items-center gap-6 phone:flex-col">
           <div class="thumb relative w-[180px] h-[180px] flex-none">
-            <img class="block object-cover w-full h-full" src={item.thumb?.data.attributes.url} alt={item.name} />
+            <!-- {item.thumb?.data.attributes.url} -->
+            <img class="block object-cover w-full h-full" src={test_sls[i]} alt={item.name} />
             <svg class="absolute top-0 left-0 w-full h-full scale-105 color-yellow" viewBox="0 0 357.14 357.14">
               <path
                 fill="currentColor"
