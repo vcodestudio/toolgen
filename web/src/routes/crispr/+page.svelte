@@ -181,10 +181,10 @@
         </p>
       </div>
       <Table
-        data={[['국가', '특허번호', '등록일', '상태'], ...posts_.map(a => [a.con_name, a.title, a.date, a.state])]}
+        data={[['국가', '특허번호', '등록일', '상태'], ...posts.map(a => [a.con_name, a.title, a.date, a.state])]}
       />
       {#if posts.length}
-        <Pagination maxPages={maxPg} current={pg} />
+        <!-- <Pagination maxPages={maxPg} current={pg} /> -->
       {/if}
     </div>
   </div>
