@@ -10,6 +10,7 @@
 
   export let data
   $: posts = data.page
+  $: presses = data.original.data[0].attributes.presses.data
 </script>
 
 <MobileHeaderW />
@@ -83,6 +84,6 @@
     />
   </div>
 </Section>
-<!-- <Section>
-  <CardNews title="Related Contents" posts={[1, 1]} />
-</Section> -->
+<Section>
+  <CardNews title="Related Contents" posts={presses} listUrl="/investors/news" />
+</Section>

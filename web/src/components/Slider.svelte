@@ -15,8 +15,8 @@
   //   Swiper.use([EffectFade])
 
   onMount(() => {
-    console.log(options)
-    const config = {
+    // console.log(options)
+    let config = {
       loop: true,
       spaceBetween,
       on: {
@@ -27,7 +27,7 @@
     }
 
     // merge options
-    Object.assign(config, options)
+    config = Object.assign(config, options)
     // const config = {
     //   loop: true,
     //   spaceBetween,

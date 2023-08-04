@@ -14,7 +14,7 @@
 
   function ru(a) {
     menus.forEach(b => (b.selected = false))
-    menus.find(b => b.link == a.route.id).selected = true
+    menus.find(b => a.route.id.includes(b.link)).selected = true
     menus = menus
   }
 
@@ -26,7 +26,7 @@
 </svelte:head>
 <PageMarginTop />
 <Section>
-  <div class="grid gap-[6rem] p:gap-[3rem]">
+  <div class="grid gap-[2rem] p:gap-[2rem]">
     <SubMenus {menus} />
     <div>
       <h1>{menus.find(a => a.selected)?.title}</h1>

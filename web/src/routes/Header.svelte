@@ -74,7 +74,7 @@
     menuActive = false
     const path = $page.route.id ?? false
     menus.map(a => {
-      if (a.link == path) {
+      if (path.includes(a.link)) {
         a.selected = true
       } else {
         a.selected = false

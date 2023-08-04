@@ -12,6 +12,7 @@
   export let data
   $: posts = data.page
   $: cards = posts.slice(2, 5)
+  $: presses = data.original.data[0].attributes.presses.data
 
   onMount(() => {
     console.log('card', cards)
@@ -41,6 +42,6 @@
     </div>
   </Overview>
 </Section>
-<!-- <Section>
-  <CardNews title="Related Contents" posts={[1, 1, 1, 1, 1]} />
-</Section> -->
+<Section>
+  <CardNews title="Related Contents" posts={presses} listUrl="/investors/news" />
+</Section>

@@ -7,9 +7,13 @@
   import SectionImg from '../../components/SectionImg.svelte'
   import Pipline from '../../components/Pipline.svelte'
   import MobileHeaderW from '../../components/MobileHeaderW.svelte'
+  import { onMount } from 'svelte'
 
   export let data
   $: posts = data.page
+  $: presses = data.original.data[0].attributes.presses.data
+
+  onMount(() => {})
 </script>
 
 <MobileHeaderW />
@@ -99,6 +103,6 @@
     />
   </div>
 </Section>
-<!-- <Section>
-  <CardNews title="Related Contents" posts={[1, 1]} />
-</Section> -->
+<Section>
+  <CardNews title="Related Contents" posts={presses} listUrl="/investors/news" />
+</Section>

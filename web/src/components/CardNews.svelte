@@ -41,12 +41,12 @@
     </a>
   </div>
   <div class="w-full h-full" bind:this={slide}>
-    <div class="items-center swiper-wrapper">
+    <div class="items-stretch swiper-wrapper">
       {#each posts as post, idx}
         {#if idx + 1 < 5}
           <a
             href="{listUrl}/{post.id}"
-            class="swiper-slide news-card m:p-4 m:w-[280px] hover:bg-gray-50 transition-colors"
+            class=" h-auto swiper-slide news-card m:p-4 m:w-[280px] hover:bg-gray-50 transition-colors"
           >
             <div class="flex flex-col gap-4 m:gap-2">
               <div class="flex items-center gap-4">
@@ -55,7 +55,7 @@
                     {post.type}
                   </p>
                 {/if}
-                <p class="{$isPC ? 'text16-400' : 'text14-400'} fg-sub single-line">{post.attributes.date}</p>
+                <p class="{$isPC ? 'text16-400' : 'text14-400'} fg-sub single-line">{post?.attributes?.date}</p>
               </div>
               <p class={$isPC ? 'text24-500' : 'text16-500'}>
                 {post.attributes.title}
@@ -63,7 +63,7 @@
             </div>
           </a>
         {:else}
-          <a href={listUrl} class="swiper-slide">
+          <a href={listUrl} class="h-auto swiper-slide">
             <div class="flex items-center h-full">
               <div
                 class="rounded-full w-[3rem] h-[3rem] border border-gray-200 flex justify-center items-center hover:bg-gray-50 transition-colors"

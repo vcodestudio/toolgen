@@ -61,6 +61,16 @@
           "localized": true
         }
       }
+    },
+    "notices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::notice.notice"
+    },
+    "presses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::press.press"
     }
   }
 }

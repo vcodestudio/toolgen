@@ -9,9 +9,7 @@
 
   export let data
   $: posts = data.page
-  onMount(() => {
-    console.log(posts)
-  })
+  onMount(() => {})
 
   let histories = [
     { year: '1999', month: '1월', content: '㈜툴젠 설립 (본점소재지: 서울특별시 동작구 사당4동 267-30)' },
@@ -89,175 +87,174 @@
 </script>
 
 <MobileHeaderW />
-<Banner src={posts[0].imgUrl} />
-<Section class_="m:pb-0">
-  <div class="relative w-full h-0">
-    <div
-      class="
+{#if posts}
+  <Banner src={posts[0].imgUrl} />
+  <Section class_="m:pb-0">
+    <div class="relative w-full h-0">
+      <div
+        class="
         bg-[#001B71] bg-opacity-90 bg-blend-multiply text-white absolute top-0 left-0 rounded-md p-8 translate-y-[-70%]
         m:p-4 m:-translate-y-[100%]
         "
-    >
-      <h1 class="m:text24">
-        Innovate Genome,<br />
-        Edit Your Life
-      </h1>
+      >
+        <h1 class="m:text24">
+          Innovate Genome,<br />
+          Edit Your Life
+        </h1>
+      </div>
     </div>
-  </div>
-</Section>
-<Section>
-  <div class="flex flex-col gap-4">
-    <p class="text16-700 color-mint">About Us</p>
-    <h3 class="color-navy">{posts[1].title}</h3>
-    {@html posts[1].content.html}
-    <SectionImg src={posts[1].imgUrl} />
-    <div class="flex justify-end m:justify-center">
-      <DownloadButton title="CI 다운로드" />
+  </Section>
+  <Section>
+    <div class="flex flex-col gap-4">
+      <p class="text16-700 color-mint">About Us</p>
+      <h3 class="color-navy">{posts[1].title}</h3>
+      {@html posts[1].content.html}
+      <SectionImg src={posts[1].imgUrl} />
+      <div class="flex justify-end m:justify-center">
+        <DownloadButton title="CI 다운로드" />
+      </div>
     </div>
-  </div>
-</Section>
+  </Section>
 
-<Section>
-  <div class="flex flex-col gap-4">
-    <p class="text16-700 color-mint">ToolGen History</p>
-    <Slider
-      navigation={false}
-      options="{{
-        direction: 'vertical',
-      }},"
-      color={{
-        active: 'fill-mint',
-        inactive: 'fill-navy',
-      }}
-    >
-      <div class="swiper-slide">
-        <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
-          <div class="flex flex-col gap-4">
-            <h3 class="color-navy">
-              {posts[2].item[0].year}<br />
-              {posts[2].item[0].title}
-            </h3>
-            <p class="max-w-[350px]">
-              {posts[2].item[0].desc}
-            </p>
-          </div>
-          <div>
-            <img class="block w-full h-auto" src={posts[2].item[0].img.data.attributes.formats.large.url} />
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
-          <div class="flex flex-col gap-4">
-            <h3 class="color-navy">
-              {posts[2].item[1].year}<br />
-              {posts[2].item[1].title}
-            </h3>
-            <p class="max-w-[350px]">
-              {posts[2].item[1].desc}
-            </p>
-          </div>
-          <div>
-            <img class="block w-full h-auto" src={posts[2].item[1].img.data.attributes.formats.large.url} />
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
-          <div class="flex flex-col gap-4">
-            <h3 class="color-navy">
-              {posts[2].item[2].year}<br />
-              {posts[2].item[2].title}
-            </h3>
-            <p class="max-w-[350px]">
-              {posts[2].item[2].desc}
-            </p>
-          </div>
-          <div>
-            <img class="block w-full h-auto" src={posts[2].item[2].img.data.attributes.formats.large.url} />
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="grid gap-6">
-          <div class="flex flex-col gap-4">
-            <h3 class="color-navy">
-              {posts[2].item[3].year}<br />
-              {posts[2].item[3].title}
-            </h3>
-            <p class="">
-              {posts[2].item[3].desc}
-            </p>
-            <div class="flex items-center justify-center">
-              <img
-                class="block w-auto h-[300px] p:w-full p:h-auto p-6"
-                src={posts[2].item[3].img.data.attributes.formats.large.url}
-              />
+  <Section>
+    <div class="flex flex-col gap-4">
+      <p class="text16-700 color-mint">ToolGen History</p>
+      <Slider
+        navigation={false}
+        color={{
+          active: 'fill-mint',
+          inactive: 'fill-navy',
+        }}
+      >
+        <div class="swiper-slide">
+          <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
+            <div class="flex flex-col gap-4">
+              <h3 class="color-navy">
+                {posts[2].item[0].year}<br />
+                {posts[2].item[0].title}
+              </h3>
+              <p class="max-w-[350px]">
+                {posts[2].item[0].desc}
+              </p>
+            </div>
+            <div>
+              <img class="block w-full h-auto" src={posts[2].item[0]?.img?.data.attributes.formats.large.url} />
             </div>
           </div>
         </div>
-      </div>
-    </Slider>
-  </div>
-</Section>
-<Section class_="fill-bluegray overflow-hidden m:pb-0">
-  <div class="flex gap-20 m:flex-col m:flex-col-reverse m:gap-4 m:items-center">
-    <img src="/images/about/2.png" class="block translate-y-20 m:w-[170px] m:translate-y-0" />
-    <div class="flex flex-col gap-6 m:gap-2">
-      <p class="text16-700 color-mint">Founder</p>
-      <h3 class="color-navy">{posts[3].title}</h3>
-      <p>
-        {posts[3].content.text}
-      </p>
-    </div>
-  </div>
-</Section>
-<Section class_="fill-navy text-white relative overflow-hidden">
-  <div class="grid grid-cols-[1fr,2fr] gap-20 relative phone:grid-cols-1 phone:gap-2">
-    <div>
-      <h3>History</h3>
-    </div>
-    <div class="relative">
-      <div class="grid gap-8 m:gap-2 pc:max-h-[450px] overflow-auto">
-        {#each histories as item, i}
-          <div class="flex items-start gap-4">
-            <p class="text16-700 flex-[1]">
-              {#if histories[i - 1]?.year !== item.year}
-                {item.year}
-              {/if}
-            </p>
-            <p class="fg-sub flex-[1]">{item.month}</p>
-            <p class="flex-[10]">
-              {@html item.content}
-            </p>
+        <div class="swiper-slide">
+          <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
+            <div class="flex flex-col gap-4">
+              <h3 class="color-navy">
+                {posts[2].item[1].year}<br />
+                {posts[2].item[1].title}
+              </h3>
+              <p class="max-w-[350px]">
+                {posts[2].item[1].desc}
+              </p>
+            </div>
+            <div>
+              <img class="block w-full h-auto" src={posts[2].item[1]?.img?.data.attributes.formats.large.url} />
+            </div>
           </div>
-        {/each}
-        <div class="pc">
-          <br />
-          <br />
-          <br />
         </div>
-      </div>
-      <div class="pc gradient-navy absolute -bottom-[1px] left-0 h-[100px] w-full pointer-events-none" />
+        <div class="swiper-slide">
+          <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
+            <div class="flex flex-col gap-4">
+              <h3 class="color-navy">
+                {posts[2].item[2].year}<br />
+                {posts[2].item[2].title}
+              </h3>
+              <p class="max-w-[350px]">
+                {posts[2].item[2].desc}
+              </p>
+            </div>
+            <div>
+              <img class="block w-full h-auto" src={posts[2].item[2].img?.data.attributes.formats.large.url} />
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="grid gap-6">
+            <div class="flex flex-col gap-4">
+              <h3 class="color-navy">
+                {posts[2].item[3].year}<br />
+                {posts[2].item[3].title}
+              </h3>
+              <p class="">
+                {posts[2].item[3].desc}
+              </p>
+              <div class="flex items-center justify-center">
+                <img
+                  class="block w-auto h-[300px] p:w-full p:h-auto p-6"
+                  src={posts[2].item[3].img?.data.attributes.formats.large.url}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Slider>
     </div>
-  </div>
-</Section>
-<Section>
-  <div class="flex flex-col gap-4 m:gap-2">
-    <p class="text16-700 color-mint">ToolGen Location</p>
-    <div class="grid grid-cols-2 gap-8 phone:grid-cols-1 m:gap-4">
-      <div class="flex flex-col gap-4 m:gap-2">
-        <h3 class="color-navy">{posts[5].title}</h3>
-        <div class="flex flex-col gap-0">
-          {@html posts[5].content.html}
-        </div>
+  </Section>
+  <Section class_="fill-bluegray overflow-hidden m:pb-0">
+    <div class="flex gap-20 m:flex-col m:flex-col-reverse m:gap-4 m:items-center">
+      <img src="/images/about/2.png" class="block translate-y-20 m:w-[170px] m:translate-y-0" />
+      <div class="flex flex-col gap-6 m:gap-2">
+        <p class="text16-700 color-mint">Founder</p>
+        <h3 class="color-navy">{posts[3].title}</h3>
+        <p>
+          {posts[3].content.text}
+        </p>
       </div>
-      <div class="flex flex-col gap-4 m:gap-2">
-        <h3 class="color-navy">{posts[6].title}</h3>
-        <div class="flex flex-col gap-0">
-          {@html posts[6].content.html}
+    </div>
+  </Section>
+  <Section class_="fill-navy text-white relative overflow-hidden">
+    <div class="grid grid-cols-[1fr,2fr] gap-20 relative phone:grid-cols-1 phone:gap-2">
+      <div>
+        <h3>History</h3>
+      </div>
+      <div class="relative">
+        <div class="grid gap-8 m:gap-2 pc:max-h-[450px] overflow-auto">
+          {#each histories as item, i}
+            <div class="flex items-start gap-4">
+              <p class="text16-700 flex-[1]">
+                {#if histories[i - 1]?.year !== item?.year}
+                  {item.year}
+                {/if}
+              </p>
+              <p class="fg-sub flex-[1]">{item.month}</p>
+              <p class="flex-[10]">
+                {@html item.content}
+              </p>
+            </div>
+          {/each}
+          <div class="pc">
+            <br />
+            <br />
+            <br />
+          </div>
+        </div>
+        <div class="pc gradient-navy absolute -bottom-[1px] left-0 h-[100px] w-full pointer-events-none" />
+      </div>
+    </div>
+  </Section>
+  <Section>
+    <div class="flex flex-col gap-4 m:gap-2">
+      <p class="text16-700 color-mint">ToolGen Location</p>
+      <div class="grid grid-cols-2 gap-8 phone:grid-cols-1 m:gap-4">
+        <div class="flex flex-col gap-4 m:gap-2">
+          <h3 class="color-navy">{posts[5].title}</h3>
+          <div class="flex flex-col gap-0">
+            {@html posts[5].content.html}
+          </div>
+        </div>
+        <div class="flex flex-col gap-4 m:gap-2">
+          <h3 class="color-navy">{posts[6].title}</h3>
+          <div class="flex flex-col gap-0">
+            {@html posts[6].content.html}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</Section>
+  </Section>
+{/if}

@@ -16,12 +16,15 @@
 
   const cards = [
     {
+      link: '/platform',
       image: '/images/static/fcc4e8b33c5441804c7b7c47262add82.jpg',
     },
     {
+      link: '/therapeutics',
       image: '/images/static/f67231e5cb6eb3a15d80cb481e45dd27.jpg',
     },
     {
+      link: '/crops',
       image: '/images/static/30b695f77b9c1f6430cdec0aaa2a1117.jpg',
     },
   ]
@@ -61,12 +64,12 @@
     </div>
     <div class="grid grid-cols-3 gap-6 m:flex m:scroll-x">
       {#each cards as card, i}
-        <div class="card" style="background-image:url({card.image})">
+        <a href={card.link} class="card" style="background-image:url({card.image})">
           <div class="text">
             <h4>{cont[i + 2]?.title}</h4>
             <p class={$isPC ? 'body16-400' : 'body14-400'}>{cont[i + 2]?.content.text}</p>
           </div>
-        </div>
+        </a>
       {/each}
     </div>
   </div>

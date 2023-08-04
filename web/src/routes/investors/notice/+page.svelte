@@ -1,6 +1,7 @@
 <script>
   import Pagination from '../../../components/Pagination.svelte'
   import Section from '../../..//components/Section.svelte'
+  import { page } from '$app/stores'
 
   export let data
   $: posts = data.data
@@ -20,7 +21,7 @@
         <p>날짜</p>
       </div>
       {#each posts as post, i}
-        <a class="item" href={`/notice/${post.id}`}>
+        <a class="item" href={`${$page.url.pathname}/${post.id}`}>
           <p>{post.id}</p>
           <p>{post.attributes.title}</p>
           <p>{post.attributes.date}</p>

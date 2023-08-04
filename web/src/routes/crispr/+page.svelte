@@ -20,6 +20,11 @@
           .reverse()
       : []
 
+  const pgSize = 10
+  $: pg = +$page.url.searchParams.get('page') ?? 1 + 0 * selectedCountry.length
+  $: maxPg = Math.ceil(posts.length / pgSize)
+  $: posts_ = posts.slice((pg - 1) * pgSize, pg * pgSize)
+
   onMount(() => {
     sims.forEach((a, i) => {
       fetch(`/crispr/${a}.json`)
@@ -37,14 +42,12 @@
     { name: '캐나다', slug: 'CA', lng: '-106.346771', lat: '56.130366' },
     { name: '중국', slug: 'CN', lng: '104.195397', lat: '35.861660' },
     { name: '독일', slug: 'DE', lng: '10.451526', lat: '51.165691' },
-    { name: '유럽', slug: 'EU', lng: '14.550072', lat: '47.516231' },
     { name: '홍콩', slug: 'HK', lng: '114.109497', lat: '22.396428' },
     { name: '인도', slug: 'IN', lng: '78.962880', lat: '20.593684' },
     { name: '일본', slug: 'JP', lng: '138.252924', lat: '36.204824' },
     { name: '대한민국', slug: 'KR', lng: '127.766922', lat: '35.907757' },
     { name: '싱가포르', slug: 'SG', lng: '103.819836', lat: '1.352083' },
     { name: '미국', slug: 'US', lng: '-95.712891', lat: '37.090240' },
-    // { name: '러시아', slug: 'RU', lng: '105.318756', lat: '61.524010' },
   ]
 
   function isIterable(obj) {
@@ -67,27 +70,6 @@
     a.x = lngToX(a.lng) + offset[0]
     a.y = latToY(a.lat) + offset[1]
   })
-
-  const generateData = country => {
-    const data = []
-    const states = ['출원', '등록', '심사', '발행', '취소']
-    const date = new Date('2021-01-01')
-
-    country = countries.find(a => a.slug == selectedCountry)?.name
-    for (let i = 0; i < 10; i++) {
-      // if country == "", random country
-      let sc = country
-      if (!country) sc = countries[Math.floor(Math.random() * countries.length)].name
-      data.push({
-        name: sc,
-        number: Math.floor(Math.random() * 10000000),
-        date: date.toISOString().slice(0, 10),
-        state: states[Math.floor(Math.random() * states.length)],
-      })
-      date.setDate(date.getDate() + 1)
-    }
-    return data
-  }
 
   const _active = 'text24-700 border-b-2 border-black'
   const _inactive = 'text24-400 fg-sub'
@@ -199,9 +181,11 @@
         </p>
       </div>
       <Table
-        data={[['국가', '특허번호', '등록일', '상태'], ...posts.map(a => [a.con_name, a.title, a.date, a.state])]}
+        data={[['국가', '특허번호', '등록일', '상태'], ...posts_.map(a => [a.con_name, a.title, a.date, a.state])]}
       />
-      <!-- <Pagination /> -->
+      {#if posts.length}
+        <Pagination maxPages={maxPg} current={pg} />
+      {/if}
     </div>
   </div>
 </Section>

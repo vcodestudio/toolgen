@@ -1,30 +1,31 @@
 <script>
-    import PageMarginTop from "/src/components/PageMarginTop.svelte"
-    import Section from "/src/components/Section.svelte"
-    import SubMenus from "/src/components/SubMenus.svelte"
-    import {page} from "$app/stores";
+  import PageMarginTop from '/src/components/PageMarginTop.svelte'
+  import Section from '/src/components/Section.svelte'
+  import SubMenus from '/src/components/SubMenus.svelte'
+  import { page } from '$app/stores'
 
-    let menus = [
-        {selected:false, name:"CRISPR-Cas9 Foundational Patent", link:"/crispr"},
-        {selected:false, name:"저촉심사", link:"/crispr/test"},
-        {selected:false, name:"CRISPR-Cas9", link:"/crispr/cas9"},
-    ];
+  let menus = [
+    { selected: false, name: 'CRISPR-Cas9 Foundational Patent', link: '/crispr' },
+    { selected: false, name: '저촉심사', link: '/crispr/test' },
+    { selected: false, name: 'CRISPR-Cas9', link: '/crispr/cas9' },
+  ]
 
-    function ru(a) {
-        menus.forEach(b=>b.selected=false);
-        menus.find(b=>b.link==a.route.id).selected=true;
-        menus = menus;
-    }
+  function ru(a) {
+    menus.forEach(b => (b.selected = false))
+    menus.find(b => a.route.id == b.link).selected = true
+    menus = menus
+  }
 
-    $: ru($page);
+  $: ru($page)
 </script>
+
 <svelte:head>
-    <title>{menus.find(a=>a.selected)?.name}</title>
+  <title>{menus.find(a => a.selected)?.name}</title>
 </svelte:head>
-<PageMarginTop/>
-<Section class_="m:pb-0">
-    <div class="grid gap-[6rem]">
-        <SubMenus menus={menus}/>
-    </div>
+<PageMarginTop />
+<Section class_="pb-0">
+  <div class="grid gap-[6rem]">
+    <SubMenus {menus} />
+  </div>
 </Section>
-<slot/>
+<slot />

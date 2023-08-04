@@ -32,13 +32,47 @@ export async function LoadPost(params = { post_type: 'notices', locale: 'ko-KR',
 
   const token =
     'a4533bd1babe4da25040ac073d8a3e9708cd48b2667fcd65e362fb018832920c18585b59d3e8ca5974e248cb5edb96065993f498db49766c7618b1e8acb32ff07b474802a35a357cbb92974e74413ffcb2767ab2535f5c3464afa9372063b97d43ee10aebacc4c73764c7eb9dc79a8d48052ad690dc71041b7f96aaead6d3a15'
-  const req = await fetch(`http://127.0.0.1:1337/api/${type}/?${query}`, {
+  const req = await fetch(`http://0.0.0.0:1337/api/${type}/?${query}`, {
     headers: {
       method: 'GET',
       Authorization: `Bearer ${token}`,
+      cors: true,
     },
   })
   const data = await req.json()
 
+  data.test = query
+
   return data
+}
+
+export function extractContent(data) {
+  const result = []
+
+  // content 항목을 순회하며 정보 추출
+  data.data[0]?.attributes?.content?.forEach(item => {
+    switch (item.__component) {
+      case 'page-item.content':
+        const title = item.title
+        let content = {
+          html: item.content?.replace(/\u2028/g, ''),
+          text: item.content
+            ?.replace(/<[^>]*>/g, '')
+            .replace(/&nbsp;/g, '')
+            .replace(/\u2028/g, '\r\n')
+            .replace(/\u0003/g, ''),
+        }
+        // remove meta tag from content, &nbsp; to break line
+        // content = content.replace(/<meta.*>/g, '').replace(/&nbsp;/g, '')
+        // remove lsep special character
+        const imgUrl = item.img.data ? item.img.data.attributes.formats.large.url : null // 큰 이미지 URL
+        result.push({ title, content, imgUrl })
+        break
+      default:
+        result.push(item)
+        break
+    }
+  })
+
+  return result
 }

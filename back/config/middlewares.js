@@ -17,6 +17,7 @@ module.exports = [
             "blob:",
             "dl.airtable.com",
             "stravelte.s3.ap-northeast-2.amazonaws.com",
+            "market-assets.strapi.io",
           ],
           "media-src": [
             "'self'",
