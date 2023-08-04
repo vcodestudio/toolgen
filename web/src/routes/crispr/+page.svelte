@@ -13,17 +13,17 @@
   $: posts =
     dats.length == 3
       ? dats[tab - 1]
-          .filter(a => {
+          ?.filter(a => {
             return a.con_code.includes(selectedCountry) || selectedCountry == 'all'
           })
           .sort((a, b) => +a.date.replaceAll('-', '') - b.date.replaceAll('-', ''))
           .reverse()
       : []
 
-  const pgSize = 10
-  $: pg = +$page.url.searchParams.get('page') ?? 1 + 0 * selectedCountry.length
-  $: maxPg = Math.ceil(posts.length / pgSize)
-  $: posts_ = posts.slice((pg - 1) * pgSize, pg * pgSize)
+  // const pgSize = 10
+  // $: pg = +$page.url.searchParams.get('page') ?? 1 + 0 * selectedCountry.length
+  // $: maxPg = Math.ceil(posts.length / pgSize)
+  // $: posts_ = posts.slice((pg - 1) * pgSize, pg * pgSize)
 
   onMount(() => {
     sims.forEach((a, i) => {
