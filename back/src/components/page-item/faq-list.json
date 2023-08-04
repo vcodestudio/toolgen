@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_page_item_faq_lists",
+  "info": {
+    "displayName": "faq-list",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-item.faq"
+    }
+  }
+}

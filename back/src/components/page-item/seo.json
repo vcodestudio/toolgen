@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_page_item_seos",
+  "info": {
+    "displayName": "SEO",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "thumbnail": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "desc": {
+      "type": "text"
+    }
+  }
+}

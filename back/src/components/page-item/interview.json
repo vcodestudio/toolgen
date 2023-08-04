@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_page_item_interviews",
+  "info": {
+    "displayName": "Interview",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "thumb": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "interview": {
+      "type": "text"
+    },
+    "eng_name": {
+      "type": "string"
+    },
+    "team": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_page_item_history_slides",
+  "info": {
+    "displayName": "history-slide",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "richtext"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

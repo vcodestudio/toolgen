@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_page_item_histories",
+  "info": {
+    "displayName": "history",
+    "icon": "archive",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "history": {
+      "displayName": "history-item",
+      "type": "component",
+      "repeatable": true,
+      "component": "misc.history-item"
+    }
+  }
+}

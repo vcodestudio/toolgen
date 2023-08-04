@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_page_item_piplines",
+  "info": {
+    "displayName": "pipline",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "desc": {
+      "type": "string"
+    }
+  }
+}

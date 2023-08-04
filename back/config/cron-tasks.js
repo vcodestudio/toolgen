@@ -45,7 +45,12 @@ module.exports = {
   playOnce: {
     task: ({ strapi }) => {
       //   Add your own logic here (e.g. send a queue of email, create a database backup, etc.).
-      console.log("ddda");
+      // Migrate("api::patent.patent", "01.json");
+      // Migrate("api::patent.patent", "02.json");
+      // Migrate("api::patent.patent", "03.json");
+      // console.log("dd");
+      // delte data table strapi "components_page_item_interviews"
+      // strapi.query("components_page_item_interviews").delete({});
     },
     options: {
       // play once after 10 seconds

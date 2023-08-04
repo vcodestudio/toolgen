@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_misc_history_items",
+  "info": {
+    "displayName": "history-item",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "string"
+    },
+    "month": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "content_": {
+      "type": "text"
+    }
+  }
+}

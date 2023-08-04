@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_item_faqs",
+  "info": {
+    "displayName": "faq",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "button_name": {
+      "type": "string"
+    },
+    "button_link": {
+      "type": "string"
+    }
+  }
+}

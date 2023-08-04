@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_page_item_history_sliders",
+  "info": {
+    "displayName": "history-slider",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-item.history-slide"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "recruits",
+  "info": {
+    "singularName": "recruit",
+    "pluralName": "recruits",
+    "displayName": "recruit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-item.recruit"
+    }
+  }
+}

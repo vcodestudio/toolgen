@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_page_item_footer_infos",
+  "info": {
+    "displayName": "footer_info",
+    "icon": "archive",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_misc_progress_items",
+  "info": {
+    "displayName": "progress-item",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

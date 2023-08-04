@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_profile_item_profiles",
+  "info": {
+    "displayName": "profile_item",
+    "icon": "archive",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "richtext"
+    },
+    "job": {
+      "type": "string"
+    },
+    "eng_name": {
+      "type": "string"
+    },
+    "job_2": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "detail_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
