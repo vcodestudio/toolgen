@@ -2,6 +2,16 @@
   import { popup } from '$lib/screen'
   export let items = []
   export let title = ''
+  export let progress = [
+    'Program(Disease)',
+    'Modeling',
+    'In vitro',
+    'In vivo',
+    'Lead Optimization',
+    'Pre-Clinical',
+    'IND',
+    'Phase 1',
+  ]
 </script>
 
 <div class="grid gap-6">
@@ -12,11 +22,11 @@
     <div class="grid gap-10 m:scroll-x">
       {#each items as item, idx}
         <div class="grid gap-4 pipline-item">
-          <div class="w-full flex gap-4 items-center">
+          <div class="flex items-center w-full gap-4">
             <h4 class="single-line">{item.title}</h4>
             <p class="text12-400 fg-sub single-line">{item.desc ?? ''}</p>
             {#if item.content}
-              <div class="flex-auto flex justify-end">
+              <div class="flex justify-end flex-auto">
                 <button
                   class="small lblue"
                   on:click={() => {
@@ -33,8 +43,8 @@
               <div class="progress-bar" style="width: {item.progress}%" />
             </div>
             <div class="flex">
-              {#each ['Program(Disease)', 'Modeling', 'In vitro', 'In vivo', 'Lead Optimization', 'Pre-Clinical', 'IND', 'Phase 1'] as item}
-                <p class="border-l-2 border-t-gray-400 px-1 text10-400 fg-sub flex-1">{item}</p>
+              {#each progress as item}
+                <p class="flex-1 px-1 border-l-2 border-t-gray-400 text10-400 fg-sub">{item}</p>
               {/each}
             </div>
           </div>

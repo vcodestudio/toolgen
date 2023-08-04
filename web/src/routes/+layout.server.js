@@ -7,9 +7,6 @@ export const load = async ({ params, url }) => {
     post_type: 'pages',
     'filters[pathname]': pathname,
     populate: 'deep,10',
-    // 'populate[0]': 'profiles',
-    // 'populate[1]': 'profiles.profile_item',
-    // 'populate[2]': 'profiles.profile_item.thumbnail',
   })
 
   const data_ = extractContent(data)

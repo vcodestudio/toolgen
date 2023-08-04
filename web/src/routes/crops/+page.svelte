@@ -53,10 +53,11 @@
       </p>
     </div>
     <Pipline
+      progress={['Target Discovery (0.5yr)', 'Phase 1 (3yr)', 'Phase 2 (2yr)', 'Phase 3 (2yr)', 'Commercialization']}
       items={[
         {
           title: '고함량올레산대두',
-          progress: 30,
+          progress: (4 / 5) * 100,
           desc: 'High-content oleic acid soybeans',
           content: `
         콩 지방산중의 하나인 올레산이 다른 지방산으로 변화되지 않게끔 해당 유전자를 교정함으로서 콩내 올레산 함량을 80% 이상 함유하는 콩을 개발하였습니다. 이는 올리브오일내의 올레산 함량 보다 높으며 재배 지역에 관계없이 올레산 고함량이 일정하다는 것을 확인하였고 2020년 미국 USDA-APHIS의 "Am I regulated?" 제도하에서 GMO규제면제를 승인받았습니다.
@@ -65,19 +66,19 @@
         {
           title: '갈변억제감자',
           desc: 'Browning-suppressed potato',
-          progress: 40,
+          progress: (2.5 / 5) * 100,
           content: `
         감자의 껍질을 없앨 경우 생기는 갈변현상을 일으키는 유전자를 교정하여 갈변억제 감자를 개발하였습니다. 한국 특허는 등록이 되었고 PCT 특허도 제출한 상태이며 또한 2022년 USDA-APHIS의 Secure Rule 제도하에서 GMO 규제면제를 승인받았습니다.
         `,
         },
-        { title: '제초제내성옥수수', progress: 20 },
-        { title: '제초제내성대두', progress: 50 },
-        { title: '아크릴아마이드억제감자', progress: 70 },
-        { title: '솔라닌독성억제감자', progress: 10 },
+        { title: '제초제내성옥수수', progress: 30 },
+        { title: '제초제내성대두', progress: 20 },
+        { title: '아크릴아마이드억제감자', progress: 20 },
+        { title: '솔라닌독성억제감자', progress: 20 },
         { title: '기능성대두', progress: 30 },
-        { title: '건조내성고추', progress: 90 },
-        { title: '독성억제담배', progress: 20 },
-        { title: '병저항성배추', progress: 10 },
+        { title: '건조내성고추', progress: 35 },
+        { title: '독성억제담배', progress: 35 },
+        { title: '병저항성배추', progress: 30 },
       ]}
     />
   </div>

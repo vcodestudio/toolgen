@@ -56,7 +56,7 @@
         {
           title: 'TGT-001 | Charcot-Marie-Tooth Disease',
           desc: 'CNS / PNS(신경)',
-          progress: 50,
+          progress: ((6 * 1) / 8) * 100,
           content: `
           TGT-001은 PMP22 유전자 중복에 의해 발생하는 유전질병인 CMT1A에 대한 유 전자교정 치료 프로그램입니다. 전세계에 100 만명 이상의 환자가 있는 CMT1A는 유전자 중복에 의해 PMP22 유전자가 과발현되고 이로 인해 말초신경(PNS)의 탈 수초화 (dem-yelination)가 일어나 생기는 질병으로 다른 많은 유전병처럼 아직 근본적인 치료법이 없기 때문에 의료적 미충족수요가 높습니다. 툴젠은 유전자교정 을 이용한 PMP22 유전자 발현 조절 기술을 바탕으로 CMT1A의 근본 원인을 교정 하여 완치를 목표로 한 TGT-001을 개발하고 있으며, 현재 동물 실험을 통해 치료 전략에 대한 검증을 마쳤습니다.
           `,
@@ -64,7 +64,7 @@
         {
           title: 'TG-LBP | Hemophilia B',
           desc: 'Liver(간)',
-          progress: 20,
+          progress: ((5 * 1) / 8) * 100,
           content: `
           다양한 질환에 적용이 가능한 유전자가위 치료제 플랫폼 기술입니다. 툴젠에서 자체적으로 발굴한 발현이 높은 safe harbor 유전자인 APOC3를 활용하여 치료적으로 필요한 유전자를 APOC3 locus에 삽입하는 치료전략을 가지고 있습니다. 현재는 Hemophilia B 환자들에게 결핍되어 있는 Factor 9 유전자를 유전자 가위를 활용하여 APOC3에 삽입하는 전략을 회사 내부에서의 동물 실험을 통해 치료 효율 검증 작업을 진행하고 있습니다.
           `,
@@ -77,7 +77,7 @@
         {
           title: 'Next-generation CAR-T',
           desc: 'CAR-T(면역세포)',
-          progress: 50,
+          progress: ((6 * 1) / 8) * 100,
           content: `
           <p><span class="font-bold color-blue">Engineered immune cell(면역세포)</span><br>
             툴젠의 Next-generation CAR-T는 유전자교정을 통해 DGK 유전자를 제거하여 항암 기능성을 향상시킨 면역세포치료제 플랫폼입니다. DGK 유전자 제거 CAR-T는 향상된 암세포 제거능(Cytotoxicity)싸이토카인 분비를 보입니다. 또한 면역세포 기능을 제어하기 위해 암이 사용하는 주요 신호 중 일부에 대해 저항성을 갖게 됩니다. DGK 유전자 제거 CAR-T는 또한 암 이식 모델(Xenograft model)마우스에서 치료 기능이 향상되는 것을 확인하였습니다. Next-generation CAR-T는 기능향상 CAR-T플랫폼으로 혈액암 및 고형암에 대한 향상된 기능을 할 것으로 기대되어 사업개발적으로는 국내외 CAR-T/ -NK, TCR-T 기업등과의 협력을 도모하고자 합니다.
@@ -87,7 +87,7 @@
         {
           title: 'CREAM',
           desc: 'Eye(눈)',
-          progress: 70,
+          progress: ((4 * 1) / 8) * 100,
           content: `
           <p>
             <span class="font-bold color-blue">Engineered MSC</span><br>
