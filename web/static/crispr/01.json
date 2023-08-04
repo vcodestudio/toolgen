@@ -1,0 +1,452 @@
+[
+  {
+    "auth": "특허",
+    "con_code": "AU",
+    "con_name": "호주",
+    "date": "2017-10-31",
+    "title": "2017254854",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "AU",
+    "con_name": "호주",
+    "date": "2013-10-23",
+    "title": "2013335451",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "AU",
+    "con_name": "호주",
+    "date": "2022-07-07",
+    "title": "2022204902",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "BR",
+    "con_name": "브라질",
+    "date": "2015-04-28",
+    "title": "BR1120150008708-6",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "BR",
+    "con_name": "브라질",
+    "date": "2020-01-10",
+    "title": "BR122020000664-1",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "CA",
+    "con_name": "캐나다",
+    "date": "2013-10-23",
+    "title": "2,888,190",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "CN",
+    "con_name": "중국",
+    "date": "2019-10-08",
+    "title": "201910950792.1",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "CN",
+    "con_name": "중국",
+    "date": "2015-10-23",
+    "title": "201510884156.5",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "CN",
+    "con_name": "중국",
+    "date": "2013-10-23",
+    "title": "201380066348.4",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "CN",
+    "con_name": "중국",
+    "date": "2019-10-08",
+    "title": "201910950935.9",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "CN",
+    "con_name": "중국",
+    "date": "2022-09-14",
+    "title": "202211117242.X ",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "CN",
+    "con_name": "중국",
+    "date": "2022-09-14",
+    "title": "202211116560.4",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "CN",
+    "con_name": "중국",
+    "date": "2019-10-08",
+    "title": "201910950859.1",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "CN",
+    "con_name": "중국",
+    "date": "2019-10-08",
+    "title": "201910950683.X",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "CN",
+    "con_name": "중국",
+    "date": "2019-02-25",
+    "title": "201910137869.3",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "실용",
+    "con_code": "DE",
+    "con_name": "유럽",
+    "date": "2017-09-28",
+    "title": "202013012610.8",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "실용",
+    "con_code": "DE",
+    "con_name": "유럽",
+    "date": "2017-09-28",
+    "title": "202013012597.7",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "EP",
+    "con_name": "유럽",
+    "date": "2020-05-29",
+    "title": "20164644.5",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "EP",
+    "con_name": "유럽",
+    "date": "2017-12-12",
+    "title": "17206792.8",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "EP",
+    "con_name": "유럽",
+    "date": "2013-10-23",
+    "title": "13849670.8",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "EP",
+    "con_name": "유럽",
+    "date": "2018-02-22",
+    "title": "18158147.1",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "EP",
+    "con_name": "유럽",
+    "date": "2022-05-31",
+    "title": "22176546.4",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "HK",
+    "con_name": "홍콩",
+    "date": "2021-05-04",
+    "title": "42021030377.2",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "HK",
+    "con_name": "홍콩",
+    "date": "2018-12-21",
+    "title": "18116450.9",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "HK",
+    "con_name": "홍콩",
+    "date": "2016-09-27",
+    "title": "16111313.9",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "HK",
+    "con_name": "홍콩",
+    "date": "2019-12-13",
+    "title": "16100558.6",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "HK",
+    "con_name": "홍콩",
+    "date": "2020-07-03",
+    "title": "42020010502.1",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "HK",
+    "con_name": "홍콩",
+    "date": "2020-07-02",
+    "title": "42020010336.4",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "HK",
+    "con_name": "홍콩",
+    "date": "2020-07-02",
+    "title": "42020010315.8",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "HK",
+    "con_name": "홍콩",
+    "date": "2020-06-07",
+    "title": "42020008798.9",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "HK",
+    "con_name": "홍콩",
+    "date": "2020-01-21",
+    "title": "42020001770.5",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "HK",
+    "con_name": "홍콩",
+    "date": "2018-12-21",
+    "title": "18116451.8",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "IN",
+    "con_name": "인도",
+    "date": "2015-05-18",
+    "title": "2854/CHENP/2015",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "JP",
+    "con_name": "일본",
+    "date": "2015-06-12",
+    "title": "2015-538033",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "JP",
+    "con_name": "일본",
+    "date": "2017-08-10",
+    "title": "2017-155410",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "JP",
+    "con_name": "일본",
+    "date": "2022-03-16",
+    "title": "2022-041576",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "KR",
+    "con_name": "한국",
+    "date": "2021-01-19",
+    "title": "10-2021-7001844",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "KR",
+    "con_name": "한국",
+    "date": "2018-03-05",
+    "title": "10-2018-7006398",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "KR",
+    "con_name": "한국",
+    "date": "2015-08-20",
+    "title": "10-2015-7022594",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "KR",
+    "con_name": "한국",
+    "date": "2015-08-20",
+    "title": "10-2015-7022593",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "KR",
+    "con_name": "한국",
+    "date": "2015-08-20",
+    "title": "10-2015-7022592",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "KR",
+    "con_name": "한국",
+    "date": "2015-05-26",
+    "title": "10-2015-7013868",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "KR",
+    "con_name": "한국",
+    "date": "2022-04-18",
+    "title": "10-2022-7012891",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "SG",
+    "con_name": "싱가포르",
+    "date": "2013-10-23",
+    "title": "11201503059X",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "SG",
+    "con_name": "싱가포르",
+    "date": "2018-10-29",
+    "title": "10201809564Y",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "SG",
+    "con_name": "싱가포르",
+    "date": "2018-10-29",
+    "title": "10201809566S",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "US",
+    "con_name": "미국",
+    "date": "2015-04-13",
+    "title": "14/685,568",
+    "state": "등록",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "US",
+    "con_name": "미국",
+    "date": "2020-08-27",
+    "title": "17/004,355",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "US",
+    "con_name": "미국",
+    "date": "2020-08-27",
+    "title": "17/004,338",
+    "state": "출원",
+    "type": "1"
+  },
+  {
+    "auth": "특허",
+    "con_code": "US",
+    "con_name": "미국",
+    "date": "2015-04-13",
+    "title": "14/685,510",
+    "state": "출원",
+    "type": "1"
+  }
+]

@@ -188,35 +188,32 @@
         <div class="fill-blue pop-profile flex text-white m:flex-col m:py-[60px] m:w-full m:max-w-full">
           <div class="thumb flex-[5] bg-white m:flex-none flex m:bg-transparent justify-center">
             <div class="bg-white">
-              <img class="w-full h-full block object-cover m:h-[350px] m:w-auto" src="/images/people-2.png" />
+              <img
+                class="w-full h-full block object-cover m:h-[350px] m:w-auto"
+                src={$popup.data.detail_image?.data.attributes.url}
+                alt={$popup.data?.name}
+              />
             </div>
           </div>
           <div class="desc p-6 grid gap-6 flex-[6] m:flex-[1]">
             <div class="flex">
               <div>
-                <p class="text16-700">이병화</p>
-                <p class="text14-400 opacity-50">총괄</p>
+                <p class="text16-700">{$popup.data?.name}</p>
+                {#if $popup.data?.job_2}
+                  <p class="opacity-50 text14-400">{$popup.data?.job_2}</p>
+                {/if}
               </div>
             </div>
-            <div class="overflow-y-auto leading-7 h-[100%] max-h-[300px] m:max-h-full">
-              <p class="body14-400">
-                1991년 한국장기신용은행(국민은행과 합병)에 입사하여 2000년 ㈜마크로젠에 입사하기 전까지 은행에서 약
-                10년간 기업여신 및 심사 등 다양한 금융업무를 경험하였습니다. 2000년 바이오 기업인 마크로젠에 합류하여
-                자금, IR, 공시, 경영관리, 영업총괄 등 다양한 업무를 경험한 후 대표이사로서 경영을 총괄하였으며,
-                2010년까지 마크로젠의 미국법인, 일본법인, 유럽지사 등을 설립하고 글로벌 유전자분석 비즈니스를
-                전개함으로써 마크로젠이 세계적인 유전체분석 및 정밀의학회사로 성장하는 데 주도적으로 기여하였습니다.
-                2011년부터는 ㈜엠지메드로 자리를 옮겨 대표이사를 역임하면서 분자진단 기술 개발 및 유전자칩을 이용한
-                질병진단사업을 성공적으로 이끌고, 코스닥시장에 상장시킨 경험도 가지고 있습니다. 금융업에서의 10년,
-                바이오업계에서 22년의 경험으로 바이오 산업에 대한 깊은 이해는 물론 기업의 재무관리, 리스크관리, 1991년
-                한국장기신용은행(국민은행과 합병)에 입사하여 2000년 ㈜마크로젠에 입사하기 전까지 은행에서 약 10년간
-                기업여신 및 심사 등 다양한 금융업무를 경험하였습니다. 2000년 바이오 기업인 마크로젠에 합류하여 자금, IR,
-                공시, 경영관리, 영업총괄 등 다양한 업무를 경험한 후 대표이사로서 경영을 총괄하였으며, 2010년까지
-                마크로젠의 미국법인, 일본법인, 유럽지사 등을 설립하고 글로벌 유전자분석 비즈니스를 전개함으로써
-                마크로젠이 세계적인 유전체분석 및 정밀의학회사로 성장하는 데 주도적으로 기여하였습니다. 2011년부터는
-                ㈜엠지메드로 자리를 옮겨 대표이사를 역임하면서 분자진단 기술 개발 및 유전자칩을 이용한 질병진단사업을
-                성공적으로 이끌고, 코스닥시장에 상장시킨 경험도 가지고 있습니다. 금융업에서의 10년, 바이오업계에서
-                22년의 경험으로 바이오 산업에 대한 깊은 이해는 물론 기업의 재무관리, 리스크관리,
-              </p>
+            <div class="relative max-h-[350px]">
+              <div class="overflow-y-auto leading-7 h-[100%] m:max-h-full">
+                <p class="body14-400">
+                  {$popup.data?.desc}
+                </p>
+                <p>
+                  <br /><br /><br />
+                </p>
+              </div>
+              <div class="absolute bottom-0 left-0 w-full h-[50px] gradient-blue" />
             </div>
           </div>
         </div>
@@ -227,18 +224,10 @@
             <Table
               data={[
                 ['국가', '출원번호', '출원일', '현황'],
-                ['한국', 'BR1120150008708-6', '2023.01.06', '출원'],
-                ['한국', 'BR1120150008708-6', '2023.01.06', '출원'],
-                ['한국', 'BR1120150008708-6', '2023.01.06', '출원'],
-                ['한국', 'BR1120150008708-6', '2023.01.06', '출원'],
-                ['한국', 'BR1120150008708-6', '2023.01.06', '출원'],
-                ['한국', 'BR1120150008708-6', '2023.01.06', '출원'],
-                ['한국', 'BR1120150008708-6', '2023.01.06', '출원'],
-                ['한국', 'BR1120150008708-6', '2023.01.06', '출원'],
-                ['한국', 'BR1120150008708-6', '2023.01.06', '출원'],
+                ...$popup.data?.map(a => [a.con_name, a.title, a.date, a.state]),
               ]}
             />
-            <Pagination />
+            <!-- <Pagination /> -->
           </div>
         </div>
       {/if}

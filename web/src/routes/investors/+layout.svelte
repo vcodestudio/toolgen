@@ -5,7 +5,7 @@
   import { page } from '$app/stores'
 
   let menus = [
-    { selected: false, title: 'Notice', name: '공지사항', link: '/investors' },
+    { selected: false, title: 'Notice', name: '공지사항', link: '/investors/notice' },
     { selected: false, title: 'Stock Information', name: '주가정보', link: '/investors/stock' },
     { selected: false, title: 'Filings', name: '공시자료', link: '/investors/filings' },
     { selected: false, title: 'Financials', name: '재무제표', link: '/investors/finance' },

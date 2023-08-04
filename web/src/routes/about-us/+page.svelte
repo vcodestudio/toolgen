@@ -1,9 +1,17 @@
 <script>
+  import { onMount } from 'svelte'
   import DownloadButton from '../../components/DownloadButton.svelte'
   import MobileHeaderW from '../../components/MobileHeaderW.svelte'
   import Section from '../../components/Section.svelte'
   import SectionImg from '../../components/SectionImg.svelte'
   import Banner from '/src/components/Banner.svelte'
+  import Slider from '../../components/Slider.svelte'
+
+  export let data
+  $: posts = data.page
+  onMount(() => {
+    console.log(posts)
+  })
 
   let histories = [
     { year: '1999', month: '1월', content: '㈜툴젠 설립 (본점소재지: 서울특별시 동작구 사당4동 267-30)' },
@@ -27,11 +35,61 @@
     },
     { year: '2013', month: '7월', content: 'CRISPR 유전자가위 기술 관련 License-out / KeyGene (네덜란드)' },
     { year: '2014', month: '6월', content: '코넥스시장 상장 / 한국거래소' },
+    {
+      year: '2014',
+      month: '11월',
+      content: 'CRISPR 유전자가위 기술 관련 License-out / Thermo Fisher Scientific (미국)',
+    },
+    { year: '2016', month: '8월', content: 'CRISPR 유전자가위 원천기술 관련 호주 특허 등록 승인 / 호주 특허청' },
+    { year: '2017', month: '8월', content: 'CRISPR 유전자가위 기술 관련 License-out / Monsanto (現 Bayer)' },
+    { year: '2017', month: '11월', content: '유전자가위 리포터 기술 관련 미국 특허 등록 / 미국 특허청' },
+    { year: '2018', month: '6월', content: '향상된 기능의 CAR-T 치료제(Styx-T) 연구성과 논문 게재 / Cancer Research' },
+    { year: '2018', month: '7월', content: 'CRISPR 유전자가위 원천기술 관련 유럽 특허 등록 / 유럽 특허청' },
+    {
+      year: '2018',
+      month: '6월',
+      content: '특이성이 향상된 CRISPR 유전자가위(Sniper Cas9) 연구성과 논문 게재 / Nature Communications',
+    },
+    { year: '2018', month: '8월', content: 'CRISPR 유전자가위 원천기술 관련 싱가포르 특허 등록 / 싱가포르 특허청' },
+    { year: '2014', month: '11월', content: 'CRISPR 유전자가위 원천기술 관련 일본 특허 등록 / 일본 특허청' },
+    {
+      year: '2019',
+      month: '4월',
+      content: '유전자교정 기술을 적용한 샤르코-마리-투스병(CMT 1A) 연구성과 논문 게재 / Nucleic Acids Research',
+    },
+    {
+      year: '2019',
+      month: '11월',
+      content: 'Campylobacter jejuni(C.jejuni) 유래 CRISPR/Cas9 미국 특허 등록 / 미국 특허청',
+    },
+    { year: '2020', month: '1월', content: 'CRISPR 유전자가위 원천기술 관련 미국 특허 등록 /  미국 특허청' },
+    {
+      year: '2020',
+      month: '4월',
+      content:
+        '충남대학교와 공동개발한 유전자가위 페튜니아(Petunia), 미국 농무부로부터 Non-GMO(Am I Regulated?) 승인 / 미국 농무부(USDA)',
+    },
+    {
+      year: '2020',
+      month: '7월',
+      content: '유전자교정 高 올레산 함량 콩, 미국 농무부로부터 Non-GMO(Am I Regulated?) 승인 / 미국 농무부(USDA)',
+    },
+    { year: '2020', month: '8월', content: 'CRISPR 유전자가위 원천기술 관련 홍콩 특허 등록 / 홍콩 특허청' },
+    { year: '2020', month: '11월', content: 'Campylobacter jejuni(C.jejuni) 유래 CRISPR/Cas9 호주 특허 등록' },
+    { year: '2020', month: '12월', content: 'CRISPR/Cas9 유전자가위 기술 특허 저촉심사 개시 / 미국 특허심판원(PTAB)' },
+    { year: '2021', month: '1월', content: 'CRISPR 유전자가위 원천기술 관련 인도 특허 등록 / 인도 특허청' },
+    { year: '2021', month: '12월', content: '코스닥시장 상장 / 한국거래소' },
+    {
+      year: '2022',
+      month: '9월',
+      content: 'CRISPR/Cas9 유전자가위 기술 특허 저촉심사 Motion Phase 승리(Senior Party의 지위 확정) / 인도 특허청',
+    },
+    { year: '2022', month: '9월', content: '유전자 교정 신품종 갈변억제 감자 GMO규제 면제승인 / 미국 농무부(USDA)' },
   ]
 </script>
 
 <MobileHeaderW />
-<Banner src="/images/static/frame-10327.jpg" />
+<Banner src={posts[0].imgUrl} />
 <Section class_="m:pb-0">
   <div class="relative w-full h-0">
     <div
@@ -50,13 +108,9 @@
 <Section>
   <div class="flex flex-col gap-4">
     <p class="text16-700 color-mint">About Us</p>
-    <h3 class="color-navy">유전자교정 기술 선두 기업</h3>
-    <p>
-      툴젠은 1999년 김진수 박사(창업자)가 설립하여 유전자교정 제품의 지속적인 연구개발을 통해 ZFN 유전자가위, TALEN
-      유전자가위 개발에 이어 2012년 CRISPR 유전자가위 개발까지 성공한 유일한 회사이며, CRISPR 유전자가위 원천특허가 주요
-      9개 국가(한국, 미국, 유럽, 호주, 중국, 일본, 싱가포르, 인도, 홍콩)에 등록되어 있습니다.
-    </p>
-    <SectionImg src="/images/static/fcc4e8b33c5441804c7b7c47262add82.jpg" />
+    <h3 class="color-navy">{posts[1].title}</h3>
+    {@html posts[1].content.html}
+    <SectionImg src={posts[1].imgUrl} />
     <div class="flex justify-end m:justify-center">
       <DownloadButton title="CI 다운로드" />
     </div>
@@ -66,71 +120,84 @@
 <Section>
   <div class="flex flex-col gap-4">
     <p class="text16-700 color-mint">ToolGen History</p>
-    <div class="grid gap-12">
-      <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
-        <div class="flex flex-col gap-4">
-          <h3 class="color-navy">
-            1999<br />
-            툴젠 설립
-          </h3>
-          <p class="max-w-[350px]">
-            1999년 김진수 박사(창업자)가 유전자가위를 개발하고 이를 사업화 하기 위하여 툴젠을 설립하였습니다.
-          </p>
-        </div>
-        <div>
-          <img class="block w-full h-auto" src="/images/about/1.png" />
-        </div>
-      </div>
-      <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
-        <div class="flex flex-col gap-4">
-          <h3 class="color-navy">
-            2000<br />
-            ZFN(징크핑거) 개발
-          </h3>
-          <p class="max-w-[350px]">
-            발명 명칭: Zinc Finger Domains and Methods of Identifying same 출원일: 2001-02-17 등록번호: 10-0436869<br />
-            등록일: 2004-06-10
-          </p>
-        </div>
-        <div>
-          <img class="block w-full h-auto" src="/images/about-d-2.jpg" />
-        </div>
-      </div>
-      <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
-        <div class="flex flex-col gap-4">
-          <h3 class="color-navy">
-            2000<br />
-            TALEN(탈렌) 개발
-          </h3>
-          <p class="max-w-[350px]">
-            발명 명칭: Genome Engineering Via Designed TAL Effector Nucleases<br />출원일: 2011-01-03<br />등록번호:
-            10-1556359<br />
-            등록일: 2015-09-22
-          </p>
-        </div>
-        <div>
-          <img class="block w-full h-auto" src="/images/about-d-3.jpg" />
-        </div>
-      </div>
-      <div class="grid gap-6">
-        <div class="flex flex-col gap-4">
-          <h3 class="color-navy">
-            2010<br />
-            CRISPR-Cas9 개발
-          </h3>
-          <p class="">
-            CRISPR-Cas 시스템은 원래 박테리아가 외부로부터 침입한 바이러스의 DNA를 기억해두었다가 후에 재침입시 이를
-            절단함으로써 스스로를 지키는 면역 시스템입니다. CRISPR-Cas 시스템은 가이드 RNA와 Cas단백질로 구성되어
-            있으며, 가이드 RNA는 바이러스의 DNA (타겟 DNA)에 상보적으로 결합하고, Cas 단백질은 RNA가 결합된 DNA를 자르는
-            역할을 수행합니다. 따라서, CRISPR-Cas 시스템을 구성하는 가이드 RNA의 염기배열을 원하는 DNA서열에 상보적
-            결합이 가능하도록 만들어줌으로써 원하는 DNA서열을 자를 수 있는 유전자가위로 사용할 수 있습니다.
-          </p>
-          <div class="flex items-center justify-center">
-            <img class="block w-auto h-[300px] p:w-full p:h-auto p-6" src="/images/about-d-4.jpg" />
+    <Slider
+      navigation={false}
+      options="{{
+        direction: 'vertical',
+      }},"
+      color={{
+        active: 'fill-mint',
+        inactive: 'fill-navy',
+      }}
+    >
+      <div class="swiper-slide">
+        <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
+          <div class="flex flex-col gap-4">
+            <h3 class="color-navy">
+              {posts[2].item[0].year}<br />
+              {posts[2].item[0].title}
+            </h3>
+            <p class="max-w-[350px]">
+              {posts[2].item[0].desc}
+            </p>
+          </div>
+          <div>
+            <img class="block w-full h-auto" src={posts[2].item[0].img.data.attributes.formats.large.url} />
           </div>
         </div>
       </div>
-    </div>
+      <div class="swiper-slide">
+        <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
+          <div class="flex flex-col gap-4">
+            <h3 class="color-navy">
+              {posts[2].item[1].year}<br />
+              {posts[2].item[1].title}
+            </h3>
+            <p class="max-w-[350px]">
+              {posts[2].item[1].desc}
+            </p>
+          </div>
+          <div>
+            <img class="block w-full h-auto" src={posts[2].item[1].img.data.attributes.formats.large.url} />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
+          <div class="flex flex-col gap-4">
+            <h3 class="color-navy">
+              {posts[2].item[2].year}<br />
+              {posts[2].item[2].title}
+            </h3>
+            <p class="max-w-[350px]">
+              {posts[2].item[2].desc}
+            </p>
+          </div>
+          <div>
+            <img class="block w-full h-auto" src={posts[2].item[2].img.data.attributes.formats.large.url} />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="grid gap-6">
+          <div class="flex flex-col gap-4">
+            <h3 class="color-navy">
+              {posts[2].item[3].year}<br />
+              {posts[2].item[3].title}
+            </h3>
+            <p class="">
+              {posts[2].item[3].desc}
+            </p>
+            <div class="flex items-center justify-center">
+              <img
+                class="block w-auto h-[300px] p:w-full p:h-auto p-6"
+                src={posts[2].item[3].img.data.attributes.formats.large.url}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </Slider>
   </div>
 </Section>
 <Section class_="fill-bluegray overflow-hidden m:pb-0">
@@ -138,13 +205,9 @@
     <img src="/images/about/2.png" class="block translate-y-20 m:w-[170px] m:translate-y-0" />
     <div class="flex flex-col gap-6 m:gap-2">
       <p class="text16-700 color-mint">Founder</p>
-      <h3 class="color-navy">김진수 박사</h3>
+      <h3 class="color-navy">{posts[3].title}</h3>
       <p>
-        김진수 박사는 1999년 ㈜툴젠 설립이후 유전체 편집을 위한 핵심 도구의 개발에 집중해왔습니다. 그 결과 초창기
-        편집기술인 Zinc-Finger Nucleases, Zinc-Finger Deaminases, TALENs 및 TALEDs에 이어 CRISPR-Cas9을 개발하여 전
-        세계에서 가장 빠르게 특허를 출원하였습니다. 김진수 박사가 개발한 이러한 도구들은 인간 줄기세포, 모델 생물체,
-        가축 및 식물의 핵 및 기관 세포질 DNA 유전체 편집을 위해 전 세계 수천 개의 연구실에서 널리 사용되고 있습니다.
-        김진수 박사는 현재 싱가포르 국립대학의 초빙교수로 활동하고 있습니다.
+        {posts[3].content.text}
       </p>
     </div>
   </div>
@@ -154,20 +217,28 @@
     <div>
       <h3>History</h3>
     </div>
-    <div class="grid gap-8 m:gap-2">
-      {#each histories as item, i}
-        <div class="flex items-start gap-4">
-          <p class="text16-700 flex-[1]">
-            {#if histories[i - 1]?.year !== item.year}
-              {item.year}
-            {/if}
-          </p>
-          <p class="fg-sub flex-[1]">{item.month}</p>
-          <p class="flex-[10]">
-            {@html item.content}
-          </p>
+    <div class="relative">
+      <div class="grid gap-8 m:gap-2 pc:max-h-[450px] overflow-auto">
+        {#each histories as item, i}
+          <div class="flex items-start gap-4">
+            <p class="text16-700 flex-[1]">
+              {#if histories[i - 1]?.year !== item.year}
+                {item.year}
+              {/if}
+            </p>
+            <p class="fg-sub flex-[1]">{item.month}</p>
+            <p class="flex-[10]">
+              {@html item.content}
+            </p>
+          </div>
+        {/each}
+        <div class="pc">
+          <br />
+          <br />
+          <br />
         </div>
-      {/each}
+      </div>
+      <div class="pc gradient-navy absolute -bottom-[1px] left-0 h-[100px] w-full pointer-events-none" />
     </div>
   </div>
 </Section>
@@ -176,16 +247,15 @@
     <p class="text16-700 color-mint">ToolGen Location</p>
     <div class="grid grid-cols-2 gap-8 phone:grid-cols-1 m:gap-4">
       <div class="flex flex-col gap-4 m:gap-2">
-        <h3 class="color-navy">툴젠 본사</h3>
-        <div class="flex gap-8">
-          <p>서울 강서구 마곡중앙로 172 8층</p>
-          <p>02-3660-1300</p>
+        <h3 class="color-navy">{posts[5].title}</h3>
+        <div class="flex flex-col gap-0">
+          {@html posts[5].content.html}
         </div>
       </div>
       <div class="flex flex-col gap-4 m:gap-2">
-        <h3 class="color-navy">오송 R&D센터</h3>
-        <div class="flex gap-8">
-          충청북도 청주시 흥덕구 오송생명1로 <br class="mob" />(오송첨단의료복합단지 내)
+        <h3 class="color-navy">{posts[6].title}</h3>
+        <div class="flex flex-col gap-0">
+          {@html posts[6].content.html}
         </div>
       </div>
     </div>

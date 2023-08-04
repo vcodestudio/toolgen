@@ -87,34 +87,34 @@
 
 <svelte:window bind:scrollY />
 <header bind:this={header} class:active={isActive}>
-  <div class="w-limit flex justify-end gap-6 single-line top-bar pc">
+  <div class="flex justify-end gap-6 w-limit single-line top-bar pc">
     <a href="/career" class="color-mint">Career</a>
     <div class="divider single-line">
       <a href="/">한</a>
-      <a href="/" class="color-disable">A</a>
+      <!-- <a href="/" class="color-disable">A</a> -->
     </div>
   </div>
-  <div class="w-limit flex gnb pc">
+  <div class="flex w-limit gnb pc">
     <div>
       <Logo
         color={isActive ? [] : ['var(--logo-color,#041E6D)', 'var(--logo-color,#337DD9)', 'var(--logo-color,#041E6D)']}
       />
     </div>
-    <div class="menu flex-auto flex gap-9 justify-end items-center">
+    <div class="flex items-center justify-end flex-auto menu gap-9">
       {#each menus as menu}
-        <a href={menu.link} class="menu-item text-center" class:selected={menu.selected}
+        <a href={menu.link} class="text-center menu-item" class:selected={menu.selected}
           ><span class="menu-item-text" style="white-space: pre-line;">{menu.name}</span></a
         >
       {/each}
     </div>
   </div>
-  <div class="w-limit py-3 flex item-center mob">
-    <div class="flex-none flex items-center">
+  <div class="flex py-3 w-limit item-center mob">
+    <div class="flex items-center flex-none">
       <Logo
         color={isActive ? [] : ['var(--logo-color,#041E6D)', 'var(--logo-color,#337DD9)', 'var(--logo-color,#041E6D)']}
       />
     </div>
-    <div class="flex-auto flex justify-end items-center hambug">
+    <div class="flex items-center justify-end flex-auto hambug">
       <button
         class="clean ham_btn"
         class:active={menuActive}
@@ -123,7 +123,7 @@
         }}
       >
         {#if menuActive}
-          <svg class=" w-2/3 h-2/3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-2/3 h-2/3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               fill-rule="evenodd"
               clip-rule="evenodd"
@@ -132,7 +132,7 @@
             />
           </svg>
         {:else}
-          <svg class=" w-2/3 h-2/3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-2/3 h-2/3" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="3" y="5" width="18" height="2" fill="currentColor" />
             <rect x="3" y="11" width="18" height="2" fill="currentColor" />
             <rect x="3" y="17" width="18" height="2" fill="currentColor" />
@@ -143,8 +143,8 @@
   </div>
   <!-- menu -->
   {#if menuActive}
-    <div class="absolute top-full left-0 w-full bg-white py-8">
-      <div class="w-limit flex flex-col gap-6">
+    <div class="absolute left-0 w-full py-8 bg-white top-full">
+      <div class="flex flex-col gap-6 w-limit">
         {#each menus as menu}
           <a href={menu.link} class="menu-item" class:selected={menu.selected}
             ><span class="menu-item-text">{menu.name}</span></a
@@ -154,7 +154,7 @@
         <div class="flex justify-end gap-6">
           <div class="flex gap-0">
             <a href="/" class="px-4">한</a>
-            <a href="/" class="color-disable border-l border-gray-200 px-4">A</a>
+            <!-- <a href="/" class="px-4 border-l border-gray-200 color-disable">A</a> -->
           </div>
         </div>
       </div>
@@ -166,6 +166,6 @@
     on:click={() => {
       menuActive = false
     }}
-    class="bg-black bg-opacity-70 fixed top-0 left-0 z-50 w-full h-full"
+    class="fixed top-0 left-0 z-50 w-full h-full bg-black bg-opacity-70"
   />
 {/if}

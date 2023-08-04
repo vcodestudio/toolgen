@@ -1,21 +1,26 @@
 <script>
-  export let post
+  export let card
+  $: post = {
+    ...card,
+    open: false,
+  }
 </script>
 
 <div
   class="plus-card relative overflow-hidden rounded-md p-10 bg-cover bg-center h-[320px] m:h-[240px]"
-  style="background-image:url({post.background})"
+  style="background-image:url({post.imgUrl})"
 >
   <div
     class="text flex flex-col text-white h-full bg-gradient-to-r from-[rgba(0,0,0,0.4)] to-transparent absolute top-0 left-0 p-10 w-full m:p-5"
   >
-    <h3 class="leading-6">{post.title}</h3>
+    {#if !post.open}
+      <h3 class="leading-6">{post.title}</h3>
+    {/if}
     <div class="flex-auto" />
     <div>
       <button
         on:click={() => {
           post.open = !post.open
-          console.log(post.active)
         }}
         class="clean w-[2.5em] h-[2.5em]"
       >
@@ -33,10 +38,10 @@
   </div>
   {#if post.open}
     <div
-      class="card-ov absolute top-0 left-0 w-full h-full bg-blue-950 bg-opacity-90 flex flex-col gap-6 p-10 text-white overflow-y-auto"
+      class="absolute top-0 left-0 flex flex-col w-full h-full gap-6 p-10 overflow-y-auto text-white card-ov bg-blue-950 bg-opacity-90"
     >
       <h4 class="color-mint">{post.title}</h4>
-      {@html post.content}
+      {@html post.content.html}
     </div>
     <button
       on:click={() => {

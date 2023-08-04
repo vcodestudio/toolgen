@@ -1,22 +1,31 @@
 <script>
-  import "$lib/precomp";
-  import Header from "./Header.svelte";
-  import Footer from "./Footer.svelte";
+  import '$lib/precomp'
+  import Header from './Header.svelte'
+  import Footer from './Footer.svelte'
   import { setScreen } from '$lib/screen'
   import { onMount } from 'svelte'
-  import Popup from "../components/Popup.svelte"
+  import Popup from '../components/Popup.svelte'
 
+  export let data
   onMount(() => {
+    console.log('page', data)
     setScreen()
     window.addEventListener('resize', setScreen)
   })
-
-  export let data;
 </script>
 
-<Header/>
-  <main>
-    <slot/>
-  </main>
-<Popup/>
-<Footer/>
+<svelte:head>
+  {#if data?.data?.title}
+    <title>
+      {data?.data?.title}
+    </title>
+  {:else}
+    <title>TOOLGEN</title>
+  {/if}
+</svelte:head>
+<Header />
+<main>
+  <slot />
+</main>
+<Popup />
+<Footer />
