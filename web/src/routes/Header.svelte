@@ -60,6 +60,21 @@
     },
   ]
 
+  let topMenus = [
+    {
+      name: 'Investors',
+      slug: 'investors',
+      link: '/investors',
+      selected: false,
+    },
+    {
+      name: 'About us',
+      slug: 'about-us',
+      link: '/about-us',
+      selected: true,
+    },
+  ]
+
   let scrollY = 0
 
   $: isActive = scrollY > 50 || menuActive
@@ -73,7 +88,7 @@
   function navigate() {
     menuActive = false
     const path = $page.route.id ?? false
-    menus.map(a => {
+    menus = menus.map(a => {
       if (path.includes(a.link)) {
         a.selected = true
       } else {
@@ -81,17 +96,28 @@
       }
       return a
     })
-    menus = menus
+
+    topMenus = topMenus.map(a => {
+      if (path.includes(a.link)) {
+        a.selected = true
+      } else {
+        a.selected = false
+      }
+      return a
+    })
   }
 </script>
 
 <svelte:window bind:scrollY />
 <header bind:this={header} class:active={isActive}>
   <div class="flex justify-end gap-6 w-limit single-line top-bar pc">
+    {#each topMenus as menu, i}
+      <a class:color-blue={menu.selected} href={menu.link}>{menu.name}</a>
+    {/each}
     <a href="/career" class="color-mint">Career</a>
     <div class="divider single-line">
       <a href="/">한</a>
-      <!-- <a href="/" class="color-disable">A</a> -->
+      <a href="/" class="color-disable">A</a>
     </div>
   </div>
   <div class="flex w-limit gnb pc">

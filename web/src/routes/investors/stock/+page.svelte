@@ -55,50 +55,58 @@
         <button class="square" class:navy={section.type == t} on:click={e => (section.type = t)}>{name}</button>
       {/each}
     </div>
-    {#if section.type == 'chart'}
-      <div class="flex items-center gap-2">
-        {#each dates as [d, name]}
-          <button class:fill={section.date == d} on:click={e => (section.date = d)}>{name}</button>
-        {/each}
-      </div>
-      <div>
-        <img
-          class="block w-full"
-          src={`https://ssl.pstatic.net/imgfinance/chart/item/area/${
-            section.date
-          }/199800.png?sidcode=${new Date().getTime()}`}
-          alt="주가 그래프"
-        />
-      </div>
-    {:else if section.type == 'trade'}
-      {@html data.trade}
-    {:else if section.type == 'hoga'}
-      {@html data.hoga}
-    {:else if section.type == 'daily'}
-      {@html data.daily}
-    {:else if section.type == 'foreign'}
-      <table>
-        <thead>
-          <tr>
-            <th rowspan="2">날짜</th>
-            <th rowspan="2">종가</th>
-            <th rowspan="2">전일비</th>
-            <th rowspan="2">등락률</th>
-            <th rowspan="2">거래량</th>
-            <th colspan="1">기관</th>
-            <th colspan="3">외국인</th>
-          </tr>
-          <tr>
-            <th>순매매량</th>
-            <th>순매매량</th>
-            <th>보유주수</th>
-            <th>지분율</th>
-          </tr>
-        </thead>
-        <tbody>
-          {@html data.foreign}
-        </tbody>
-      </table>
-    {/if}
+    <div class={section.type ?? 'normal'}>
+      {#if section.type == 'chart'}
+        <div class="flex items-center gap-2">
+          {#each dates as [d, name]}
+            <button class:fill={section.date == d} on:click={e => (section.date = d)}>{name}</button>
+          {/each}
+        </div>
+        <div>
+          <img
+            class="block w-full"
+            src={`https://ssl.pstatic.net/imgfinance/chart/item/area/${
+              section.date
+            }/199800.png?sidcode=${new Date().getTime()}`}
+            alt="주가 그래프"
+          />
+        </div>
+      {:else if section.type == 'trade'}
+        {@html data.trade}
+      {:else if section.type == 'hoga'}
+        {@html data.hoga}
+      {:else if section.type == 'daily'}
+        {@html data.daily}
+      {:else if section.type == 'foreign'}
+        <table>
+          <thead>
+            <tr>
+              <th rowspan="2">날짜</th>
+              <th rowspan="2">종가</th>
+              <th rowspan="2">전일비</th>
+              <th rowspan="2">등락률</th>
+              <th rowspan="2">거래량</th>
+              <th colspan="1">기관</th>
+              <th colspan="3">외국인</th>
+            </tr>
+            <tr>
+              <th>순매매량</th>
+              <th>순매매량</th>
+              <th>보유주수</th>
+              <th>지분율</th>
+            </tr>
+          </thead>
+          <tbody>
+            {@html data.foreign}
+          </tbody>
+        </table>
+      {/if}
+    </div>
   </div>
 </Section>
+
+<style>
+  :global(table td img) {
+    display: inline-block;
+  }
+</style>

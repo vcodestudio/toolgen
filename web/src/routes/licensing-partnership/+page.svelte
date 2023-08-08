@@ -12,15 +12,12 @@
 
 <PageMarginTop />
 <Section>
-  <div class="grid gap-6">
-    <h1>Licensing</h1>
+  <div class="flex flex-col gap-8">
+    <div class="grid gap-4">
+      <h3>{posts[0].title}</h3>
+      {@html posts[0].content.html}
+    </div>
     <SectionImg src="/images/licensing/1.png" />
-  </div>
-</Section>
-<Section>
-  <div class="grid gap-4">
-    <h3>{posts[0].title}</h3>
-    {@html posts[0].content.html}
   </div>
 </Section>
 <Section class_="fill-navy text-white">

@@ -76,7 +76,7 @@
       {#each posts as item, i}
         <a class="item" href={`https://dart.fss.or.kr/dsaf001/main.do?rcpNo=${item.rcept_no}`} target="_blank">
           <p>{i + 1 + data.body.page_count * (data.body.page_no - 1)}</p>
-          <p>{item.report_nm}</p>
+          <p class="text-left">{item.report_nm}</p>
           <p>{item.flr_nm}</p>
           <p>{item.rcept_dt}</p>
           <p>{item.rm}</p>

@@ -90,7 +90,7 @@
         },
         {
           title: 'CREAM',
-          desc: 'Eye(눈)',
+          desc: 'Engineered MSC',
           progress: ((4 * 1) / 8) * 100,
           content: `
           <p>

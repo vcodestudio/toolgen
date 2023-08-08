@@ -4,6 +4,7 @@
   import 'swiper/css'
   //   import 'swiper/swiper-bundle.css'
   export let [navigation, pagination] = [true, true]
+  export let paginationPos = 'bottom'
   export let color = {
     active: 'bg-black opacity-100',
     inactive: 'bg-black opacity-30',
@@ -53,6 +54,17 @@
   let currentSlide = 0
 </script>
 
+{#if pagination && sliderObj && paginationPos == 'top'}
+  <div class="flex items-center justify-start em:gap-2">
+    {#each sliderObj.slides as slide, idx}
+      <div
+        class=" w-3 h-3 rounded-full transition-all {currentSlide == idx
+          ? `w-[1.5rem] ${color.active}`
+          : color.inactive ?? color.active}"
+      />
+    {/each}
+  </div>
+{/if}
 <div class="flex flex-col gap-6">
   <div class="flex gap-6">
     {#if navigation}
@@ -116,7 +128,7 @@
         </svg>
       </button>
     {/if}
-    {#if pagination && sliderObj}
+    {#if pagination && sliderObj && paginationPos == 'bottom'}
       <div class="flex items-center justify-center em:gap-2">
         {#each sliderObj.slides as slide, idx}
           <div

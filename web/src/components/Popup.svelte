@@ -207,7 +207,7 @@
             </div>
             <div class="relative max-h-[350px]">
               <div class="overflow-y-auto leading-7 h-[100%] m:max-h-full">
-                <p class="body14-400">
+                <p class="whitespace-pre-wrap body14-400">
                   {$popup.data?.desc}
                 </p>
                 <p>

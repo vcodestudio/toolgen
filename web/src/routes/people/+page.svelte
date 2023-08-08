@@ -76,11 +76,11 @@
 <PageMarginTop />
 <Section>
   <div class="grid gap-8">
-    <h1>People</h1>
+    <!-- <h1>People</h1> -->
     <div class="profiles">
       {#each posts[0]?.item ?? [] as item, i}
         <div
-          class="flex flex-col item"
+          class="flex flex-col overflow-hidden rounded-md item"
           role="button"
           tabindex="0"
           on:click={() => {
@@ -132,10 +132,10 @@
                 <p>{item.eng_name}</p>
               {/if}
               {#if item.team}
-                <p class="fg-sub">/ 소속</p>
+                <p class="fg-sub">/ {item.team}</p>
               {/if}
             </div>
-            <p>
+            <p class="whitespace-pre-wrap">
               {item.interview}
             </p>
           </div>

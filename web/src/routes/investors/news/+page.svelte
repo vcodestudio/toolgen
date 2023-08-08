@@ -68,7 +68,7 @@
       {#each posts as post, i}
         <a class="item" href={`${$page.url.pathname}/${post.id}`}>
           <p>{post.id}</p>
-          <p>{post.attributes.title}</p>
+          <p class="text-left">{post.attributes.title}</p>
           <p>{post.attributes.date}</p>
         </a>
       {/each}

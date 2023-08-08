@@ -49,7 +49,7 @@
       content: '특이성이 향상된 CRISPR 유전자가위(Sniper Cas9) 연구성과 논문 게재 / Nature Communications',
     },
     { year: '2018', month: '8월', content: 'CRISPR 유전자가위 원천기술 관련 싱가포르 특허 등록 / 싱가포르 특허청' },
-    { year: '2014', month: '11월', content: 'CRISPR 유전자가위 원천기술 관련 일본 특허 등록 / 일본 특허청' },
+    { year: '2018', month: '11월', content: 'CRISPR 유전자가위 원천기술 관련 일본 특허 등록 / 일본 특허청' },
     {
       year: '2019',
       month: '4월',
@@ -125,6 +125,7 @@
           active: 'fill-mint',
           inactive: 'fill-navy',
         }}
+        paginationPos="top"
       >
         <div class="swiper-slide">
           <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
@@ -133,7 +134,7 @@
                 {posts[2].item[0].year}<br />
                 {posts[2].item[0].title}
               </h3>
-              <p class="max-w-[350px]">
+              <p class="whitespace-pre-wrap">
                 {posts[2].item[0].desc}
               </p>
             </div>
@@ -153,7 +154,7 @@
                 {posts[2].item[1].year}<br />
                 {posts[2].item[1].title}
               </h3>
-              <p class="max-w-[350px]">
+              <p class="whitespace-pre-wrap">
                 {posts[2].item[1].desc}
               </p>
             </div>
@@ -173,7 +174,7 @@
                 {posts[2].item[2].year}<br />
                 {posts[2].item[2].title}
               </h3>
-              <p class="max-w-[350px]">
+              <p class="whitespace-pre-wrap">
                 {posts[2].item[2].desc}
               </p>
             </div>
@@ -187,22 +188,22 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="grid gap-6">
+          <div class="grid grid-cols-2 gap-6 phone:grid-cols-1">
             <div class="flex flex-col gap-4">
               <h3 class="color-navy">
                 {posts[2].item[3].year}<br />
                 {posts[2].item[3].title}
               </h3>
-              <p class="">
+              <p class="whitespace-pre-wrap">
                 {posts[2].item[3].desc}
               </p>
-              <div class="flex items-center justify-center">
-                <!-- {posts[2].item[3].img?.data.attributes.formats.large.url} -->
-                <img
-                  class="block w-auto h-[300px] p:w-full p:h-auto p-6"
-                  src="https://stravelte.s3.ap-northeast-2.amazonaws.com/s4_e0a17879ff.jpg"
-                />
-              </div>
+            </div>
+            <div class="flex items-center justify-center">
+              <!-- {posts[2].item[3].img?.data.attributes.formats.large.url} -->
+              <img
+                class="block w-full h-auto"
+                src="https://stravelte.s3.ap-northeast-2.amazonaws.com/s4_e0a17879ff.jpg"
+              />
             </div>
           </div>
         </div>
@@ -213,8 +214,10 @@
     <div class="flex gap-20 m:flex-col m:flex-col-reverse m:gap-4 m:items-center">
       <img src="/images/about/2.png" class="block translate-y-20 m:w-[170px] m:translate-y-0" />
       <div class="flex flex-col gap-6 m:gap-2">
-        <p class="text16-700 color-mint">Founder</p>
-        <h3 class="color-navy">{posts[3].title}</h3>
+        <div class="flex flex-col gap-0">
+          <p class="text16-700 color-mint">Founder</p>
+          <h3 class="color-navy">{posts[3].title}</h3>
+        </div>
         <p>
           {posts[3].content.text}
         </p>

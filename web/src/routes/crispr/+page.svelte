@@ -9,6 +9,7 @@
   import dat1 from '$lib/crispr/01.json'
   import dat2 from '$lib/crispr/02.json'
   import dat3 from '$lib/crispr/03.json'
+  import PaginationJson from '../../components/Pagination_JSON.svelte'
 
   let sims = ['01', '02', '03']
   let dats = [dat1, dat2, dat3]
@@ -24,16 +25,13 @@
           .reverse()
       : []
 
-  onMount(() => {
-    // sims.forEach((a, i) => {
-    //   fetch(`/crispr/${a}.json`)
-    //     .then(r => r.json())
-    //     .then(r => {
-    //       dats[i] = r
-    //     })
-    // })
-  })
+  let pgNum = 1
   let selectedCountry = 'all'
+  let popOpen = false
+  $: {
+    popOpen = selectedCountry != 'all'
+    pgNum = 1
+  }
   // 한국, 미국, 일본, 케나다, 브라질, 유럽, 인도
   let countries = [
     { name: '호주', slug: 'AU', lng: '133.775136', lat: '-25.274398' },
@@ -43,15 +41,11 @@
     { name: '독일', slug: 'DE', lng: '10.451526', lat: '51.165691' },
     { name: '홍콩', slug: 'HK', lng: '114.109497', lat: '22.396428' },
     { name: '인도', slug: 'IN', lng: '78.962880', lat: '20.593684' },
-    { name: '일본', slug: 'JP', lng: '138.252924', lat: '36.204824' },
+    { name: '일본', slug: 'JP', lng: '142.382924', lat: '39.204824' },
     { name: '대한민국', slug: 'KR', lng: '127.766922', lat: '35.907757' },
     { name: '싱가포르', slug: 'SG', lng: '103.819836', lat: '1.352083' },
     { name: '미국', slug: 'US', lng: '-95.712891', lat: '37.090240' },
   ]
-
-  function isIterable(obj) {
-    return typeof obj[Symbol.iterator] === 'function'
-  }
 
   const lngToX = lng => {
     return (lng / 360 + 0.5) * 100
@@ -65,7 +59,7 @@
     a.lng = parseFloat(a.lng)
     a.lat = parseFloat(a.lat)
 
-    const offset = [-4.5, 9]
+    const offset = [-3.5, 13]
     a.x = lngToX(a.lng) + offset[0]
     a.y = latToY(a.lat) + offset[1]
   })
@@ -75,18 +69,28 @@
 
   $: chul = posts.filter(a => a.state == '출원').length
   $: dung = posts.filter(a => a.state == '등록').length
+
+  $: posts_ = posts.slice(10 * (pgNum - 1), 10 * pgNum)
 </script>
 
 <Section>
   <div class="grid gap-[2rem]">
-    <h2>CRISPR-Cas9 Foundational Patent</h2>
+    <!-- <h2>CRISPR-Cas9 Foundational Patent</h2> -->
     <div class="flex gap-[1.5rem]">
       <a class={tab == 1 ? _active : _inactive} href="?tab=1">원천특허</a>
       <a class={tab == 2 ? _active : _inactive} href="?tab=2">응용특허</a>
     </div>
     <div class="grid gap-4">
       <div class="relative w-full map pc">
-        <img class="block w-full h-auto" src="/images/map.jpg" alt="map" />
+        <img
+          class="block w-full h-auto"
+          src="/images/map.jpg"
+          alt="map"
+          on:click|self={e => {
+            // selectedCountry = 'all'
+            popOpen = false
+          }}
+        />
         {#each countries as country}
           <a
             href="#"
@@ -97,12 +101,12 @@
               selectedCountry = country.slug
             }}
           >
-            {#if selectedCountry == country.slug}
+            {#if selectedCountry == country.slug && popOpen}
               <div class="bg-white rounded-3xl shadow-lg px-[1rem] py-[1rem] relative bottom-4 pointer-events-none">
                 <div class="flex items-center gap-3">
                   <div class="w-[70px] h-[70px] rounded-3xl">
                     <img
-                      class="block object-cover w-full h-full"
+                      class="block object-contain w-full h-full"
                       src="/images/flags/{country.slug.toLowerCase()}.jpg"
                       alt="map"
                     />
@@ -180,11 +184,10 @@
         </p>
       </div>
       <Table
-        data={[['국가', '특허번호', '등록일', '상태'], ...posts.map(a => [a.con_name, a.title, a.date, a.state])]}
+        data={[['국가', '출원번호', '출원일', '상태'], ...posts_.map(a => [a.con_name, a.title, a.date, a.state])]}
       />
-      {#if posts.length}
-        <!-- <Pagination maxPages={maxPg} current={pg} /> -->
-      {/if}
     </div>
   </div>
+
+  <PaginationJson items={[...posts]} current={pgNum} />
 </Section>

@@ -9,7 +9,7 @@
     { selected: false, title: 'Stock Information', name: '주가정보', link: '/investors/stock' },
     { selected: false, title: 'Filings', name: '공시자료', link: '/investors/filings' },
     { selected: false, title: 'Financials', name: '재무제표', link: '/investors/finance' },
-    { selected: false, title: 'News', name: '업계뉴스', link: '/investors/news' },
+    { selected: false, title: 'News', name: '뉴스', link: '/investors/news' },
   ]
 
   function ru(a) {

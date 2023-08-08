@@ -2,7 +2,7 @@
   import { popup } from '$lib/screen'
   const licenses = [
     {
-      name: 'CRISPR Foundation Patents',
+      name: 'CRISPR Foundational Patents',
       childs: [],
     },
     {
@@ -18,7 +18,6 @@
       childs: [
         { name: 'TGT-001 | Charcot-Marie-Tooth Disease' },
         { name: 'TGT-101 | Age-related Macular Degeneration' },
-        { name: 'TG-LBP | Hemophilia B' },
         { name: 'TG-LBP | Hemophilia B' },
         { name: 'Next-generation CAR-T' },
         { name: 'CREAM' },
@@ -51,10 +50,10 @@
 
 <div class="accordion-a">
   {#each licenses as item, i}
-    <div class="item w-full grid gap-1px">
+    <div class="grid w-full item gap-1px">
       <a
         href="./"
-        class="bar text18-700 w-full items-center flex gap-4"
+        class="flex items-center w-full gap-4 bar text18-700"
         role="button"
         tabindex="0"
         on:click|preventDefault={() => {
@@ -91,14 +90,14 @@
         </div>
       </a>
       {#if item.open && item.childs.length}
-        <div class="buttons grid gap-1px">
+        <div class="grid buttons gap-1px">
           {#each item.childs as child}
             <a
               href="#"
               on:click|preventDefault={() => {
                 popup.set({ type: 'form' })
               }}
-              class="bar block w-full items-center flex gap-4"
+              class="flex items-center block w-full gap-4 bar"
             >
               <span>
                 {child.name}
