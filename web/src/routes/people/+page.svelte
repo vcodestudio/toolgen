@@ -35,16 +35,16 @@
       'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_3_a2eebc6575.jpg',
     ],
     [
-      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_4_f7a632dec4.png',
-      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_4_f2d00d21a9.jpg',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_6_841ba51839.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_6_4cac803f69.jpg',
     ],
     [
       'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_5_b67e042887.png',
       'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_5_d05e9f9fb2.jpg',
     ],
     [
-      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_6_841ba51839.png',
-      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_6_4cac803f69.jpg',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_4_f7a632dec4.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_4_f2d00d21a9.jpg',
     ],
     [
       'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_7_66459086bb.png',
@@ -55,16 +55,16 @@
       'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_9_c28e63e47a.jpg',
     ],
     [
-      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_9_061c680851.png',
-      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_10_590b002a91.jpg',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_11_897b689e97.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_8_65126dc886.jpg',
     ],
     [
       'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_10_2dc41ba74f.png',
       'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_11_807a40fe9d.jpg',
     ],
     [
-      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_11_897b689e97.png',
-      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_8_65126dc886.jpg',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_9_061c680851.png',
+      'https://stravelte.s3.ap-northeast-2.amazonaws.com/Rectangle_2329_10_590b002a91.jpg',
     ],
   ]
 
@@ -115,15 +115,15 @@
     {#each posts[1]?.item ?? [] as item, i}
       <div class="swiper-slide">
         <div class="flex items-center gap-6 phone:flex-col">
-          <div class="thumb relative w-[180px] h-[180px] flex-none">
+          <div class="thumb relative w-[180px] h-[180px] rounded-full overflow-hidden flex-none">
             <!-- {item.thumb?.data.attributes.url} -->
             <img class="block object-cover w-full h-full" src={test_sls[i]} alt={item.name} />
-            <svg class="absolute top-0 left-0 w-full h-full scale-105 color-yellow" viewBox="0 0 357.14 357.14">
+            <!-- <svg class="absolute top-0 left-0 w-full h-full scale-105 color-yellow" viewBox="0 0 357.14 357.14">
               <path
+                d="m0,0v357.14h357.14V0H0Zm178.57,342.67c-90.63,0-164.1-73.47-164.1-164.1S87.94,14.47,178.57,14.47s164.1,73.47,164.1,164.1-73.47,164.1-164.1,164.1Z"
                 fill="currentColor"
-                d="m0,0v357.14h357.14V0H0Zm302.6,219.43l-83.17,83.17c-45.53,45.53-119.35,45.53-164.89,0h0c-45.53-45.53-45.53-119.35,0-164.89l83.17-83.17c45.53-45.53,119.35-45.53,164.89,0h0c45.53,45.53,45.53,119.35,0,164.89Z"
               />
-            </svg>
+            </svg> -->
           </div>
           <div class="flex flex-col flex-auto gap-6 phone:gap-2">
             <div class="flex items-center gap-2 phone:justify-center">

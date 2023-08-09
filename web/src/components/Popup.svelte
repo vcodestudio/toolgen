@@ -89,10 +89,9 @@
           <div class="grid gap-6">
             <div class="grid gap-1">
               <p class="text14-400 fg-sub">Interest in ToolGen's</p>
-              <p class="text18-700">[Platform : Diagnosis (새로운 사업 확장 기회)]</p>
+              <p class="text18-700">[{$popup.data?.title}]</p>
               <p>
-                툴젠의 기능향상 CRISPR-Cas9및 안정성 평가 기술은 파트너사의 안정적인 CRISPR-Cas9의 활용을 통한 빠른 사업
-                확장이 가능하도록 최선을 다하고 있습니다. 파트너쉽에 대해 문의주시면 자세히 설명드리겠습니다.
+                {$popup.data?.content}
               </p>
             </div>
             <div class="grid gap-4">
@@ -219,7 +218,7 @@
           </div>
         </div>
       {:else if $popup.type == 'pct'}
-        <div class="content w-[1080px]">
+        <div class="content w-[1280px]">
           <div class="grid gap-4">
             <h4>CRISPR-Cas9 응용특허 PCT 출원 리스트</h4>
             <Table

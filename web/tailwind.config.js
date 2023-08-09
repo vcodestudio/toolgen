@@ -4,8 +4,8 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     screens: {
-      pc: '1081px',
-      m: { max: '1080px' },
+      pc: '1281px',
+      m: { max: '1280px' },
       phone: { max: '740px' },
       p: { max: '740px' },
     },

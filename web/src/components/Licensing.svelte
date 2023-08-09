@@ -3,10 +3,14 @@
   const licenses = [
     {
       name: 'CRISPR Foundational Patents',
+      content:
+        'CRISPR 원천 특허권자인 툴젠은 파트너쉽을 통해 파트너사의 기업 가치 상승에 CRISPR 기술이 기여하도록 노력하고 있습니다. 파트너쉽에 대해 문의주시면 자세히 설명드리겠습니다.',
       childs: [],
     },
     {
       name: 'Platform',
+      content:
+        '툴젠의 기능향상 CRISPR-Cas9및 안정성 평가 기술은 파트너사의 안정적인 CRISPR-Cas9의 활용을 통한 빠른 사업 확장이 가능하도록 최선을 다하고 있습니다. 파트너쉽에 대해 문의주시면 자세히 설명드리겠습니다.',
       childs: [
         { name: 'Improved Cas9 (유전자가위 고도화)' },
         { name: 'CRISPR Safety Evaluation (유전자 가위 안전성 평가기술)' },
@@ -15,6 +19,8 @@
     },
     {
       name: 'Therapeutics',
+      content:
+        '툴젠의 파트너사는 툴젠의 in-vivo 치료제, ex-vivo 치료제, 그리고 차세대 세포치료제 플랫폼과 파트너사 기의 시너지를 통해 더 빠르고 안정적인 치료제 개발을 도모할 수 있습니다. 파트너쉽에 대해 문의주시면 자세히 설명드리겠습니다.',
       childs: [
         { name: 'TGT-001 | Charcot-Marie-Tooth Disease' },
         { name: 'TGT-101 | Age-related Macular Degeneration' },
@@ -25,6 +31,8 @@
     },
     {
       name: 'Crops',
+      content:
+        '툴젠의 CRISPR-Cas9을 활용한 첨단육종기술은 파트너사의 고부가가치 종자 개발 기간의 단축 및 비용 절감에 기여합니다. 툴젠의 첨단육종기술 및 고부가가치 종자에 관심 있으신 분은 문의 주시기 바랍니다.',
       childs: [
         { name: '고함량올레산대두' },
         { name: '갈변억제감자' },
@@ -40,6 +48,7 @@
     },
     {
       name: 'Etc.',
+      content: '툴젠과의 파트너쉽에 대해 문의주시면 자세히 설명드리겠습니다.',
       childs: [],
     },
   ]
@@ -61,7 +70,15 @@
           licenses.map(a => {
             a.open = false
           })
-          item.childs.length ? (item.open = !item.open) : popup.set({ type: 'form' })
+          item.childs.length
+            ? (item.open = !item.open)
+            : popup.set({
+                type: 'form',
+                data: {
+                  title: item.name,
+                  content: item.content,
+                },
+              })
         }}
       >
         <span class="flex-auto">
@@ -95,7 +112,7 @@
             <a
               href="#"
               on:click|preventDefault={() => {
-                popup.set({ type: 'form' })
+                popup.set({ type: 'form', data: { title: `${item.name} : ${child.name}`, content: item.content } })
               }}
               class="flex items-center block w-full gap-4 bar"
             >

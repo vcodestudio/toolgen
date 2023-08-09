@@ -11,13 +11,13 @@
   let menuActive = false
   let menus = [
     {
-      name: 'CRISPR\nFoundational Patent',
+      name: 'CRISPR Foundational Patent',
       slug: 'crispr',
       link: '/crispr',
       selected: false,
     },
     {
-      name: 'Licensing\n& Partnership',
+      name: 'Licensing & Partnership',
       slug: 'licensing-partnership',
       link: '/licensing-partnership',
       selected: false,
@@ -45,18 +45,6 @@
       slug: 'people',
       link: '/people',
       selected: false,
-    },
-    {
-      name: 'Investors',
-      slug: 'investors',
-      link: '/investors',
-      selected: false,
-    },
-    {
-      name: 'About us',
-      slug: 'about-us',
-      link: '/about-us',
-      selected: true,
     },
   ]
 
@@ -171,7 +159,7 @@
   {#if menuActive}
     <div class="absolute left-0 w-full py-8 bg-white top-full">
       <div class="flex flex-col gap-6 w-limit">
-        {#each menus as menu}
+        {#each menus.concat(topMenus) as menu}
           <a href={menu.link} class="menu-item" class:selected={menu.selected}
             ><span class="menu-item-text">{menu.name}</span></a
           >

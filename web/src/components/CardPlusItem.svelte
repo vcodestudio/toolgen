@@ -38,11 +38,12 @@
   </div>
   {#if post.open}
     <div
-      class="absolute top-0 left-0 flex flex-col w-full h-full gap-6 p-10 overflow-y-auto text-white card-ov bg-blue-950 bg-opacity-90"
+      class="absolute top-0 left-0 flex flex-col w-full h-full gap-6 p-10 pb-[8rem] pr-[6rem] overflow-y-auto text-white bg-black card-ov bg-opacity-80"
     >
-      <h4 class="color-mint">{post.title}</h4>
+      <h4 class="color-blue">{post.title}</h4>
       {@html post.content.html}
     </div>
+    <div class="absolute bottom-0 left-0 w-full h-[8rem] bg-gradient-to-t from-black" />
     <button
       on:click={() => {
         post.open = !post.open
