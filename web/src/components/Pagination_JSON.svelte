@@ -1,11 +1,21 @@
 <script>
+  import { createEventDispatcher } from 'svelte'
   export let items = []
   export let current = 1
   let pageSize = 5
   let maxPages = 99
-  $: maxPages = Math.ceil(items.length / pageSize)
-  $: items, (current = 1)
-  $: pages = getPages(current)
+  export let itemPerPage = 10
+  let pages = []
+  $: {
+    items = items
+    maxPages = Math.ceil(items.length / itemPerPage)
+    pages = getPages(current, maxPages)
+  }
+
+  $: {
+    items = items
+    current = 1
+  }
 
   function slicePages(current_ = 1) {
     let start = Math.max(0, current_ - 3)
@@ -14,7 +24,7 @@
     return [start, end]
   }
 
-  function getPages(num) {
+  function getPages(num, maxPages) {
     let [start, end] = slicePages(num)
     let pages = []
     for (let i = start; i <= end; i++) {
@@ -23,8 +33,10 @@
     return pages
   }
 
+  const dispatch = createEventDispatcher()
   function pageTo(num) {
     current = num
+    dispatch('pageTo', num)
   }
 </script>
 

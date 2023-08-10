@@ -1,7 +1,6 @@
 <script>
   import { popup } from '$lib/screen'
-  import Pagination from './Pagination.svelte'
-  import Table from './Table.svelte'
+  import TableBoard from './TableBoard.svelte'
 
   let upload
 </script>
@@ -221,13 +220,7 @@
         <div class="content w-[1280px]">
           <div class="grid gap-4">
             <h4>CRISPR-Cas9 응용특허 PCT 출원 리스트</h4>
-            <Table
-              data={[
-                ['국가', '출원번호', '출원일', '현황'],
-                ...$popup.data?.map(a => [a.con_name, a.title, a.date, a.state]),
-              ]}
-            />
-            <!-- <Pagination /> -->
+            <TableBoard posts={$popup.data ?? []} />
           </div>
         </div>
       {/if}

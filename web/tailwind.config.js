@@ -8,6 +8,7 @@ export default {
       m: { max: '1280px' },
       phone: { max: '740px' },
       p: { max: '740px' },
+      ps: { max: '550px' },
     },
   },
   plugins: [

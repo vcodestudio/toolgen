@@ -6,9 +6,15 @@
   }
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <div
   class="plus-card relative overflow-hidden rounded-md p-10 bg-cover bg-center h-[320px] m:h-[240px]"
   style="background-image:url({post.imgUrl})"
+  role="button"
+  tabindex="0"
+  on:click={() => {
+    post.open = true
+  }}
 >
   <div
     class="text flex flex-col text-white h-full bg-gradient-to-r from-[rgba(0,0,0,0.4)] to-transparent absolute top-0 left-0 p-10 w-full m:p-5"
@@ -18,12 +24,7 @@
     {/if}
     <div class="flex-auto" />
     <div>
-      <button
-        on:click={() => {
-          post.open = !post.open
-        }}
-        class="clean w-[2.5em] h-[2.5em]"
-      >
+      <button class="clean w-[2.5em] h-[2.5em]">
         <svg class="w-full h-full" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="44" height="44" rx="22" fill="#F8DB15" />
           <path
@@ -45,8 +46,8 @@
     </div>
     <div class="absolute bottom-0 left-0 w-full h-[8rem] bg-gradient-to-t from-black" />
     <button
-      on:click={() => {
-        post.open = !post.open
+      on:click|stopPropagation={() => {
+        post.open = false
       }}
       class="clean absolute right-10 top-10 w-[2.25rem] h-[2.25rem]"
     >

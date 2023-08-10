@@ -13,23 +13,30 @@
 
   let sims = ['01', '02', '03']
   let dats = [dat1, dat2, dat3]
+  let posts = []
   export let data
   $: tab = data.tab
-  $: posts =
-    dats.length == 3
-      ? dats[tab - 1]
-          ?.filter(a => {
-            return a.con_code.includes(selectedCountry) || selectedCountry == 'all'
-          })
-          .sort((a, b) => +a.date.replaceAll('-', '') - b.date.replaceAll('-', ''))
-          .reverse()
-      : []
 
   let pgNum = 1
   let selectedCountry = 'all'
   let popOpen = false
   $: {
+    pgNum = pgNum
+    console.log('df', pgNum)
+  }
+  $: {
     popOpen = selectedCountry != 'all'
+
+    posts =
+      dats.length == 3
+        ? dats[tab - 1]
+            ?.filter(a => {
+              return a.con_code.includes(selectedCountry) || selectedCountry == 'all'
+            })
+            .sort((a, b) => +a.date.replaceAll('-', '') - b.date.replaceAll('-', ''))
+            .reverse()
+        : []
+
     pgNum = 1
   }
   // 한국, 미국, 일본, 케나다, 브라질, 유럽, 인도
@@ -98,6 +105,7 @@
             class="marker text16-500 absolute text-center flex flex-col gap-4 items-center -translate-y-[100%] -translate-x-[50%]"
             style="left:{country.x}%;top:{country.y}%"
             on:click|preventDefault={() => {
+              popOpen = !popOpen
               selectedCountry = country.slug
             }}
           >
@@ -189,5 +197,11 @@
     </div>
   </div>
 
-  <PaginationJson items={[...posts]} current={pgNum} />
+  <PaginationJson
+    items={posts}
+    current={pgNum}
+    on:pageTo={e => {
+      pgNum = e.detail
+    }}
+  />
 </Section>
