@@ -12,16 +12,14 @@
     setScreen()
     window.addEventListener('resize', setScreen)
   })
+
+  $: title = data.original?.title || 'TOOLGEN'
 </script>
 
 <svelte:head>
-  {#if data?.data?.title}
-    <title>
-      {data?.data?.title}
-    </title>
-  {:else}
-    <title>TOOLGEN</title>
-  {/if}
+  <title>
+    {title}
+  </title>
 </svelte:head>
 <Header />
 <main>

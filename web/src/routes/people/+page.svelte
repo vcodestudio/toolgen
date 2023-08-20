@@ -7,6 +7,8 @@
 
   import { popup } from '../../lib/screen'
 
+  import * as qs from 'qs'
+
   export let data
   $: posts = data.page
 
@@ -70,6 +72,7 @@
 
   onMount(() => {
     console.log('page', posts)
+    window.qs = qs
   })
 </script>
 
@@ -84,11 +87,14 @@
           role="button"
           tabindex="0"
           on:click={() => {
-            popup.set({ type: 'profile', data: Object.assign(item, { img: test_ports[i][1] }) })
+            popup.set({ type: 'profile', data: Object.assign(item, { img: item.detail_image?.data?.attributes?.url }) })
           }}
           on:keydown={event => {
             if (event.key === 'Enter' || event.key === ' ') {
-              popup.set({ type: 'profile', data: Object.assign(item, { img: test_ports[i][1] }) })
+              popup.set({
+                type: 'profile',
+                data: Object.assign(item, { img: item.detail_image?.data?.attributes?.url }),
+              })
             }
           }}
         >
@@ -96,7 +102,7 @@
             <!-- test_ports -->
             <!-- {item.thumbnail?.data.attributes.url} -->
             <!-- <img class="block object-cover w-full h-full" src={test_ports[i][0]} alt={item.name} /> -->
-            <img class="block object-cover w-full h-full" src={item.large?.data.attributes.url} alt={item.name} />
+            <img class="block object-cover w-full h-full" src={item.thumbnail?.data?.attributes?.url} alt={item.name} />
           </div>
           <div class="flex grid flex-col items-start flex-auto gap-0 p-4 py-6 fill-blue desc">
             <div class="flex items-end gap-2">

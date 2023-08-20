@@ -22,17 +22,20 @@ export function formatDate(date, format = 'YYYY.MM.DD') {
     .replace(/DD/g, day < 10 ? `0${day}` : day)
 }
 
+import * as qs from 'qs'
+
 export async function LoadPost(params = { post_type: 'notices', locale: 'ko-KR', page: 1, limit: 10 }) {
   const type = params.post_type
   delete params.post_type
   // convert params to query string
-  const query = Object.keys(params)
-    .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(params[k])}`)
-    .join('&')
+  // const query = Object.keys(params)
+  //   .map(k => `${encodeURIComponent(k)}=${encodeURIComponent(params[k])}`)
+  //   .join('&')
+  const query = qs.stringify(params, { encodeValuesOnly: true })
 
   const token =
     'a4533bd1babe4da25040ac073d8a3e9708cd48b2667fcd65e362fb018832920c18585b59d3e8ca5974e248cb5edb96065993f498db49766c7618b1e8acb32ff07b474802a35a357cbb92974e74413ffcb2767ab2535f5c3464afa9372063b97d43ee10aebacc4c73764c7eb9dc79a8d48052ad690dc71041b7f96aaead6d3a15'
-  const req = await fetch(`http://0.0.0.0:1337/api/${type}/?${query}`, {
+  const req = await fetch(`http://0.0.0.0:1337/api/${type}?${query}`, {
     headers: {
       method: 'GET',
       Authorization: `Bearer ${token}`,
@@ -41,7 +44,7 @@ export async function LoadPost(params = { post_type: 'notices', locale: 'ko-KR',
   })
   const data = await req.json()
 
-  data.test = query
+  data.query = query
 
   return data
 }
@@ -63,10 +66,10 @@ export function extractContent(data) {
             .replace(/\u0003/g, ''),
         }
         // remove meta tag from content, &nbsp; to break line
-        content.html = content.html.replace('<meta charset="utf-8">', '')
+        if (content.html) content.html = content.html.replace('<meta charset="utf-8">', '')
         // remove lsep special character
-        const imgUrl = item.img.data ? item.img.data.attributes.formats.large.url : null // 큰 이미지 URL
-        result.push({ title, content, imgUrl })
+        const imgUrl = item.img?.data ? item.img.data.attributes.formats.large.url : null // 큰 이미지 URL
+        result.push({ title, content, imgUrl, item })
         break
       default:
         result.push(item)

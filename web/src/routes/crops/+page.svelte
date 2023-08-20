@@ -10,7 +10,7 @@
 
   export let data
   $: posts = data.page
-  $: presses = data.original.data[0].attributes.presses.data
+  $: presses = data.original?.presses.data
 </script>
 
 <MobileHeaderW />

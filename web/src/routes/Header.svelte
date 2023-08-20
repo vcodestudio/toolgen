@@ -75,7 +75,7 @@
   navigate()
   function navigate() {
     menuActive = false
-    const path = $page.route.id ?? false
+    const path = $page.route.id ?? ''
     menus = menus.map(a => {
       if (path.includes(a.link)) {
         a.selected = true

@@ -12,7 +12,7 @@
   export let data
   $: posts = data.page
   $: cards = posts.slice(2, 5)
-  $: presses = data.original.data[0].attributes.presses.data
+  $: presses = data.original?.presses.data
 
   onMount(() => {
     console.log('card', cards)

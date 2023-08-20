@@ -3,6 +3,7 @@
   import Section from '/src/components/Section.svelte'
   import SubMenus from '/src/components/SubMenus.svelte'
   import { page } from '$app/stores'
+  import { onMount } from 'svelte'
 
   let menus = [
     { selected: false, name: 'CRISPR-Cas9 Foundational Patent', link: '/crispr' },
@@ -19,9 +20,6 @@
   $: ru($page)
 </script>
 
-<svelte:head>
-  <title>{menus.find(a => a.selected)?.name}</title>
-</svelte:head>
 <PageMarginTop />
 <Section class_="pb-0">
   <div class="grid gap-[6rem]">
