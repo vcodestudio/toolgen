@@ -17,6 +17,25 @@ module.exports = ({ env }) => ({
         uploadStream: {},
         delete: {},
       },
+      resize: {
+        formats: ["large", "medium", "small", "thumbnail"],
+        large: {
+          width: 1920,
+          height: 1080,
+        },
+        medium: {
+          width: 960,
+          height: 540,
+        },
+        small: {
+          width: 480,
+          height: 270,
+        },
+        thumbnail: {
+          width: 240,
+          height: 135,
+        },
+      },
     },
   },
   "strapi-plugin-populate-deep": {
