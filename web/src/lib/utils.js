@@ -63,7 +63,7 @@ export function extractContent(data) {
             .replace(/\u0003/g, ''),
         }
         // remove meta tag from content, &nbsp; to break line
-        // content = content.replace(/<meta.*>/g, '').replace(/&nbsp;/g, '')
+        content.html = content.html.replace('<meta charset="utf-8">', '')
         // remove lsep special character
         const imgUrl = item.img.data ? item.img.data.attributes.formats.large.url : null // 큰 이미지 URL
         result.push({ title, content, imgUrl })

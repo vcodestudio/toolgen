@@ -123,7 +123,7 @@
                     <p class="text16-700 single-line">{country.name}</p>
                     <div class="flex flex-col gap-2 text14-400">
                       <p class="single-line">출원 : {chul}개</p>
-                      <p class="single-line">특허 : {dung}개</p>
+                      <p class="single-line">등록 : {dung}개</p>
                     </div>
                   </div>
                 </div>

@@ -55,7 +55,7 @@
       </div>
     </div>
     <Pipline
-      title="Vivo"
+      title="In Vivo"
       items={[
         {
           title: 'TGT-001 | Charcot-Marie-Tooth Disease',

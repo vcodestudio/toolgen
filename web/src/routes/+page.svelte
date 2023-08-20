@@ -37,7 +37,7 @@
 >
   <div class="w-full" style:height={$hHeight + 'px'} />
   <div class="items-center justify-center w-full cont">
-    <div class="banner-content">
+    <div class="bg-white banner-content bg-opacity-40">
       <img class="block w-full h-auto mob" src="/images/static/373da1004309db1dd448c63a00849184.jpg" />
       <h1 class="font-[900] em:leading-5 uppercase pc:text-[76px]">
         Innovate Genome<br />

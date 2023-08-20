@@ -58,7 +58,7 @@
     {
       year: '2019',
       month: '11월',
-      content: 'Campylobacter jejuni(C.jejuni) 유래 CRISPR/Cas9 미국 특허 등록 / 미국 특허청',
+      content: 'Campylobacter jejuni(C.jejuni) 유래 CRISPR-Cas9 미국 특허 등록 / 미국 특허청',
     },
     { year: '2020', month: '1월', content: 'CRISPR 유전자가위 원천기술 관련 미국 특허 등록 /  미국 특허청' },
     {
@@ -73,14 +73,14 @@
       content: '유전자교정 高 올레산 함량 콩, 미국 농무부로부터 Non-GMO(Am I Regulated?) 승인 / 미국 농무부(USDA)',
     },
     { year: '2020', month: '8월', content: 'CRISPR 유전자가위 원천기술 관련 홍콩 특허 등록 / 홍콩 특허청' },
-    { year: '2020', month: '11월', content: 'Campylobacter jejuni(C.jejuni) 유래 CRISPR/Cas9 호주 특허 등록' },
-    { year: '2020', month: '12월', content: 'CRISPR/Cas9 유전자가위 기술 특허 저촉심사 개시 / 미국 특허심판원(PTAB)' },
+    { year: '2020', month: '11월', content: 'Campylobacter jejuni(C.jejuni) 유래 CRISPR-Cas9 호주 특허 등록' },
+    { year: '2020', month: '12월', content: 'CRISPR-Cas9 유전자가위 기술 특허 저촉심사 개시 / 미국 특허심판원(PTAB)' },
     { year: '2021', month: '1월', content: 'CRISPR 유전자가위 원천기술 관련 인도 특허 등록 / 인도 특허청' },
     { year: '2021', month: '12월', content: '코스닥시장 상장 / 한국거래소' },
     {
       year: '2022',
       month: '9월',
-      content: 'CRISPR/Cas9 유전자가위 기술 특허 저촉심사 Motion Phase 승리(Senior Party의 지위 확정) / 인도 특허청',
+      content: 'CRISPR-Cas9 유전자가위 기술 특허 저촉심사 Motion Phase 승리(Senior Party의 지위 확정) / 인도 특허청',
     },
     { year: '2022', month: '9월', content: '유전자 교정 신품종 갈변억제 감자 GMO규제 면제승인 / 미국 농무부(USDA)' },
   ]
