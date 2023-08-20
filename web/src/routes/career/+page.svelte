@@ -65,11 +65,7 @@
   >
     {#each data?.page[1]?.imgs?.data ?? [] as item}
       <div class="swiper-slide">
-        <img
-          class="block w-full object-cover h-[550px] m:h-[450px] p:h-[250px]"
-          src={item.attributes.formats.large.url}
-          alt="..."
-        />
+        <img class="block w-full object-cover h-[550px] m:h-[450px] p:h-[250px]" src={item.attributes.url} alt="..." />
       </div>
     {/each}
   </Slider>
