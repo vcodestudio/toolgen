@@ -95,7 +95,8 @@
           <div class="thumb">
             <!-- test_ports -->
             <!-- {item.thumbnail?.data.attributes.url} -->
-            <img class="block object-cover w-full h-full" src={test_ports[i][0]} alt={item.name} />
+            <!-- <img class="block object-cover w-full h-full" src={test_ports[i][0]} alt={item.name} /> -->
+            <img class="block object-cover w-full h-full" src={item.large?.data.attributes.url} alt={item.name} />
           </div>
           <div class="flex grid flex-col items-start flex-auto gap-0 p-4 py-6 fill-blue desc">
             <div class="flex items-end gap-2">
@@ -117,13 +118,8 @@
         <div class="flex items-center gap-6 phone:flex-col">
           <div class="thumb relative w-[180px] h-[180px] rounded-full overflow-hidden flex-none">
             <!-- {item.thumb?.data.attributes.url} -->
-            <img class="block object-cover w-full h-full" src={test_sls[i]} alt={item.name} />
-            <!-- <svg class="absolute top-0 left-0 w-full h-full scale-105 color-yellow" viewBox="0 0 357.14 357.14">
-              <path
-                d="m0,0v357.14h357.14V0H0Zm178.57,342.67c-90.63,0-164.1-73.47-164.1-164.1S87.94,14.47,178.57,14.47s164.1,73.47,164.1,164.1-73.47,164.1-164.1,164.1Z"
-                fill="currentColor"
-              />
-            </svg> -->
+            <!-- <img class="block object-cover w-full h-full" src={test_sls[i]} alt={item.name} /> -->
+            <img class="block object-cover w-full h-full" src={item.thumb?.data.attributes.url} alt={item.name} />
           </div>
           <div class="flex flex-col flex-auto gap-6 phone:gap-2">
             <div class="flex items-center gap-2 phone:justify-center">
