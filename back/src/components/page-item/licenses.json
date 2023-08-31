@@ -2,18 +2,15 @@
   "collectionName": "components_page_item_licenses",
   "info": {
     "displayName": "licenses",
-    "icon": "archive"
+    "icon": "archive",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "childs": {
-      "displayName": "license-item",
+    "item": {
       "type": "component",
       "repeatable": true,
-      "component": "misc.license-item"
+      "component": "page-item.license-item"
     }
   }
 }

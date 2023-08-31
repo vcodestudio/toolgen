@@ -119,7 +119,9 @@
             <div class="grid gap-1">
               <p class="text14-400 fg-sub">Apply to ToolGen's</p>
               <p class="text18-700">{__e(lang, '인재 DB 등록')}</p>
-              <p />
+              <p>
+                {__t('career.1', lang)}
+              </p>
             </div>
             <div class="grid gap-4">
               <div class="grid gap-2">
@@ -152,7 +154,7 @@
                       </span>
                     {:else}
                       <span class="text-gray-400">
-                        {__e(lang, 'ex)입사지원서, 자기소개서, 포트폴리오, 학위증명서, 연구내용 (논문 및 특허)')}
+                        {__t('career.2', lang, 'ex)입사지원서 ...')}
                       </span>
                     {/if}
                   </div>

@@ -1,674 +1,674 @@
 [
-	{
-		"route": "sub-menu",
-		"id": "1",
-		"ko": "저촉심사",
-		"eng": "-"
-	},
-	{
-		"route": "sub-menu",
-		"id": "3",
-		"ko": "주가정보",
-		"eng": "Stock Information"
-	},
-	{
-		"route": "sub-menu",
-		"id": "4",
-		"ko": "공시자료",
-		"eng": "Fillings"
-	},
-	{
-		"route": "sub-menu",
-		"id": "5",
-		"ko": "재무제표",
-		"eng": "Financials"
-	},
-	{
-		"route": "sub-menu",
-		"id": "6",
-		"ko": "뉴스",
-		"eng": "News"
-	},
-	{
-		"route": "",
-		"id": "2",
-		"ko": "내부정보관리규정",
-		"eng": "Internal Information Management Regulations"
-	},
-	{
-		"route": "main",
-		"id": "1",
-		"ko": "Licensing 자세히 알아보기",
-		"eng": "Licensing & Partnership"
-	},
-	{
-		"route": "foundational-patent",
-		"id": "1",
-		"ko": "원천특허",
-		"eng": "Foundational patents"
-	},
-	{
-		"route": "foundational-patent",
-		"id": "2",
-		"ko": "응용특허",
-		"eng": "Application patents"
-	},
-	{
-		"route": "foundational-patent",
-		"id": "3",
-		"ko": "PCT 출원 리스트",
-		"eng": "List of PCT patent applications"
-	},
-	{
-		"route": "foundational-patent",
-		"id": "4",
-		"ko": "출원",
-		"eng": "Issued"
-	},
-	{
-		"route": "foundational-patent",
-		"id": "5",
-		"ko": "등록",
-		"eng": "Filed"
-	},
-	{
-		"route": "financials",
-		"id": "",
-		"ko": "자산총계",
-		"eng": "Assets"
-	},
-	{
-		"route": "financials",
-		"id": "",
-		"ko": "부채총계",
-		"eng": "Liabilities"
-	},
-	{
-		"route": "financials",
-		"id": "",
-		"ko": "자본총계",
-		"eng": "Equity"
-	},
-	{
-		"route": "financials",
-		"id": "",
-		"ko": "매출액",
-		"eng": "Revenues"
-	},
-	{
-		"route": "financials",
-		"id": "",
-		"ko": "영업이익",
-		"eng": "Operating income"
-	},
-	{
-		"route": "financials",
-		"id": "",
-		"ko": "당기순이익",
-		"eng": "Profit"
-	},
-	{
-		"route": "financials",
-		"id": "",
-		"ko": "항목",
-		"eng": "Item"
-	},
-	{
-		"route": "etc",
-		"id": "1",
-		"ko": "건",
-		"eng": ""
-	},
-	{
-		"route": "etc",
-		"id": "2",
-		"ko": "전체",
-		"eng": "all"
-	},
-	{
-		"route": "etc",
-		"id": "6",
-		"ko": "국가",
-		"eng": "Country"
-	},
-	{
-		"route": "etc",
-		"id": "7",
-		"ko": "출원번호",
-		"eng": "Application Number"
-	},
-	{
-		"route": "etc",
-		"id": "8",
-		"ko": "출원일",
-		"eng": "Filing Date"
-	},
-	{
-		"route": "etc",
-		"id": "9",
-		"ko": "상태",
-		"eng": "Status"
-	},
-	{
-		"route": "etc",
-		"id": "3",
-		"ko": "더보기",
-		"eng": "More"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "현재가",
-		"eng": "Open"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "고가",
-		"eng": "High"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "저가",
-		"eng": "Low"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "매수호가",
-		"eng": "Buying price"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "매도호가",
-		"eng": "Selling price"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "거래량",
-		"eng": "Volume"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "주가 그래프",
-		"eng": "Stock Price Graph"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "최근 거래",
-		"eng": "Recent Transactions"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "호가 정보",
-		"eng": "Call Price Information"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "일별 시세",
-		"eng": "Daily Rate"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "외국인 지분율",
-		"eng": "Foreign Ownership Rate"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "1일",
-		"eng": "1D"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "1주일",
-		"eng": "1W"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "3개월",
-		"eng": "3M"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "1년",
-		"eng": "1Y"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "3년",
-		"eng": "3Y"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "5년",
-		"eng": "5Y"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "10년",
-		"eng": "10 Years"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "제목",
-		"eng": "Title"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "작성자",
-		"eng": "Submitter"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "날짜",
-		"eng": "Date"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "비고",
-		"eng": "Note"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "1개월",
-		"eng": "1M"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "6개월",
-		"eng": "6M"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "1년",
-		"eng": "1Y"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "성명",
-		"eng": "NAME"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "단체명/기업명",
-		"eng": "Organization/Company Name"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "이메일",
-		"eng": "E-MAIL"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "연락처",
-		"eng": "CONTACT NUMBER"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "선택",
-		"eng": "Select"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "문의사항",
-		"eng": "Inquiry"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "인재 DB 등록하기",
-		"eng": "Register for Talent Pool"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "채용 중 공고",
-		"eng": "Job Openings"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "종가",
-		"eng": "Closing Price"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "전일비",
-		"eng": "Price Difference from Previous Day"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "등락률",
-		"eng": "Rate of Change"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "기관",
-		"eng": "Institutional Investors"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "외국인",
-		"eng": "Foreign Investors"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "순매매량",
-		"eng": "Net Purchase/Sale Volume"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "보유주수",
-		"eng": "Holdings"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "지분율",
-		"eng": "Ownership Ratio"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "공지사항",
-		"eng": "Notice"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "저촉심사",
-		"eng": "Exemption Review"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "주가정보",
-		"eng": "Stock Information"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "공시자료",
-		"eng": "Fillings"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "재무제표",
-		"eng": "Financials"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "뉴스",
-		"eng": "News"
-	},
-	{
-		"route": "etc",
-		"id": "",
-		"ko": "주요시세",
-		"eng": "Stock Prices"
-	},
-	{
-		"route": "sub-menu",
-		"id": "2",
-		"ko": "공지사항",
-		"eng": "Notice"
-	},
-	{
-		"route": "common",
-		"id": "1",
-		"ko": "PDF 다운로드",
-		"eng": "Download PDF"
-	},
-	{
-		"route": "common",
-		"id": "2",
-		"ko": "모두보기",
-		"eng": "View All"
-	},
-	{
-		"route": "career",
-		"id": "2",
-		"ko": "\"ex)입사지원서",
-		"eng": " 자기소개서"
-	},
-	{
-		"route": "career",
-		"id": "1",
-		"ko": "\"해당 지원은 상시 채용을 위해 활용되며",
-		"eng": " 담당 부서에서 비정기적으로 검토하여 채용 포지션이 오픈시 서류 합격자에 한해 개별적으로 연락드리게 됩니다.\""
-	},
-	{
-		"route": "common",
-		"id": "3",
-		"ko": "CI 다운로드",
-		"eng": "Download CI"
-	},
-	{
-		"route": "",
-		"id": "1",
-		"ko": "개인정보취급방침",
-		"eng": "Privacy Policy"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "자산총계",
-		"eng": "Assets"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "부채총계",
-		"eng": "Liabilities"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "자본총계",
-		"eng": "Equity"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "매출액",
-		"eng": "Revenues"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "자산총계 (단위:백만원)",
-		"eng": "Assets"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "부채총계 (단위:백만원)",
-		"eng": "Liabilities"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "자본총계 (단위:백만원)",
-		"eng": "Equity"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "매출액 (단위:백만원)",
-		"eng": "Revenues"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "영업이익 (단위:백만원)",
-		"eng": "Operating income"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "당기순이익 (단위: 백만원)",
-		"eng": "Profit"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "기간별 조회",
-		"eng": "Periodic Search"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "본 자료는 금융감독원 전자공시시스템 (http://dart.fss.or.kr)의 검색결과입니다.",
-		"eng": "This document is a search result from the Electronic Disclosure System (http://dart.fss.or.kr) of the Financial Supervisory Service."
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "번호",
-		"eng": "Number"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "보고서명",
-		"eng": "Report Name"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "제출인",
-		"eng": "Submitter"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "접수일자",
-		"eng": "Date"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "출원",
-		"eng": "Issued"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "등록",
-		"eng": "Filed"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "개",
-		"eng": ""
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "접기",
-		"eng": "Fold"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "펼쳐보기",
-		"eng": "Expand"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "응용특허 PCT 출원 리스트",
-		"eng": "PCT patent application list"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "보내기",
-		"eng": "Send"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "현황",
-		"eng": "Status"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "첨부자료",
-		"eng": "ATTACHMENT"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "인재 DB 등록",
-		"eng": "HR DB REGISTRATION"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "목록으로",
-		"eng": "Back to List"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "항목",
-		"eng": "Item"
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "",
-		"eng": ""
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "",
-		"eng": ""
-	},
-	{
-		"route": "",
-		"id": "",
-		"ko": "",
-		"eng": ""
-	}
+  {
+    "route": "sub-menu",
+    "id": 1,
+    "ko": "저촉심사",
+    "eng": "-"
+  },
+  {
+    "route": "sub-menu",
+    "id": 3,
+    "ko": "주가정보",
+    "eng": "Stock Information"
+  },
+  {
+    "route": "sub-menu",
+    "id": 4,
+    "ko": "공시자료",
+    "eng": "Fillings"
+  },
+  {
+    "route": "sub-menu",
+    "id": 5,
+    "ko": "재무제표",
+    "eng": "Financials"
+  },
+  {
+    "route": "sub-menu",
+    "id": 6,
+    "ko": "뉴스",
+    "eng": "News"
+  },
+  {
+    "route": "",
+    "id": 2,
+    "ko": "내부정보관리규정",
+    "eng": "Internal Information Management Regulations"
+  },
+  {
+    "route": "main",
+    "id": 1,
+    "ko": "Licensing 자세히 알아보기",
+    "eng": "Licensing & Partnership"
+  },
+  {
+    "route": "foundational-patent",
+    "id": 1,
+    "ko": "원천특허",
+    "eng": "Foundational patents"
+  },
+  {
+    "route": "foundational-patent",
+    "id": 2,
+    "ko": "응용특허",
+    "eng": "Application patents"
+  },
+  {
+    "route": "foundational-patent",
+    "id": 3,
+    "ko": "PCT 출원 리스트",
+    "eng": "List of PCT patent applications"
+  },
+  {
+    "route": "foundational-patent",
+    "id": 4,
+    "ko": "출원",
+    "eng": "Issued"
+  },
+  {
+    "route": "foundational-patent",
+    "id": 5,
+    "ko": "등록",
+    "eng": "Filed"
+  },
+  {
+    "route": "financials",
+    "id": "",
+    "ko": "자산총계",
+    "eng": "Assets"
+  },
+  {
+    "route": "financials",
+    "id": "",
+    "ko": "부채총계",
+    "eng": "Liabilities"
+  },
+  {
+    "route": "financials",
+    "id": "",
+    "ko": "자본총계",
+    "eng": "Equity"
+  },
+  {
+    "route": "financials",
+    "id": "",
+    "ko": "매출액",
+    "eng": "Revenue"
+  },
+  {
+    "route": "financials",
+    "id": "",
+    "ko": "영업이익",
+    "eng": "Operating income"
+  },
+  {
+    "route": "financials",
+    "id": "",
+    "ko": "당기순이익",
+    "eng": "Net income"
+  },
+  {
+    "route": "financials",
+    "id": "",
+    "ko": "항목",
+    "eng": "Item"
+  },
+  {
+    "route": "etc",
+    "id": 1,
+    "ko": "건",
+    "eng": ""
+  },
+  {
+    "route": "etc",
+    "id": 2,
+    "ko": "전체",
+    "eng": "all"
+  },
+  {
+    "route": "etc",
+    "id": 6,
+    "ko": "국가",
+    "eng": "Country"
+  },
+  {
+    "route": "etc",
+    "id": 7,
+    "ko": "출원번호",
+    "eng": "Application Number"
+  },
+  {
+    "route": "etc",
+    "id": 8,
+    "ko": "출원일",
+    "eng": "Filing Date"
+  },
+  {
+    "route": "etc",
+    "id": 9,
+    "ko": "상태",
+    "eng": "Status"
+  },
+  {
+    "route": "etc",
+    "id": 3,
+    "ko": "더보기",
+    "eng": "More"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "현재가",
+    "eng": "Open"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "고가",
+    "eng": "High"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "저가",
+    "eng": "Low"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "매수호가",
+    "eng": "Buying price"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "매도호가",
+    "eng": "Selling price"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "거래량",
+    "eng": "Volume"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "주가 그래프",
+    "eng": "Stock Price Graph"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "최근 거래",
+    "eng": "Recent Transactions"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "호가 정보",
+    "eng": "Call Price Information"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "일별 시세",
+    "eng": "Daily Rate"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "외국인 지분율",
+    "eng": "Foreign Ownership Rate"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "1일",
+    "eng": "1D"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "1주일",
+    "eng": "1W"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "3개월",
+    "eng": "3M"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "1년",
+    "eng": "1Y"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "3년",
+    "eng": "3Y"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "5년",
+    "eng": "5Y"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "10년",
+    "eng": "10 Years"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "제목",
+    "eng": "Title"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "작성자",
+    "eng": "Submitter"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "날짜",
+    "eng": "Date"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "비고",
+    "eng": "Note"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "1개월",
+    "eng": "1M"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "6개월",
+    "eng": "6M"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "1년",
+    "eng": "1Y"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "성명",
+    "eng": "NAME"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "단체명/기업명",
+    "eng": "Organization/Company Name"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "이메일",
+    "eng": "E-MAIL"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "연락처",
+    "eng": "CONTACT NUMBER"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "선택",
+    "eng": "Select"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "문의사항",
+    "eng": "Inquiry"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "인재 DB 등록하기",
+    "eng": "Register for Talent Pool"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "채용 중 공고",
+    "eng": "Job Openings"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "종가",
+    "eng": "Closing Price"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "전일비",
+    "eng": "Price Difference from Previous Day"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "등락률",
+    "eng": "Rate of Change"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "기관",
+    "eng": "Institutional Investors"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "외국인",
+    "eng": "Foreign Investors"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "순매매량",
+    "eng": "Net Purchase/Sale Volume"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "보유주수",
+    "eng": "Holdings"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "지분율",
+    "eng": "Ownership Ratio"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "공지사항",
+    "eng": "Notice"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "저촉심사",
+    "eng": "Exemption Review"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "주가정보",
+    "eng": "Stock Information"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "공시자료",
+    "eng": "Fillings"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "재무제표",
+    "eng": "Financials"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "뉴스",
+    "eng": "News"
+  },
+  {
+    "route": "etc",
+    "id": "",
+    "ko": "주요시세",
+    "eng": "Stock Prices"
+  },
+  {
+    "route": "sub-menu",
+    "id": 2,
+    "ko": "공지사항",
+    "eng": "Notice"
+  },
+  {
+    "route": "common",
+    "id": 1,
+    "ko": "PDF 다운로드",
+    "eng": "Download PDF"
+  },
+  {
+    "route": "common",
+    "id": 2,
+    "ko": "모두보기",
+    "eng": "View All"
+  },
+  {
+    "route": "career",
+    "id": 2,
+    "ko": "ex)입사지원서, 자기소개서, 포트폴리오, 학위증명서, 연구내용 (논문 및 특허)",
+    "eng": "(RESUME, PERSONAL STATEMENT, PORTFOLIO, DEGREE CETIFICATE, RESEARCH CONTENTS)"
+  },
+  {
+    "route": "career",
+    "id": 1,
+    "ko": "해당 지원은 상시 채용을 위해 활용되며, 담당 부서에서 비정기적으로 검토하여 채용 포지션이 오픈시 서류 합격자에 한해 개별적으로 연락드리게 됩니다.",
+    "eng": "This application will be used for recruitment purpose only. It will be reviewed by relevant department and only certain applicants will be contacted individually when a position becomes available."
+  },
+  {
+    "route": "common",
+    "id": 3,
+    "ko": "CI 다운로드",
+    "eng": "Download CI"
+  },
+  {
+    "route": "",
+    "id": 1,
+    "ko": "개인정보취급방침",
+    "eng": "Privacy Policy"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "자산총계",
+    "eng": "Assets"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "부채총계",
+    "eng": "Liabilities"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "자본총계",
+    "eng": "Equity"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "매출액",
+    "eng": "Revenues"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "자산총계 (단위:백만원)",
+    "eng": "Assets"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "부채총계 (단위:백만원)",
+    "eng": "Liabilities"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "자본총계 (단위:백만원)",
+    "eng": "Equity"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "매출액 (단위:백만원)",
+    "eng": "Revenue"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "영업이익 (단위:백만원)",
+    "eng": "Operating income"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "당기순이익 (단위: 백만원)",
+    "eng": "Net income"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "기간별 조회",
+    "eng": "Periodic Search"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "본 자료는 금융감독원 전자공시시스템 (http://dart.fss.or.kr)의 검색결과입니다.",
+    "eng": "This document is a search result from the Electronic Disclosure System (http://dart.fss.or.kr) of the Financial Supervisory Service."
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "번호",
+    "eng": "Number"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "보고서명",
+    "eng": "Report Name"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "제출인",
+    "eng": "Submitter"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "접수일자",
+    "eng": "Date"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "출원",
+    "eng": "Issued"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "등록",
+    "eng": "Filed"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "개",
+    "eng": ""
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "접기",
+    "eng": "Fold"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "펼쳐보기",
+    "eng": "Expand"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "응용특허 PCT 출원 리스트",
+    "eng": "PCT patent application list"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "보내기",
+    "eng": "Send"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "현황",
+    "eng": "Status"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "첨부자료",
+    "eng": "ATTACHMENT"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "인재 DB 등록",
+    "eng": "HR DB REGISTRATION"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "목록으로",
+    "eng": "Back to List"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "항목",
+    "eng": "Item"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "",
+    "eng": ""
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "",
+    "eng": ""
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "",
+    "eng": ""
+  }
 ]

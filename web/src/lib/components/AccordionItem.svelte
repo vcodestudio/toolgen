@@ -4,13 +4,13 @@
   export let open = false
 </script>
 
-<div class="accordion-b p-6 m:p-4" class:fill-light-blue={open}>
-  <div class="flex gap-6 items-start">
+<div class="p-6 accordion-b m:p-4" class:fill-bluegray={open}>
+  <div class="flex items-start gap-6">
     <p class="fg-sub text16">{twoDigits(+index + 1)}</p>
     <div class="w-full">
       <a
         href="#"
-        class="block bar flex w-full items-center"
+        class="flex items-center block w-full bar"
         tabindex="0"
         role="button"
         on:click|preventDefault={() => {
@@ -38,7 +38,7 @@
         </div>
       </a>
       {#if open}
-        <div class="cont mt-6">
+        <div class="mt-6 cont">
           <slot />
         </div>
       {/if}

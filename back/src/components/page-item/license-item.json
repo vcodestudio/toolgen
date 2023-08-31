@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_page_item_license_items",
+  "info": {
+    "displayName": "license_item",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "childs": {
+      "type": "string"
+    }
+  }
+}

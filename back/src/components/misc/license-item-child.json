@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_misc_license_item_children",
+  "info": {
+    "displayName": "license_item_child"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

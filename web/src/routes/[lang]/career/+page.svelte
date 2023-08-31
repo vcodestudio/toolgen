@@ -31,6 +31,8 @@
     ],
   }
 
+  jobs = { category: [], data: [] }
+
   let currentCategory = jobs.category[0]
 </script>
 
@@ -85,7 +87,7 @@
     </div>
   </div>
 </Section>
-{#if jobs}
+{#if jobs.length}
   <Section>
     <div class="grid gap-8">
       <h3>{__e(lang, '채용 중 공고')}</h3>
