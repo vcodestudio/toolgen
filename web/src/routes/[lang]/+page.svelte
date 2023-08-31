@@ -14,15 +14,15 @@
 
   let cards = [
     {
-      link: `/${lang}/platform`,
+      link: `/platform`,
       image: '/images/static/fcc4e8b33c5441804c7b7c47262add82.jpg',
     },
     {
-      link: `/${lang}/therapeutics`,
+      link: `/therapeutics`,
       image: '/images/static/f67231e5cb6eb3a15d80cb481e45dd27.jpg',
     },
     {
-      link: `/${lang}/crops`,
+      link: `/crops`,
       image: '/images/static/30b695f77b9c1f6430cdec0aaa2a1117.jpg',
     },
   ]
