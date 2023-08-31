@@ -154,8 +154,8 @@
         <a href="/{$page.params.lang}/career" class="color-mint">Career</a>
         <div class="flex justify-end gap-6">
           <div class="flex gap-0">
-            <a href="/" class="px-4">한</a>
-            <!-- <a href="/" class="px-4 border-l border-gray-200 color-disable">A</a> -->
+            <a href="/ko" class="px-4">한</a>
+            <a href="/eng" class="px-4 border-l border-gray-200">A</a>
           </div>
         </div>
       </div>
