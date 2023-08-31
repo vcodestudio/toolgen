@@ -11,15 +11,18 @@ export const POST = async ({ request }) => {
   } else {
     // check if req is our server
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env['MAIL_ID'],
-        pass: process.env['MAIL_PASS'],
-      },
+      // service: 'gmail',
+      // host: 'smtp.gmail.com',
+      host: 'localhost',
+      secure: false,
+      // auth: {
+      //   user: 'vcode@vcode-studio.com', // process.env['MAIL_ID'] ?? 'vcode@vcode-studio.com',
+      //   pass: 'Only6497!12', //process.env['MAIL_PASS'] ?? 'Only6497!12',
+      // },
     })
 
     var mailOptions = {
-      from: 'vcode@vcode-studio.com',
+      from: 'noreply@toolgen.com',
       to: 'vcode@vcode-studio.com',
       subject: `${body.name}으로 부터 메일`,
       text: `${body.msg}`,

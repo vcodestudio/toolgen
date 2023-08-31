@@ -22,6 +22,7 @@ export function formatDate(date, format = 'YYYY.MM.DD') {
     .replace(/DD/g, day < 10 ? `0${day}` : day)
 }
 
+import { redirect } from '@sveltejs/kit'
 import * as qs from 'qs'
 
 export async function LoadPost(params = { post_type: 'notices', locale: 'ko-KR', page: 1, limit: 10 }) {
@@ -78,4 +79,25 @@ export function extractContent(data) {
   })
 
   return result
+}
+
+import Tr from '$lib/i18n/translate.json' assert { type: 'json' }
+
+export function __t(route, locale = 'ko', memo = '') {
+  let output = 'undefined'
+  const [loc, id] = route.split('.')
+  if (loc && id) {
+    output = Tr.find(a => a.route == loc && a.id == id)[locale]
+  } else if (loc) {
+    output = Tr.find(a => a.route == route && a.ko == memo)[locale]
+  }
+  return output
+}
+
+export function __e(locale = 'ko', str = '') {
+  let output
+  output = Tr.find(a => (a.route == 'etc' || a.route == '') && a.ko == str)
+  if (output[locale]) output = output[locale]
+  else output = `${str} : undefined`
+  return output
 }

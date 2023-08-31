@@ -1,14 +1,12 @@
 {
   "collectionName": "components_page_item_piplines",
   "info": {
-    "displayName": "pipline",
-    "icon": "archive"
+    "displayName": "pipeline_item",
+    "icon": "archive",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "category": {
-      "type": "string"
-    },
     "title": {
       "type": "string"
     },
@@ -20,6 +18,12 @@
       "customField": "plugin::ckeditor5.CKEditor"
     },
     "desc": {
+      "type": "string"
+    },
+    "progress": {
+      "type": "string"
+    },
+    "category": {
       "type": "string"
     }
   }

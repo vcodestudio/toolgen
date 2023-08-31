@@ -50,11 +50,11 @@
         "page-item.gallery",
         "page-item.recruit",
         "page-item.licenses",
-        "page-item.pipline",
         "page-item.history-slider",
         "page-item.profiles",
         "page-item.interview-slider",
-        "page-item.faq-list"
+        "page-item.faq-list",
+        "page-item.pipeline"
       ],
       "pluginOptions": {
         "i18n": {

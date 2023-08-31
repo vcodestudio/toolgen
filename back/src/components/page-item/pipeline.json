@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_page_item_pipelines",
+  "info": {
+    "displayName": "pipeline",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page-item.pipline"
+    },
+    "progress": {
+      "type": "string"
+    }
+  }
+}
