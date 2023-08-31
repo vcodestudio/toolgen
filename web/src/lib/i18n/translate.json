@@ -549,7 +549,7 @@
     "route": "",
     "id": "",
     "ko": "기간별 조회",
-    "eng": "Periodic Search"
+    "eng": "Periodic inquiry"
   },
   {
     "route": "",
@@ -728,8 +728,8 @@
   {
     "route": "",
     "id": "",
-    "ko": "",
-    "eng": ""
+    "ko": "조회",
+    "eng": "Search"
   },
   {
     "route": "",

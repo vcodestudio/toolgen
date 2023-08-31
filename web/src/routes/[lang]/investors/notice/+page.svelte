@@ -2,6 +2,9 @@
   import Pagination from '$lib/components/Pagination.svelte'
   import Section from '$lib/components/Section.svelte'
   import { page } from '$app/stores'
+  import { __e } from '$lib/utils'
+
+  let lang = $page.params.lang
 
   export let data
   $: posts = data.data
@@ -16,9 +19,9 @@
     <!-- body -->
     <div class="board normal">
       <div class="item fg-sub text16-500 m:hidden">
-        <p>번호</p>
-        <p>제목</p>
-        <p>날짜</p>
+        <p>{__e(lang, '번호')}</p>
+        <p>{__e(lang, '제목')}</p>
+        <p>{__e(lang, '날짜')}</p>
       </div>
       {#each posts as post, i}
         <a class="item" href={`${$page.url.pathname}/${post.id}`}>

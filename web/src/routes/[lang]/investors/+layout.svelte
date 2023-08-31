@@ -10,11 +10,11 @@
   let lang = $page.params.lang
 
   let menus = [
-    { selected: false, title: 'Notice', name: __e(lang, '공지사항'), link: '/investors/notice', lang: 'ko' },
+    { selected: false, title: 'Notice', name: __e(lang, '공지사항'), link: '/investors/notice' },
     { selected: false, title: 'Stock Information', name: __e(lang, '주가정보'), link: '/investors/stock' },
     { selected: false, title: 'Filings', name: __e(lang, '공시자료'), link: '/investors/filings' },
     { selected: false, title: 'Financials', name: __e(lang, '재무제표'), link: '/investors/finance' },
-    { selected: false, title: 'News', name: __e(lang, '뉴스'), link: '/investors/news', lang: 'ko' },
+    { selected: false, title: 'News', name: __e(lang, '뉴스'), link: '/investors/news' },
   ]
 
   menus = menus
