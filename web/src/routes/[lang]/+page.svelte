@@ -51,7 +51,7 @@
       </div>
 
       <div class="flex justify-center">
-        <a href="/{lang}/crispr">
+        <a href="/{lang}/crispr/cas9">
           <button class="border-none fill hover:bg-navy hover:text-white">CRISPR-Cas9</button>
         </a>
       </div>
