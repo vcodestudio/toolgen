@@ -3,7 +3,7 @@
     "route": "sub-menu",
     "id": 1,
     "ko": "저촉심사",
-    "eng": "-"
+    "eng": "Interference"
   },
   {
     "route": "sub-menu",
@@ -411,7 +411,7 @@
     "route": "etc",
     "id": "",
     "ko": "저촉심사",
-    "eng": "Exemption Review"
+    "eng": "Interference"
   },
   {
     "route": "etc",
@@ -507,7 +507,7 @@
     "route": "",
     "id": "",
     "ko": "매출액",
-    "eng": "Revenues"
+    "eng": "Revenue"
   },
   {
     "route": "",
@@ -652,6 +652,78 @@
     "id": "",
     "ko": "항목",
     "eng": "Item"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "호주",
+    "eng": "Australia"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "브라질",
+    "eng": "Brazil"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "캐나다",
+    "eng": "Canada"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "중국",
+    "eng": "China"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "유럽",
+    "eng": "Europe"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "홍콩",
+    "eng": "Hong Kong"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "인도",
+    "eng": "India"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "일본",
+    "eng": "Japan"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "대한민국",
+    "eng": "South Korea"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "싱가포르",
+    "eng": "Singapore"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "미국",
+    "eng": "United States"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "",
+    "eng": ""
   },
   {
     "route": "",

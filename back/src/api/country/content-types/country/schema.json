@@ -40,14 +40,6 @@
         }
       }
     },
-    "national_code": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "lat": {
       "type": "string",
       "pluginOptions": {

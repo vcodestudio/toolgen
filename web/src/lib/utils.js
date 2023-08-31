@@ -70,7 +70,8 @@ export function extractContent(data) {
         if (content.html) content.html = content.html.replace('<meta charset="utf-8">', '')
         // remove lsep special character
         const imgUrl = item.img?.data ? item.img.data.attributes.formats.large.url : null // 큰 이미지 URL
-        result.push({ title, content, imgUrl, item })
+        const img = item.img?.data ? item.img.data.attributes : null // 이미지 정보
+        result.push({ title, content, imgUrl, img, item })
         break
       default:
         result.push(item)
@@ -97,7 +98,9 @@ export function __t(route, locale = 'ko', memo = '') {
 export function __e(locale = 'ko', str = '') {
   let output
   output = Tr.find(a => (a.route == 'etc' || a.route == '') && a.ko == str)
+  console.log(str)
   if (output[locale]) output = output[locale]
+  else if (output) output = ''
   else output = `${str} : undefined`
   return output
 }

@@ -42,17 +42,17 @@
   }
   // 한국, 미국, 일본, 케나다, 브라질, 유럽, 인도
   let countries = [
-    { name: '호주', slug: 'AU', lng: '133.775136', lat: '-25.274398' },
-    { name: '브라질', slug: 'BR', lng: '-51.925280', lat: '-14.235004' },
-    { name: '캐나다', slug: 'CA', lng: '-106.346771', lat: '56.130366' },
-    { name: '중국', slug: 'CN', lng: '104.195397', lat: '35.861660' },
-    { name: '유럽', slug: 'EP', lng: '9.555373', lat: '51.165691' },
-    { name: '홍콩', slug: 'HK', lng: '114.109497', lat: '22.396428' },
-    { name: '인도', slug: 'IN', lng: '78.962880', lat: '20.593684' },
-    { name: '일본', slug: 'JP', lng: '142.382924', lat: '39.204824' },
-    { name: '대한민국', slug: 'KR', lng: '127.766922', lat: '35.907757' },
-    { name: '싱가포르', slug: 'SG', lng: '103.819836', lat: '1.352083' },
-    { name: '미국', slug: 'US', lng: '-95.712891', lat: '37.090240' },
+    { name: __e(lang, '호주'), slug: 'AU', lng: '133.775136', lat: '-25.274398' },
+    { name: __e(lang, '브라질'), slug: 'BR', lng: '-51.925280', lat: '-14.235004' },
+    { name: __e(lang, '캐나다'), slug: 'CA', lng: '-106.346771', lat: '56.130366' },
+    { name: __e(lang, '중국'), slug: 'CN', lng: '104.195397', lat: '35.861660' },
+    { name: __e(lang, '유럽'), slug: 'EP', lng: '9.555373', lat: '51.165691' },
+    { name: __e(lang, '홍콩'), slug: 'HK', lng: '114.109497', lat: '22.396428' },
+    { name: __e(lang, '인도'), slug: 'IN', lng: '78.962880', lat: '20.593684' },
+    { name: __e(lang, '일본'), slug: 'JP', lng: '142.382924', lat: '39.204824' },
+    { name: __e(lang, '대한민국'), slug: 'KR', lng: '127.766922', lat: '35.907757' },
+    { name: __e(lang, '싱가포르'), slug: 'SG', lng: '103.819836', lat: '1.352083' },
+    { name: __e(lang, '미국'), slug: 'US', lng: '-95.712891', lat: '37.090240' },
   ]
 
   const lngToX = lng => {
@@ -195,7 +195,7 @@
       <Table
         data={[
           [__e(lang, '국가'), __e(lang, '출원번호'), __e(lang, '출원일'), __e(lang, '상태')],
-          ...posts_.map(a => [a.con_name, a.title, a.date, a.state]),
+          ...posts_.map(a => [countries.find(b => b.slug == a.con_code)?.name, a.title, a.date, __e(lang, a.state)]),
         ]}
       />
     </div>
