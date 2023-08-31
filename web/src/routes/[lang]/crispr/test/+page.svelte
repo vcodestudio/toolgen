@@ -19,7 +19,7 @@
       <p class="text18-700">{posts[1]?.title}</p>
       {@html posts[1]?.content.html}
       <br />
-      <img class="block" src={posts[1]?.img?.url} alt="..." />
+      <!-- <img class="block" src={posts[1]?.img?.url} alt="..." /> -->
     </div>
     <hr />
     <div class="flex flex-col gap-8">
@@ -29,7 +29,7 @@
           {@html posts[2]?.content.html}
         </div>
         <div>
-          <img class="block" src={posts[2]?.img?.url} alt="..." />
+          <!-- <img class="block" src={posts[2]?.img?.url} alt="..." /> -->
         </div>
       </div>
       <div class="flex flex-col gap-2">
