@@ -100,8 +100,10 @@ export function __t(route, locale = 'ko', memo = '') {
 export function __e(locale = 'ko', str = '') {
   let output
   output = Tr.find(a => (a.route == 'etc' || a.route == '') && a.ko == str)
+  console.log(str)
+  console.log(output[locale])
   if (output[locale]) output = output[locale]
   else if (output) output = ''
-  else output = `${str} : undefined`
+  else output = `${str}`
   return output
 }
