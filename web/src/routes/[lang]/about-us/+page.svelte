@@ -12,11 +12,11 @@
   export let data
   $: posts = data.page
   onMount(() => {
-    console.log(posts)
+    // console.log(posts)
   })
 
-  // $: histories = posts.find(a => a.__component == 'page-item.history')?.history
-  let histories = [
+  $: histories = posts.find(a => a.__component == 'page-item.history')?.history
+  let histories_ = [
     { year: '1999', month: '1월', content: '㈜툴젠 설립 (본점소재지: 서울특별시 동작구 사당4동 267-30)' },
     { year: '2002', month: '6월', content: '아시아의 주목할 만한 10개 생명과학회사로 선정 / Pacific Forum' },
     { year: '2003', month: '3월', content: 'ZFP(Zinc Finger Proteins) 논문 발표 / Nature Biotechnology' },
