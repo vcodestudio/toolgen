@@ -70,8 +70,8 @@ export function extractContent(data) {
         if (content.html) content.html = content.html.replace('<meta charset="utf-8">', '')
         // remove lsep special character
         const imgUrl = item.img?.data ? item.img.data.attributes.formats.large.url : null // 큰 이미지 URL
-        const img = item.img?.data ? item.img.data?.attributes : undefined // 이미지 정보
-        result.push({ title, content, imgUrl, img, item })
+        // const img = item.img?.data ? item.img.data?.attributes : undefined // 이미지 정보
+        result.push({ title, content, imgUrl, item })
         break
       default:
         result.push(item)
