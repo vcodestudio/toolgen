@@ -17,7 +17,7 @@
     <div class="flex flex-col gap-6">
       <h2>{posts[0]?.title}</h2>
       {@html posts[0]?.content.html}
-      <DownloadButton title={__t('common.1', $page.params.lang)} />
+      <!-- <DownloadButton title={__t('common.1', $page.params.lang)} /> -->
       <img class="block" src={posts[0]?.imgUrl} alt=".." />
     </div>
   </div></Section

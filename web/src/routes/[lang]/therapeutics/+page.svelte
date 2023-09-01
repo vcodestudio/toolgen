@@ -31,7 +31,7 @@
   </p>
   <div class="flex-auto" />
   <div>
-    <DownloadButton href="/" title={__t('common.1', $page.params.lang)} />
+    <!-- <DownloadButton href="/" title={__t('common.1', $page.params.lang)} /> -->
   </div>
 </Banner>
 <Section>

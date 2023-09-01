@@ -27,7 +27,7 @@
       </div>
       <div class="divider">
         <p><b>E-mail</b> info@toolgen.com</p>
-        <p><b>Tel</b> 02-3660-1330</p>
+        <p><b>Tel</b> 02-3660-1300</p>
         <p><b>Fax</b> 02-3660-1310</p>
       </div>
     </div>

@@ -24,7 +24,7 @@
   </p>
   <div class="flex-auto" />
   <div>
-    <DownloadButton href="/" title="다운로드" />
+    <!-- <DownloadButton href="/" title="다운로드" /> -->
   </div>
 </Banner>
 <Section>

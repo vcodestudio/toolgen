@@ -116,7 +116,7 @@
       {@html posts[1]?.content.html}
       <SectionImg src={posts[1]?.imgUrl} />
       <div class="flex justify-end m:justify-center">
-        <DownloadButton title={__t('common.3', $page.params.lang)} />
+        <!-- <DownloadButton title={__t('common.3', $page.params.lang)} /> -->
       </div>
     </div>
   </Section>
