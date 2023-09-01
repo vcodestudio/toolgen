@@ -7,6 +7,11 @@
   let lang = $page.params.lang
 
   let upload
+
+  function ltn(str) {
+    // convert lsep to \n
+    return str?.replace(/[\u2028]/g, '<br>')
+  }
 </script>
 
 {#if $popup}
@@ -191,7 +196,7 @@
               <div>
                 <p class="text16-700">{$popup.data?.name}</p>
                 {#if $popup.data?.job_2}
-                  <p class="opacity-50 text14-400">{$popup.data?.job_2}</p>
+                  <p class="opacity-50 text14-400">{@html ltn($popup.data?.job_2)}</p>
                 {/if}
               </div>
             </div>

@@ -86,6 +86,11 @@
       img: '/images/people-12.png',
     },
   ]
+
+  function ltn(str) {
+    // convert lsep to \n
+    return str?.replace(/[\u2028]/g, ' \u2022 ')
+  }
 </script>
 
 <div class="profiles">
@@ -109,7 +114,7 @@
       <div class="flex grid flex-col items-start flex-auto gap-0 p-4 py-6 fill-blue desc">
         <div class="flex items-end gap-2">
           <h4 class="text24-500 single-line">{item.name}</h4>
-          <p class="text12-400 single-line">{item.job}</p>
+          <p class="text12-400 single-line">{ltn(item.job)}</p>
         </div>
         <p class="text18-400">{item.eng}</p>
         <p class="body14-600 color-light-blue">{item.desc}</p>
