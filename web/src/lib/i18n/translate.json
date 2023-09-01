@@ -63,13 +63,13 @@
     "route": "foundational-patent",
     "id": 4,
     "ko": "출원",
-    "eng": "Issued"
+    "eng": "Filed"
   },
   {
     "route": "foundational-patent",
     "id": 5,
     "ko": "등록",
-    "eng": "Filed"
+    "eng": "Issued"
   },
   {
     "route": "financials",
