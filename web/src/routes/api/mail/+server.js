@@ -13,11 +13,11 @@ export const POST = async ({ request }) => {
     const transporter = nodemailer.createTransport({
       // service: 'gmail',
       // host: 'smtp.gmail.com',
-      port:25,
+      port: 25,
       host: 'localhost',
       secure: false,
       tls: {
-        rejectUnauthorized: false
+        rejectUnauthorized: false,
       },
       // auth: {
       //   user: 'vcode@vcode-studio.com', // process.env['MAIL_ID'] ?? 'vcode@vcode-studio.com',
@@ -26,7 +26,7 @@ export const POST = async ({ request }) => {
     })
 
     var mailOptions = {
-      from: 'noreply@toolgen.com',
+      from: 'vcode@vcode-studio.com', //'info@toolgen.com'
       to: 'vcode@vcode-studio.com',
       subject: `${body.name}으로 부터 메일`,
       text: `${body.msg}`,

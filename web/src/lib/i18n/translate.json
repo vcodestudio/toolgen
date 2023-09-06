@@ -732,6 +732,66 @@
     "eng": "Search"
   },
   {
+    "route": "form",
+    "id": "send_thank",
+    "ko": "문의가 발송되었습니다. 감사합니다.",
+    "eng": "The inquiry has been sent. Thank you."
+  },
+  {
+    "route": "form",
+    "id": "invalid_email",
+    "ko": "이메일 형식이 올바르지 않습니다.",
+    "eng": "The email format is not valid."
+  },
+  {
+    "route": "form",
+    "id": "invalid_desc",
+    "ko": "내용은 10자 이상 입력해주세요.",
+    "eng": "Please enter at least 10 characters for the content."
+  },
+  {
+    "route": "form",
+    "id": "invalid_required",
+    "ko": "필수 입력 항목입니다.",
+    "eng": "This field is required."
+  },
+  {
+    "route": "form",
+    "id": "invalid_number",
+    "ko": "전화번호 형식이 올바르지 않습니다.",
+    "eng": "The phone number format is not valid."
+  },
+  {
+    "route": "form",
+    "id": "download",
+    "ko": "다운로드 및 열람 가능한 링크를 넣어주세요.",
+    "eng": "Please provide a downloadable and viewable link"
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "",
+    "eng": ""
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "",
+    "eng": ""
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "",
+    "eng": ""
+  },
+  {
+    "route": "",
+    "id": "",
+    "ko": "",
+    "eng": ""
+  },
+  {
     "route": "",
     "id": "",
     "ko": "",

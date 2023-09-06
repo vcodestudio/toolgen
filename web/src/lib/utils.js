@@ -90,9 +90,11 @@ export function __t(route, locale = 'ko', memo = '') {
   let output = 'undefined'
   const [loc, id] = route.split('.')
   if (loc && id) {
-    output = Tr.find(a => a.route == loc && a.id == id)[locale]
+    output = Tr.find(a => a.route == loc && a.id == id)
+    if (output && locale in output) output = output[locale]
   } else if (loc) {
-    output = Tr.find(a => a.route == route && a.ko == memo)[locale]
+    output = Tr.find(a => a.route == route && a.ko == memo)
+    if (output && locale in output) output = output[locale]
   }
   return output
 }
@@ -100,9 +102,8 @@ export function __t(route, locale = 'ko', memo = '') {
 export function __e(locale = 'ko', str = '') {
   let output
   output = Tr.find(a => (a.route == 'etc' || a.route == '') && a.ko == str)
-  console.log(str)
-  console.log(output[locale])
-  if (output[locale]) output = output[locale]
+
+  if (output && locale in output) output = output[locale]
   else if (output) output = ''
   else output = `${str}`
   return output
