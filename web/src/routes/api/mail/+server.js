@@ -13,8 +13,12 @@ export const POST = async ({ request }) => {
     const transporter = nodemailer.createTransport({
       // service: 'gmail',
       // host: 'smtp.gmail.com',
+      port:25,
       host: 'localhost',
       secure: false,
+      tls: {
+        rejectUnauthorized: false
+      },
       // auth: {
       //   user: 'vcode@vcode-studio.com', // process.env['MAIL_ID'] ?? 'vcode@vcode-studio.com',
       //   pass: 'Only6497!12', //process.env['MAIL_PASS'] ?? 'Only6497!12',
