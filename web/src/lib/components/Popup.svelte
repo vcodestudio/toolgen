@@ -3,14 +3,45 @@
   import TableBoard from './TableBoard.svelte'
   import { page } from '$app/stores'
   import { __e, __t } from '$lib/utils'
+  import { applyAction, deserialize } from '$app/forms';
 
   let lang = $page.params.lang
 
   let upload
 
+  let formEnd = false;
+  let errors = {}
+
   function ltn(str) {
     // convert lsep to \n
     return str?.replace(/[\u2028]/g, '<br>')
+  }
+
+  async function handleSubmit(event) {
+    const data = new FormData(this);
+    const action = this.action.split("?/")[1] ?? "";
+
+    let res = {type: 'error'};
+
+    const req = await fetch(this.action, {
+      method: 'POST',
+      body: data,
+    });
+    res = deserialize(await req.text());
+
+    if(res.type == 'success') {
+        if(res.data.success) {
+          formEnd = true;
+        } else {
+          errors = res.data?.error ?? {}
+        }
+    } else {
+    }
+  }
+
+  function popset(bool) {
+    popup.set(bool);
+    formEnd = false;
   }
 </script>
 
@@ -22,11 +53,11 @@
     tabindex="0"
     role="button"
     on:click|self={() => {
-      popup.set(false)
+      popset(false)
     }}
     on:keydown|self={e => {
       if (e.key === 'Enter' || e.key === ' ') {
-        popup.set(false)
+        popset(false)
       }
     }}
   >
@@ -35,7 +66,7 @@
         class="clean exit pc"
         href="/"
         on:click|preventDefault={() => {
-          popup.set(false)
+          popset(false)
         }}
       >
         <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +83,7 @@
         class="clean exit mob"
         href="/"
         on:click|preventDefault={() => {
-          popup.set(false)
+          popset(false)
         }}
       >
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,6 +112,7 @@
         </div>
       {:else if $popup.type == 'form'}
         <div class="content">
+          {#if !formEnd}
           <div class="grid gap-6">
             <div class="grid gap-1">
               <p class="text14-400 fg-sub">Interest in ToolGen's</p>
@@ -89,38 +121,50 @@
                 {$popup.data?.content}
               </p>
             </div>
-            <div class="grid gap-4">
+            <form class="grid gap-4" method="POST" action="/api/email?/license" on:submit|preventDefault={handleSubmit}>
               <div class="grid gap-2">
                 <p class="text14-700">{__e(lang, '성명')} <span class="fg-blue">*</span></p>
-                <input type="text" />
+                <input type="text" name="name" />
               </div>
               <div class="grid gap-2">
                 <p class="text14-700">{__e(lang, '단체명/기업명')} <span class="fg-blue">*</span></p>
-                <input type="text" />
+                <input type="text" name="company" />
               </div>
               <div class="grid gap-2">
                 <p class="text14-700">{__e(lang, '이메일')} <span class="fg-blue">*</span></p>
-                <input type="text" />
+                <input type="text" name="email" />
               </div>
               <div class="grid gap-2">
                 <p class="text14-700">
                   {__e(lang, '연락처')} <span class="text14-400 fg-sub">({__e(lang, '선택')})</span>
                 </p>
-                <input type="text" />
+                <input type="text" name="number" />
               </div>
               <div class="grid gap-2">
                 <p class="text14-700">{__e(lang, '문의사항')} <span class="fg-blue">*</span></p>
-                <textarea rows="5" />
+                {#if errors.desc}
+                  <p class="text-red-500 text-sm">문의사항을 채워주세요.</p>
+                {/if}
+                <textarea rows="5" name="desc" />
               </div>
               <div>
                 <button class="fill">{__e(lang, '보내기')}</button>
               </div>
-            </div>
+            </form>
           </div>
+          {:else}
+          <div class="flex flex-col gap-8">
+            <p class="text-center text-lg">
+              문의가 발송되었습니다. 감사합니다.
+            </p>
+            <button class="fill" on:click={e=>{popset(false)}}>CLOSE</button>
+          </div>
+          {/if}
         </div>
       {:else if $popup.type == 'db'}
         <div class="content">
-          <div class="grid gap-6">
+          {#if !formEnd}
+          <form class="grid gap-6" action="/api/email?/sendDB" on:submit|preventDefault={handleSubmit}>
             <div class="grid gap-1">
               <p class="text14-400 fg-sub">Apply to ToolGen's</p>
               <p class="text18-700">{__e(lang, '인재 DB 등록')}</p>
@@ -177,7 +221,15 @@
                 <button class="fill">{__e(lang, '보내기')}</button>
               </div>
             </div>
+          </form>
+          {:else}
+          <div class="flex flex-col gap-8">
+            <p class="text-center text-lg">
+              문의가 발송되었습니다. 감사합니다.
+            </p>
+            <button class="fill" on:click={e=>{popset(false)}}>CLOSE</button>
           </div>
+          {/if}
         </div>
       {:else if $popup.type == 'profile'}
         <div class="fill-blue pop-profile flex text-white m:flex-col m:py-[60px] m:w-full m:max-w-full">

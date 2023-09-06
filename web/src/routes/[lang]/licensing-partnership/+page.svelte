@@ -8,6 +8,10 @@
   import { onMount } from 'svelte'
 
   export let data
+  export let form
+
+  $: console.log(form);
+
   $: posts = data.page
 
   $: licenses = posts[2]?.item
