@@ -3,7 +3,7 @@
   import { Swiper } from 'swiper'
   import 'swiper/css'
   //   import 'swiper/swiper-bundle.css'
-  export let [navigation, pagination] = [true, true]
+  export let [navigation, pagination, pg_arrow] = [true, true, true]
   export let paginationPos = 'bottom'
   export let color = {
     active: 'bg-black opacity-100',
@@ -63,6 +63,21 @@
           : color.inactive ?? color.active}"
       />
     {/each}
+    {#if pg_arrow}
+      <div
+        on:click={() => {
+          sliderObj.slideNext()
+        }}
+        class="cursor-pointer"
+      >
+        <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9.75 4.70096C10.75 5.27831 10.75 6.72169 9.75 7.29904L2.25 11.6292C1.25 12.2065 -5.89441e-07 11.4848 -5.38967e-07 10.3301L-1.60415e-07 1.66987C-1.09942e-07 0.515171 1.25 -0.206516 2.25 0.370835L9.75 4.70096Z"
+            fill="#2A7DE1"
+          />
+        </svg>
+      </div>
+    {/if}
   </div>
 {/if}
 <div class="flex flex-col gap-6">
@@ -130,6 +145,21 @@
     {/if}
     {#if pagination && sliderObj && paginationPos == 'bottom'}
       <div class="flex items-center justify-center em:gap-2">
+        {#if pg_arrow}
+          <div
+            on:click={() => {
+              sliderObj.slidePrev()
+            }}
+            class="cursor-pointer"
+          >
+            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.25 7.29904C0.249999 6.72169 0.25 5.27831 1.25 4.70096L8.75 0.370834C9.75 -0.206516 11 0.515172 11 1.66987L11 10.3301C11 11.4848 9.75 12.2065 8.75 11.6292L1.25 7.29904Z"
+                fill="#2A7DE1"
+              />
+            </svg>
+          </div>
+        {/if}
         {#each sliderObj.slides as slide, idx}
           <div
             class=" w-3 h-3 rounded-full transition-all {currentSlide == idx
@@ -137,6 +167,21 @@
               : color.inactive ?? color.active}"
           />
         {/each}
+        {#if pg_arrow}
+          <div
+            on:click={() => {
+              sliderObj.slideNext()
+            }}
+            class="cursor-pointer"
+          >
+            <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.75 4.70096C10.75 5.27831 10.75 6.72169 9.75 7.29904L2.25 11.6292C1.25 12.2065 -5.89441e-07 11.4848 -5.38967e-07 10.3301L-1.60415e-07 1.66987C-1.09942e-07 0.515171 1.25 -0.206516 2.25 0.370835L9.75 4.70096Z"
+                fill="#2A7DE1"
+              />
+            </svg>
+          </div>
+        {/if}
       </div>
     {/if}
     {#if navigation}

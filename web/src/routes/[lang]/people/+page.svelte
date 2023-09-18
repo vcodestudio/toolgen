@@ -73,7 +73,7 @@
   </div>
 </Section>
 <Section class_="fill-yellow">
-  <Slider>
+  <Slider pg_arrow={false}>
     {#each posts[1]?.item ?? [] as item, i}
       <div class="swiper-slide">
         <div class="flex items-center gap-6 phone:flex-col">
