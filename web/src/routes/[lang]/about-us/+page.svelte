@@ -103,7 +103,7 @@
         "
       >
         <h1 class="m:text24">
-          Innovate Genome,<br />
+          Innovate Genome<br />
           Edit Your Life
         </h1>
       </div>

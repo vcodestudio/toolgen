@@ -23,9 +23,12 @@
           tabindex="0"
           on:click|preventDefault={() => {
             // all close
-            licenses.map(a => {
-              a.open = false
-            })
+            if (!item.open) {
+              licenses = licenses.map(a => {
+                a.open = false
+                return a
+              })
+            }
             item.childs?.length
               ? (item.open = !item.open)
               : popup.set({
