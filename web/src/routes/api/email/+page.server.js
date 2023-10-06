@@ -33,7 +33,7 @@ export const actions = {
 
       var mailOptions = {
         from: '"Info" <info@toolgen.com>', //'info@toolgen.com'
-        to: 'info@toolgen.com',
+        to: 'Partnership@toolgen.com',
         subject: `[라이센스 문의]${data.get('title')}`,
         html: `
         <p>${data.get('title')}에 대한 문의가 접수되었습니다.</p>
@@ -106,7 +106,7 @@ export const actions = {
 
       var mailOptions = {
         from: '"Info" <info@toolgen.com>', //'info@toolgen.com'
-        to: 'info@toolgen.com',
+        to: 'recruit@toolgen.com',
         subject: `[인재 DB 등록] 인재 DB 등록 요청이 접수되었습니다.`,
         html: `
         <table>

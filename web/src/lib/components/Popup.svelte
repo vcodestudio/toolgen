@@ -138,6 +138,7 @@
                 action="/api/email?/license"
                 on:submit|preventDefault={handleSubmit}
               >
+                <input type="hidden" name="type" value="license" />
                 <input type="hidden" name="lang" value={lang} />
                 <input type="hidden" name="title" value={$popup.data?.title} />
                 <div class="grid gap-2">
@@ -202,6 +203,7 @@
                   {__t('career.1', lang)}
                 </p>
               </div>
+              <input type="hidden" name="type" value="recruit" />
               <input type="hidden" name="lang" value={lang} />
               <div class="grid gap-4">
                 <div class="grid gap-2">

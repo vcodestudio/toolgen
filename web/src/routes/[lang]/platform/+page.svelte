@@ -39,5 +39,5 @@
   </Overview>
 </Section>
 <Section>
-  <CardNews title="Related Contents" posts={presses} listUrl="/investors/news" />
+  <CardNews title="News" posts={presses} listUrl="/investors/news" />
 </Section>
