@@ -25,7 +25,7 @@
       </div>
       {#each posts as post, i}
         <a class="item" href={`${$page.url.pathname}/${post.id}`}>
-          <p>{post.id}</p>
+          <p>{i + (data?.meta.pagination.page - 1) * 15 + 1}</p>
           <p class="text-left">{post.attributes.title}</p>
           <p>{post.attributes.date}</p>
         </a>

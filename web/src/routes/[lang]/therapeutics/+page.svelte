@@ -18,8 +18,7 @@
   $: categories = [...new Set(pipeitem?.item.map(a => a.category))] ?? []
 
   onMount(() => {
-    // console.log(presses)
-    console.log('pip', posts, categories)
+    // console.log('pip', posts, categories)
   })
 </script>
 
@@ -71,5 +70,5 @@
   </div>
 </Section>
 <Section>
-  <CardNews title="Related Contents" posts={presses} listUrl="/investors/news" />
+  <CardNews title="News" posts={presses} listUrl="/investors/news" />
 </Section>

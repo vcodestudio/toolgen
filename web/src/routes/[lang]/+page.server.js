@@ -5,13 +5,11 @@ export const load = async ({ fetch }) => {
     post_type: 'notices',
     'pagination[page]': 1,
     'pagination[pageSize]': 5,
-    sort: 'date:desc',
   })
   const res_2 = await LoadPost({
     post_type: 'presses',
     'pagination[page]': 1,
     'pagination[pageSize]': 5,
-    sort: 'date:desc',
   })
 
   return {

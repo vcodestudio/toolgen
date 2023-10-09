@@ -27,6 +27,10 @@ import * as qs from 'qs'
 
 export async function LoadPost(params = { post_type: 'notices', locale: 'ko-KR', page: 1, limit: 10 }) {
   const type = params.post_type
+  if (['notices', 'presses'].includes(type)) {
+    params.locale = 'ko-KR'
+  }
+  console.log(params)
   delete params.post_type
   // convert params to query string
   // const query = Object.keys(params)

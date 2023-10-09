@@ -26,7 +26,7 @@
         <p>{post?.date}</p>
       </div>
     </div>
-    <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-6 detail-content">
       {@html post?.body}
     </div>
     <hr />

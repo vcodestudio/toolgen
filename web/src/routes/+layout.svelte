@@ -5,6 +5,7 @@
   import { setScreen } from '$lib/screen'
   import { onMount } from 'svelte'
   import Popup from '$lib/components/Popup.svelte'
+  import PopUpBanner from '$lib/components/PopUpBanner.svelte'
 
   export let data
   onMount(() => {
@@ -26,4 +27,5 @@
   <slot />
 </main>
 <Popup />
+<PopUpBanner />
 <Footer />
