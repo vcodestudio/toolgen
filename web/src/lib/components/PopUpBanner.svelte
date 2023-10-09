@@ -2,6 +2,7 @@
   import { onMount } from 'svelte'
 
   export let src = '/dummy/unnamed.png'
+  export let link = 'https://www.youtube.com/@ToolGenInc/streams'
 
   let enabled = false //false
 
@@ -32,7 +33,7 @@
     class="fixed left-4 z-[10000] bg-white border border-[navy] phone:left-[50%] phone:-translate-x-1/2 phone:w-[calc(100%-2rem)] top-1/2 max-w-[450px] -translate-y-1/2"
     id="popup"
   >
-    <a href="/" class="block" target="_blank">
+    <a href={link} class="block" target="_blank">
       <img class="block w-full h-auto" {src} alt="..." />
     </a>
     <div class="flex gap-0 border-t border-[navy] h-[3em]">
