@@ -23,7 +23,7 @@
 
   onMount(() => {
     if (document.cookie.indexOf('popupYN=N') < 0) {
-      enabled = true
+      //   enabled = true
     }
   })
 </script>
