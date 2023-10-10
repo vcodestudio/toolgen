@@ -23,9 +23,6 @@
 
   onMount(() => {
     if (document.cookie.indexOf('popupYN=N') < 0) {
-      //   enabled = true
-    }
-    if (location.href.includes('?test')) {
       enabled = true
     }
   })
