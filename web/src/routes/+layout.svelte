@@ -9,7 +9,7 @@
 
   export let data
   onMount(() => {
-    console.log('page', data)
+    // console.log('page', data)
     setScreen()
     window.addEventListener('resize', setScreen)
   })

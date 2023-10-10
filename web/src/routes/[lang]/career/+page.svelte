@@ -13,7 +13,7 @@
   let lang = $page.params.lang
 
   onMount(() => {
-    console.log(data)
+    // console.log(data)
   })
   let jobs = {
     category: [

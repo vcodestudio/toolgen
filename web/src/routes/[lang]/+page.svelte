@@ -5,7 +5,7 @@
   import MobileHeaderW from '$lib/components/MobileHeaderW.svelte'
   import { onMount } from 'svelte'
   import { page } from '$app/stores'
-  import { __t } from '$lib/utils'
+  import { __t, LoadPost } from '$lib/utils'
 
   export let data
   let cont
@@ -30,6 +30,20 @@
   cards = cards.map(a => {
     a.link = `/${lang}${a.link}`
     return a
+  })
+
+  onMount(async () => {
+    const req = await fetch('/api/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ type: 'main' }),
+    })
+    const res = await req.json()
+
+    data = Object.assign(data, res)
+    console.log('data', data)
   })
 </script>
 
@@ -105,9 +119,11 @@
     </div>
   </div>
 </section>
-<section>
-  <div class="gap-20 w-limit section-content">
-    <CardNews title="Notice" listUrl="/investors/notice" posts={data.notice.data} />
-    <CardNews title="News" listUrl="/investors/news" posts={data.press.data} />
-  </div>
-</section>
+{#if data.notice && data.press}
+  <section>
+    <div class="gap-20 w-limit section-content">
+      <CardNews title="Notice" listUrl="/investors/notice" posts={data.notice.data} />
+      <CardNews title="News" listUrl="/investors/news" posts={data.press.data} />
+    </div>
+  </section>
+{/if}

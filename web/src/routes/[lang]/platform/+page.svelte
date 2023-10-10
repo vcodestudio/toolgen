@@ -8,11 +8,27 @@
   import CardPlusItem from '$lib/components/CardPlusItem.svelte'
   import { page } from '$app/stores'
   import { __t } from '$lib/utils'
+  import { onMount } from 'svelte'
 
   export let data
   $: posts = data.page
   $: cards = posts.slice(2, 5)
-  $: presses = data.original?.presses.data
+  // $: presses = data.original?.presses.data
+  let presses = []
+
+  onMount(async () => {
+    const req = await fetch('/api/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ type: 'news' }),
+    })
+
+    const res = await req.json()
+
+    presses = res.data
+  })
 </script>
 
 <MobileHeaderW />
@@ -38,6 +54,8 @@
     </div>
   </Overview>
 </Section>
-<Section>
-  <CardNews title="News" posts={presses} listUrl="/investors/news" />
-</Section>
+{#if presses.length}
+  <Section>
+    <CardNews title="News" posts={presses} listUrl="/investors/news" />
+  </Section>
+{/if}

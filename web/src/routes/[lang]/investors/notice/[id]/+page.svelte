@@ -9,7 +9,7 @@
   export let data
   $: post = data?.post.data[0].attributes
   onMount(() => {
-    console.log('page2', data)
+    // console.log('page2', data)
   })
 </script>
 

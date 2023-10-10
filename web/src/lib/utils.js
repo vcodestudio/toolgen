@@ -30,7 +30,7 @@ export async function LoadPost(params = { post_type: 'notices', locale: 'ko-KR',
   if (['notices', 'presses'].includes(type)) {
     params.locale = 'ko-KR'
   }
-  console.log(params)
+  // console.log(params)
   delete params.post_type
   // convert params to query string
   // const query = Object.keys(params)

@@ -4,7 +4,7 @@
   export let data
   $: posts = data.page
   onMount(() => {
-    console.log(posts)
+    // console.log(posts)
   })
 </script>
 

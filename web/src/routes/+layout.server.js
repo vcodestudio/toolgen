@@ -36,8 +36,8 @@ export const load = async ({ params, url }) => {
       'content.item.thumbnail',
       'content.item.thumb',
       'content.item.detail_image',
-      'notices',
-      'presses',
+      // 'notices',
+      // 'presses',
     ],
   })
   const data_ = extractContent(data)

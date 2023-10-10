@@ -10,7 +10,7 @@
   export let data
   export let form
 
-  $: console.log(form);
+  // $: console.log(form);
 
   $: posts = data.page
 

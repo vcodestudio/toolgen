@@ -12,13 +12,24 @@
   import { __t } from '$lib/utils'
   export let data
   $: posts = data.page
-  $: presses = data.original?.presses.data
+  // $: presses = data.original?.presses.data
+  let presses = []
 
   $: pipeitem = posts.find(a => a.__component == 'page-item.pipeline')
   $: categories = [...new Set(pipeitem?.item.map(a => a.category))] ?? []
 
-  onMount(() => {
-    // console.log('pip', posts, categories)
+  onMount(async () => {
+    const req = await fetch('/api/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ type: 'news' }),
+    })
+
+    const res = await req.json()
+
+    presses = res.data
   })
 </script>
 
@@ -69,6 +80,8 @@
     {/each}
   </div>
 </Section>
-<Section>
-  <CardNews title="News" posts={presses} listUrl="/investors/news" />
-</Section>
+{#if presses.length}
+  <Section>
+    <CardNews title="News" posts={presses} listUrl="/investors/news" />
+  </Section>
+{/if}

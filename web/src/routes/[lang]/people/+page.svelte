@@ -13,7 +13,7 @@
   $: posts = data.page
 
   onMount(() => {
-    console.log('page', posts)
+    // console.log('page', posts)
     window.qs = qs
   })
 

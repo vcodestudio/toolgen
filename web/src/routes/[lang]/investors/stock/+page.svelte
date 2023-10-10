@@ -8,7 +8,7 @@
 
   export let data
   onMount(() => {
-    console.log(data)
+    // console.log(data)
   })
 
   let section = {
