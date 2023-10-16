@@ -26,5 +26,5 @@
   <slot />
 </main>
 <Popup />
-<PopUpBanner />
+<!-- <PopUpBanner /> -->
 <Footer meta={data.setting.data.attributes.footer} />
