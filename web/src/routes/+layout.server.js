@@ -42,9 +42,16 @@ export const load = async ({ params, url }) => {
   })
   const data_ = extractContent(data)
 
+  const footer = await LoadPost({
+    post_type: 'setting',
+    locale: langs[params.lang],
+    populate: ['footer'],
+  })
+
   return {
     pathname,
     page: data_,
     original: data.data[0]?.attributes,
+    footer: footer,
   }
 }

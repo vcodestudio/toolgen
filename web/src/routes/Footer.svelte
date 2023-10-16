@@ -5,6 +5,19 @@
   import { __e } from '$lib/utils'
 
   let lang = $page.params.lang
+
+  export let meta = []
+
+  // $: datas = meta.reduce((acc, cur, i) => {
+  //   if (i % 4 === 0) {
+  //     acc.push([cur])
+  //   } else {
+  //     acc[acc.length - 1].push(cur)
+  //   }
+  //   return acc
+  // }, [])
+
+  let datas = []
 </script>
 
 <footer class="fill-sub p-20 px-0 m:py-[40px]">
@@ -25,11 +38,25 @@
         <p><b>사업자등록번호</b> 108-81-18555</p>
         <p><b>대표이사/사장</b> 이병화</p>
       </div>
+
       <div class="divider">
         <p><b>E-mail</b> info@toolgen.com</p>
         <p><b>Tel</b> 02-3660-1300</p>
         <p><b>Fax</b> 02-3660-1310</p>
       </div>
+
+      {#each datas as data}
+        <div class="divider">
+          {#each data as { title, desc }}
+            <p>
+              {#if title}
+                <b>{title}</b>
+              {/if}
+              {desc}
+            </p>
+          {/each}
+        </div>
+      {/each}
     </div>
     <div>
       <p class="text16-400 fg-sub">Copyright 2023 (C) ToolGen, Inc. All Rights Reserved.</p>

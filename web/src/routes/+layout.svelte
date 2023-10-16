@@ -9,7 +9,6 @@
 
   export let data
   onMount(() => {
-    // console.log('page', data)
     setScreen()
     window.addEventListener('resize', setScreen)
   })
@@ -28,4 +27,4 @@
 </main>
 <Popup />
 <PopUpBanner />
-<Footer />
+<Footer meta={data.footer.data.attributes.footer} />
