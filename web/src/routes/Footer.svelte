@@ -43,8 +43,8 @@
         <p><b>Fax</b> 02-3660-1310</p>
       </div> -->
 
-      {#each datas as data}
-        <div class="divider">
+      {#each datas as data, i}
+        <div class="divider" class:eng={i == 0 && lang == 'eng'}>
           {#each data as { title, desc }}
             <p>
               {#if title}
