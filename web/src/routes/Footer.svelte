@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="flex flex-col gap-2">
-      <div class="divider">
+      <!-- <div class="divider">
         <p>서울 강서구 마곡중앙로 172 8층 (07789)</p>
         <p><b>업무시간</b> 08:30 ~ 17:30 (주말, 공휴일 휴무)</p>
         <p><b>사업자등록번호</b> 108-81-18555</p>
@@ -41,9 +41,9 @@
         <p><b>E-mail</b> info@toolgen.com</p>
         <p><b>Tel</b> 02-3660-1300</p>
         <p><b>Fax</b> 02-3660-1310</p>
-      </div>
+      </div> -->
 
-      <!-- {#each datas as data}
+      {#each datas as data}
         <div class="divider">
           {#each data as { title, desc }}
             <p>
@@ -54,7 +54,7 @@
             </p>
           {/each}
         </div>
-      {/each} -->
+      {/each}
     </div>
     <div>
       <p class="text16-400 fg-sub">Copyright 2023 (C) ToolGen, Inc. All Rights Reserved.</p>
