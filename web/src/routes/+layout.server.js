@@ -52,6 +52,6 @@ export const load = async ({ params, url }) => {
     pathname,
     page: data_,
     original: data.data[0]?.attributes,
-    footer: footer,
+    setting: footer,
   }
 }

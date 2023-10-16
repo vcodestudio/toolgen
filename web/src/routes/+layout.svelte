@@ -27,4 +27,4 @@
 </main>
 <Popup />
 <PopUpBanner />
-<Footer meta={data.footer.data.attributes.footer} />
+<Footer meta={data.setting.data.attributes.footer} />
