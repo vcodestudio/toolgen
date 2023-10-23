@@ -12,11 +12,13 @@ export const POST = async ({ request }) => {
           post_type: 'notices',
           'pagination[page]': 1,
           'pagination[pageSize]': 5,
+          'sort[0]': 'date:DESC',
         })
         res_2 = await LoadPost({
           post_type: 'presses',
           'pagination[page]': 1,
           'pagination[pageSize]': 5,
+          'sort[0]': 'date:DESC',
         })
 
         data = {
@@ -29,6 +31,7 @@ export const POST = async ({ request }) => {
           post_type: 'presses',
           'pagination[page]': 1,
           'pagination[pageSize]': 5,
+          'sort[0]': 'date:DESC',
         })
 
         data = res_2
