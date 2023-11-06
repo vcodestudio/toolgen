@@ -16,7 +16,7 @@
 <Table
   data={[
     [__e(lang, '국가'), __e(lang, '출원번호'), __e(lang, '출원일'), __e(lang, '현황')],
-    ...posts_.map(a => [a.con_name, a.title, a.date, __e(lang, a.state)]),
+    ...posts_.map(a => [a.con_code, a.title, a.date, __e(lang, a.state)]),
   ]}
 />
 <PaginationJson

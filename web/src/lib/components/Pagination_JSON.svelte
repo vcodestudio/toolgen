@@ -10,6 +10,8 @@
     items = items
     maxPages = Math.ceil(items.length / itemPerPage)
     pages = getPages(current, maxPages)
+
+    console.log(items)
   }
 
   $: {

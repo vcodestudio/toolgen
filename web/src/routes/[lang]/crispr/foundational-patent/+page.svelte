@@ -6,15 +6,10 @@
   import { __t, __e } from '$lib/utils'
   import { popup } from '$lib/screen'
   import { onMount } from 'svelte'
-
-  import dat1 from '$lib/crispr/01.json'
-  import dat2 from '$lib/crispr/02.json'
-  import dat3 from '$lib/crispr/03.json'
   import PaginationJson from '$lib/components/Pagination_JSON.svelte'
 
   let lang = $page.params.lang
-  let sims = ['01', '02', '03']
-  let dats = [dat1, dat2, dat3]
+  let dats = [[], [], []]
   let posts = []
   export let data
   $: tab = data.tab
@@ -38,8 +33,9 @@
             .reverse()
         : []
 
-    pgNum = 1
+    // pgNum = 1
   }
+  $: selectedCountry && (pgNum = 1)
   // 한국, 미국, 일본, 케나다, 브라질, 유럽, 인도
   let countries = [
     // { name: __e(lang, '호주'), slug: 'AU', lng: '133.775136', lat: '-25.274398' },
@@ -62,7 +58,10 @@
   countries = countries
 
   onMount(() => {
-    console.log(data)
+    const dats_ = data.dats?.data?.map(a => a.attributes) ?? []
+    dats.forEach((dat, i) => {
+      dats[i] = dats_.filter(a => +a.type == i + 1)
+    })
   })
 
   const lngToX = lng => {

@@ -21,13 +21,10 @@
     "title": {
       "type": "string"
     },
-    "state": {
-      "type": "string"
-    },
-    "auth": {
-      "type": "string"
-    },
     "type": {
+      "type": "string"
+    },
+    "state": {
       "type": "string"
     }
   }
