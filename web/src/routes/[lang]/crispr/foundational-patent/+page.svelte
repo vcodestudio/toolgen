@@ -99,56 +99,58 @@
           }}
         />
         {#each countries_ as country}
-          <a
-            href="#"
-            class:active={selectedCountry == country.slug}
-            class="marker text16-500 absolute text-center flex flex-col gap-4 items-center -translate-y-[100%] -translate-x-[50%]"
-            style="left:{country.x}%;top:{country.y}%"
-            on:click|preventDefault={() => {
-              popOpen = !popOpen
-              selectedCountry = country.slug
-            }}
-          >
-            {#if selectedCountry == country.slug && popOpen}
-              <div class="bg-white rounded-3xl shadow-lg px-[1rem] py-[1rem] relative bottom-4 pointer-events-none">
-                <div class="flex items-center gap-3">
-                  <div class="w-[70px] h-[70px] rounded-3xl">
-                    <img
-                      class="block object-contain w-full h-full"
-                      src={country.img?.data[0]?.attributes?.url ?? ''}
-                      alt={country.title}
-                    />
-                  </div>
-                  <div class="flex flex-col items-start gap-2">
-                    <p class="text16-700 single-line">{country.title}</p>
-                    <div class="flex flex-col gap-2 text14-400">
-                      <p class="single-line">{__e(lang, '출원')} : {chul}{__e(lang, '개')}</p>
-                      <p class="single-line">{__e(lang, '등록')} : {dung}{__e(lang, '개')}</p>
+          {#if country.img?.data?.length ?? false}
+            <a
+              href="#"
+              class:active={selectedCountry == country.slug}
+              class="marker text16-500 absolute text-center flex flex-col gap-4 items-center -translate-y-[100%] -translate-x-[50%]"
+              style="left:{country.x}%;top:{country.y}%"
+              on:click|preventDefault={() => {
+                popOpen = !popOpen
+                selectedCountry = country.slug
+              }}
+            >
+              {#if selectedCountry == country.slug && popOpen}
+                <div class="bg-white rounded-3xl shadow-lg px-[1rem] py-[1rem] relative bottom-4 pointer-events-none">
+                  <div class="flex items-center gap-3">
+                    <div class="w-[70px] h-[70px] rounded-3xl">
+                      <img
+                        class="block object-contain w-full h-full"
+                        src={country.img?.data[0]?.attributes?.url ?? ''}
+                        alt={country.title}
+                      />
+                    </div>
+                    <div class="flex flex-col items-start gap-2">
+                      <p class="text16-700 single-line">{country.title}</p>
+                      <div class="flex flex-col gap-2 text14-400">
+                        <p class="single-line">{__e(lang, '출원')} : {chul}{__e(lang, '개')}</p>
+                        <p class="single-line">{__e(lang, '등록')} : {dung}{__e(lang, '개')}</p>
+                      </div>
                     </div>
                   </div>
+                  <svg
+                    class="absolute -translate-x-1/2 left-1/2 top-full"
+                    width="16"
+                    height="12"
+                    viewBox="0 0 16 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M15.5 0H0.5L8 12L15.5 0Z" fill="white" />
+                  </svg>
                 </div>
-                <svg
-                  class="absolute -translate-x-1/2 left-1/2 top-full"
-                  width="16"
-                  height="12"
-                  viewBox="0 0 16 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M15.5 0H0.5L8 12L15.5 0Z" fill="white" />
-                </svg>
+              {:else}
+                <span>
+                  {country.title}
+                </span>
+              {/if}
+              <div class="relative w-0 h-0 rounded-full">
+                <div
+                  class="pin flex justify-center items-center rounded-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+                />
               </div>
-            {:else}
-              <span>
-                {country.title}
-              </span>
-            {/if}
-            <div class="relative w-0 h-0 rounded-full">
-              <div
-                class="pin flex justify-center items-center rounded-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
-              />
-            </div>
-          </a>
+            </a>
+          {/if}
         {/each}
         {#if tab == 2}
           <button
