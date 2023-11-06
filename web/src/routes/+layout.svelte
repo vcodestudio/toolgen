@@ -11,9 +11,11 @@
   onMount(() => {
     setScreen()
     window.addEventListener('resize', setScreen)
+    console.log(data)
   })
 
   $: title = data.original?.title || 'TOOLGEN'
+  $: popup = data.popup?.data?.attributes ?? false
 </script>
 
 <svelte:head>
@@ -26,5 +28,7 @@
   <slot />
 </main>
 <Popup />
-<!-- <PopUpBanner /> -->
+{#if popup && popup.active}
+  <PopUpBanner data={popup} />
+{/if}
 <Footer meta={data.setting.data.attributes.footer} />

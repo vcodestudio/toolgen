@@ -1,8 +1,12 @@
 <script>
   import { onMount } from 'svelte'
 
-  export let src = '/dummy/unnamed.png'
-  export let link = 'https://www.youtube.com/@ToolGenInc/streams'
+  export let data
+
+  $: src = data?.img?.data[0]?.attributes?.url ?? ''
+  $: link = data?.link ?? ''
+  $: html = data?.html ?? ''
+  $: desc = data?.desc ?? ''
 
   let enabled = false //false
 
@@ -30,14 +34,20 @@
 
 {#if enabled}
   <div
-    class="fixed left-4 z-[10000] bg-white border border-[navy] phone:left-[50%] phone:-translate-x-1/2 phone:w-[calc(100%-2rem)] top-1/2 max-w-[450px] -translate-y-1/2"
+    class="fixed left-4 z-[10000] bg-white border border-[navy] phone:left-[50%] phone:-translate-x-1/2 phone:w-[calc(100%-2rem)] top-1/2 min-w-[350px] max-w-[450px] -translate-y-1/2"
     id="popup"
   >
     <div class="flex flex-col gap-2 p-4">
-      <p>2023년 10월 13일 금요일 11시부터 오송R&D센터 생중계를 아래의 링크에서 볼 수 있습니다.</p>
-      <a href={link} class="block" target="_blank">
-        <img class="block w-full h-auto" {src} alt="..." />
-      </a>
+      {#if html && html.length}
+        {@html html}
+      {:else}
+        {#if desc && desc.length}
+          <p>{desc}</p>
+        {/if}
+        <a href={link} class="block" target="_blank">
+          <img class="block w-full h-auto" {src} alt="..." />
+        </a>
+      {/if}
     </div>
     <div class="flex gap-0 border-t border-[navy] h-[3em]">
       <a class="justify-center flex-1 button clean" href="#" on:click|preventDefault={setCookie}>

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "patent",
     "pluralName": "patents",
-    "displayName": "patent",
+    "displayName": "특허정보 관리",
     "description": ""
   },
   "options": {

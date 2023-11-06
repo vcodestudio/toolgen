@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * progress router
+ * popup router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::progress.progress');
+module.exports = createCoreRouter('api::popup.popup');

@@ -11,29 +11,12 @@
   export let data
 
   let lang = $page.params.lang
+  let catIdx = 0
 
-  onMount(() => {
-    // console.log(data)
-  })
-  let jobs = {
-    category: [
-      { name: 'All Positions', slug: 'all' },
-      { name: 'Project Leaders', slug: 'leader' },
-      { name: 'Researchers', slug: 'researcher' },
-    ],
-    // fill three departments
-    data: [
-      { department: 'Platform A', category: { slug: 'researcher' }, title: 'Project Team Leader, Crop 1', link: '#' },
-      { department: 'Platform B', category: { slug: 'leader' }, title: 'Project Team Leader, Crop 1', link: '#' },
-      { department: 'Platform C', category: { slug: 'researcher' }, title: 'Project Team Leader, Crop 2', link: '#' },
-      { department: 'Platform A', category: { slug: 'leader' }, title: 'Project Team Leader, Crop 3', link: '#' },
-      { department: 'Platform B', category: { slug: 'researcher' }, title: 'Project Team Leader, Crop 4', link: '#' },
-    ],
-  }
-
-  jobs = { category: [], data: [] }
-
-  let currentCategory = jobs.category[0]
+  let jobs = data.recruit?.data?.attributes?.item ?? []
+  let job_active = data.recruit?.data?.attributes?.active ?? false
+  $: job_categories = ['All Positions'].concat([...new Set(job_data.map(a => a.job))] ?? [])
+  $: job_data = jobs ?? []
 </script>
 
 <PageMarginTop />
@@ -87,26 +70,29 @@
     </div>
   </div>
 </Section>
-{#if jobs.length}
+{#if job_active && job_data.length}
   <Section>
     <div class="grid gap-8">
       <h3>{__e(lang, '채용 중 공고')}</h3>
       <div class="flex gap-4 flex-nowrap scroll-x">
-        {#each jobs.category as category}
+        {#each job_categories as category, idx}
           <button
-            class={currentCategory.slug == category.slug ? 'navy' : 'bluegray'}
+            class={job_categories[catIdx] == category ? 'navy' : 'bluegray'}
             on:click={() => {
-              currentCategory = category
+              catIdx = idx
             }}
           >
-            <span>{category.name}</span>
+            <span>{category}</span>
           </button>
         {/each}
       </div>
-      {#each [...new Set(jobs.data
-            .filter(a => a.category.slug == currentCategory.slug || currentCategory.slug == 'all')
+      {#each [...new Set(job_data
+            .filter(a => a.job == job_categories[catIdx] || catIdx == 0)
             .map(a => a.department))].sort() as item}
-        <Department name={item} members={jobs.data.filter(a => a.department == item)} />
+        <Department
+          name={item}
+          members={job_data.filter(a => a.department == item && (a.job == job_categories[catIdx] || catIdx == 0))}
+        />
       {/each}
     </div>
   </Section>

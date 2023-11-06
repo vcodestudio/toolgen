@@ -1,11 +1,6 @@
 <script>
   export let name = 'Department Name'
-  export let members = [
-    { name: 'Project Team Leader, Crop', link: '/' },
-    { name: 'Project Team Leader, Crop', link: '/' },
-    { name: 'Project Team Leader, Crop', link: '/' },
-    { name: 'Project Team Leader, Crop', link: '/' },
-  ]
+  export let members = []
 </script>
 
 <div class="grid grid-cols-[1fr,2fr] gap-20 phone:grid-cols-1 phone:gap-4">
@@ -14,8 +9,12 @@
   </div>
   <div>
     {#each members as item, i}
-      <a href="/" class="flex em:py-3 text24-700 items-center gap-4 border-gray-200 {i == 3 ? '' : 'border-b-[1px]'}">
-        <p class="flex-auto">Project Team Leader, Crop</p>
+      <a
+        href={item.link}
+        class="flex em:py-3 text24-700 items-center gap-4 border-gray-200 {i == 3 ? '' : 'border-b-[1px]'}"
+        target="_blank"
+      >
+        <p class="flex-auto">{item.title}</p>
         <div>
           <svg
             class="w-[1em] h-[1em]"

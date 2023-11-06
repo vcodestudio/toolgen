@@ -48,10 +48,16 @@ export const load = async ({ params, url }) => {
     populate: ['footer'],
   })
 
+  const popup = await LoadPost({
+    post_type: 'popup',
+    populate: ['*', 'img'],
+  })
+
   return {
     pathname,
     page: data_,
     original: data.data[0]?.attributes,
     setting: footer,
+    popup,
   }
 }

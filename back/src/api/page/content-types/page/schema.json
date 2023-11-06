@@ -4,7 +4,7 @@
   "info": {
     "singularName": "page",
     "pluralName": "pages",
-    "displayName": "Page",
+    "displayName": "페이지",
     "description": ""
   },
   "options": {
@@ -61,16 +61,6 @@
           "localized": true
         }
       }
-    },
-    "notices": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::notice.notice"
-    },
-    "presses": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::press.press"
     }
   }
 }

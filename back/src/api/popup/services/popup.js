@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * progress service
+ * popup service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::progress.progress');
+module.exports = createCoreService('api::popup.popup');

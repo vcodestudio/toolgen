@@ -1,5 +1,9 @@
 export function load({ cookies }) {
-  let data = [{ year: 2023 }]
+  let data = []
+  // 2021년부터 현재 년도까지
+  for (let i = 2020; i < new Date().getFullYear(); i++) {
+    data.push({ year: i })
+  }
   data.forEach(async item => {
     const res = arrangeData(item.year).then(res => {
       return res

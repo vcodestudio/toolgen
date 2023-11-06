@@ -7,7 +7,7 @@
   }
   // 비율 계산
   let sum = 0
-  data.forEach(a => (a.value_ = a.value))
+  data.forEach(a => (a.value_ = +a.value.replace(',', '')))
   data.forEach(a => (sum = Math.max(sum, +a.value_)))
   data.forEach(a => (a.percent = 10 + (a.value_ / sum) * 90 + '%'))
 </script>

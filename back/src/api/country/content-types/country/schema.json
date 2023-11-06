@@ -1,60 +1,22 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "countries",
   "info": {
     "singularName": "country",
     "pluralName": "countries",
-    "displayName": "country",
+    "displayName": "출원국가",
     "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "flag": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "lat": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "lng": {
-      "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "misc.country-item",
+      "pluginOptions": {}
     }
   }
 }
