@@ -43,7 +43,7 @@
 </script>
 
 <div class="flex justify-center pagination">
-  <a class="item" href="#" class:disabled={current == 1} on:click|preventDefault={e => (current = 1)}>
+  <a class="item" href="#" class:disabled={current == 1} on:click|preventDefault={e => pageTo(1)}>
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fill-rule="evenodd"
@@ -53,7 +53,7 @@
       />
     </svg>
   </a>
-  <a class="item" href="#" class:disabled={current == 1} on:click|preventDefault={e => current--}>
+  <a class="item" href="#" class:disabled={current == 1} on:click|preventDefault={e => pageTo(current - 1)}>
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fill-rule="evenodd"
@@ -70,7 +70,7 @@
       <a class="item" href="#" on:click|preventDefault={e => pageTo(page.pageNum)}>{page.pageNum}</a>
     {/if}
   {/each}
-  <a class="item" href="#" class:disabled={current == maxPages} on:click|preventDefault={e => current++}>
+  <a class="item" href="#" class:disabled={current == maxPages} on:click|preventDefault={e => pageTo(current + 1)}>
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fill-rule="evenodd"
@@ -80,7 +80,7 @@
       />
     </svg>
   </a>
-  <a class="item" href="#" class:disabled={current == maxPages} on:click|preventDefault={e => (current = maxPages)}>
+  <a class="item" href="#" class:disabled={current == maxPages} on:click|preventDefault={e => pageTo(maxPages)}>
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fill-rule="evenodd"

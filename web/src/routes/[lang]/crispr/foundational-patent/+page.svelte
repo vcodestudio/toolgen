@@ -36,26 +36,16 @@
     // pgNum = 1
   }
   $: selectedCountry && (pgNum = 1)
-  // 한국, 미국, 일본, 케나다, 브라질, 유럽, 인도
-  let countries = [
-    // { name: __e(lang, '호주'), slug: 'AU', lng: '133.775136', lat: '-25.274398' },
-    // { name: __e(lang, '브라질'), slug: 'BR', lng: '-51.925280', lat: '-14.235004' },
-    // { name: __e(lang, '캐나다'), slug: 'CA', lng: '-106.346771', lat: '56.130366' },
-    // { name: __e(lang, '중국'), slug: 'CN', lng: '104.195397', lat: '35.861660' },
-    // { name: __e(lang, '유럽'), slug: 'EP', lng: '9.555373', lat: '51.165691' },
-    // { name: __e(lang, '홍콩'), slug: 'HK', lng: '114.109497', lat: '22.396428' },
-    // { name: __e(lang, '인도'), slug: 'IN', lng: '78.962880', lat: '20.593684' },
-    // { name: __e(lang, '일본'), slug: 'JP', lng: '142.382924', lat: '39.204824' },
-    // { name: __e(lang, '대한민국'), slug: 'KR', lng: '127.766922', lat: '35.907757' },
-    // { name: __e(lang, '싱가포르'), slug: 'SG', lng: '103.819836', lat: '1.352083' },
-    // { name: __e(lang, '미국'), slug: 'US', lng: '-95.712891', lat: '37.090240' },
-  ]
+  let countries = []
 
   countries = data.countries?.data?.attributes?.item ?? []
   countries.forEach(country => {
     country.title = (lang == 'eng' ? country.eng_name : country.name) ?? ''
   })
   countries = countries
+  $: countries_ = countries.filter(a => {
+    return dats[tab - 1].find(b => b.con_code == a.slug) ?? false
+  })
 
   onMount(() => {
     const dats_ = data.dats?.data?.map(a => a.attributes) ?? []
@@ -108,7 +98,7 @@
             popOpen = false
           }}
         />
-        {#each countries as country}
+        {#each countries_ as country}
           <a
             href="#"
             class:active={selectedCountry == country.slug}
@@ -186,7 +176,7 @@
             selectedCountry = 'all'
           }}>{__e(lang, '전체')}</button
         >
-        {#each countries as country}
+        {#each countries_ as country}
           <button
             class:fill={country.slug == selectedCountry}
             on:click={() => {
