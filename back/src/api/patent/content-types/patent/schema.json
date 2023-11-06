@@ -15,9 +15,6 @@
     "con_code": {
       "type": "string"
     },
-    "con_name": {
-      "type": "string"
-    },
     "date": {
       "type": "string"
     },
