@@ -125,8 +125,8 @@
                   <div class="w-[70px] h-[70px] rounded-3xl">
                     <img
                       class="block object-contain w-full h-full"
-                      src="/images/flags/{country.slug.toLowerCase()}.jpg"
-                      alt="map"
+                      src={country.img?.data[0]?.attributes?.url ?? ''}
+                      alt={country.title}
                     />
                   </div>
                   <div class="flex flex-col items-start gap-2">
