@@ -52,11 +52,11 @@
         <tr>
           <td rowspan="2">라이센싱 문의</td>
           <td class="title">필수</td>
-          <td>성명, 이메일, 국가, 회사명, 관심분야</td>
+          <td class="text-left">성명, 이메일, 국가, 회사명, 관심분야</td>
         </tr>
         <tr>
           <td class="title">선택</td>
-          <td>문의사항</td>
+          <td class="text-left">문의사항</td>
         </tr>
       </tbody>
     </table>
@@ -76,7 +76,7 @@
         <tr>
           <td rowspan="2">입사지원서 제출</td>
           <td>필수</td>
-          <td
+          <td class="text-left"
             >성명 (국문, 영문), 생년월일, 주소, 휴대전화번호, 이메일, 학력사항 (학교, 전공, 입학년월, 졸업년월,
             졸업구분, 소재지), 경력사항 (근무기간, 근무처, 직위, 직무, 주요업무), 경력회사내용, 어학사항, 특기사항
             (병역구분, 면제사유, 군별, 보훈여부)</td
@@ -84,7 +84,7 @@
         </tr>
         <tr>
           <td>선택</td>
-          <td>자격사항 (특수자격 및 면허) 이력서, 프로필 링크 석, 박사과정 중 연구경력</td>
+          <td class="text-left">자격사항 (특수자격 및 면허) 이력서, 프로필 링크 석, 박사과정 중 연구경력</td>
         </tr>
       </tbody>
     </table>
@@ -141,33 +141,35 @@
       <tbody>
         <tr>
           <td>인터넷 익스플로어</td>
-          <td>브라우저 상단의 도구 &gt; 인터넷 옵션 &gt; 개인정보</td>
+          <td class="text-left">브라우저 상단의 도구 &gt; 인터넷 옵션 &gt; 개인정보</td>
         </tr>
         <tr>
           <td>크롬</td>
-          <td>브라우저 우측 상단 &gt; 맞춤 설정 및 제어 &gt; 설정 &gt; 개인정보 및 보안 &gt; 인터넷 사용 기록 삭제</td>
+          <td class="text-left"
+            >브라우저 우측 상단 &gt; 맞춤 설정 및 제어 &gt; 설정 &gt; 개인정보 및 보안 &gt; 인터넷 사용 기록 삭제</td
+          >
         </tr>
         <tr>
           <td>사파리</td>
-          <td>설정 &gt; Safari &gt; 방문 기록 및 웹 사이트 데이터 지우기</td>
+          <td class="text-left">설정 &gt; Safari &gt; 방문 기록 및 웹 사이트 데이터 지우기</td>
         </tr>
         <tr>
           <td>파이어폭스</td>
-          <td
+          <td class="text-left"
             >브라우저 우측 상단 &gt; 설정 &gt; 개인 정보 및 보안 &gt; 쿠키 및 사이트 데이터 삭제 &gt; 데이터 삭제 &gt;
             쿠키 및 사이트 데이터 &amp; 캐시된 웹 콘텐츠 &gt; 삭제</td
           >
         </tr>
         <tr>
           <td>네이버웨일</td>
-          <td
+          <td class="text-left"
             >브라우저 우측 상단 &gt; 세 점 아이콘 &gt; 설정 &gt; 개인정보 보호 &gt; 인터넷 사용 기록 삭제 &gt; 데이터
             삭제</td
           >
         </tr>
         <tr>
           <td>Microsoft Edge</td>
-          <td
+          <td class="text-left"
             >브라우저 우측 상단 &gt; 세 점 아이콘 &gt; 설정 &gt; 개인 정보 및 서비스 &gt; 검색 데이터 지우기 &gt; 지울
             항목 선택 &gt; 지금 지우기</td
           >

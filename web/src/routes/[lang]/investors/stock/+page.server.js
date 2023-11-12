@@ -19,10 +19,35 @@ export const load = async () => {
   const hoga = getHoga(doc)
 
   // fetch trade from /item/sise_time.naver?code=199800&thistime=20230802161057
-  const tradePrice = await fetch(
-    `https://finance.naver.com/item/sise_time.naver?code=${code}&thistime=20230802161057`,
-    options,
-  )
+  // get current time in korea. if sat, sun, return friday. return format like 20230802161057
+  function getBusinessDateFormatted() {
+    let now = new Date()
+
+    // 주말 확인 (토요일: 6, 일요일: 0)
+    if (now.getDay() === 0) {
+      // 일요일이면 금요일로 2일 빼기
+      now.setDate(now.getDate() - 2)
+    } else if (now.getDay() === 6) {
+      // 토요일이면 금요일로 1일 빼기
+      now.setDate(now.getDate() - 1)
+    } else if (now.getDay() === 1 && now.getHours() < 9) {
+      // 월요일 오전 9시 이전이면 금요일로 3일 빼기
+      now.setDate(now.getDate() - 3)
+    }
+
+    // 날짜 포맷팅
+    let year = now.getFullYear()
+    let month = (now.getMonth() + 1).toString().padStart(2, '0')
+    let day = now.getDate().toString().padStart(2, '0')
+
+    return `${year}${month}${day}190000`
+  }
+
+  const tradeUrl = `https://finance.naver.com/item/sise_time.naver?code=${code}&thistime=${getBusinessDateFormatted()}`
+  const tradePrice = await fetch(tradeUrl, options)
+
+  console.log(tradeUrl)
+
   const tradeBuffer = await tradePrice.arrayBuffer()
   const tradeData = decoder.decode(tradeBuffer)
   const tradeDoc = new JSDOM(tradeData).window.document

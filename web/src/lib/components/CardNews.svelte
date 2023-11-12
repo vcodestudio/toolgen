@@ -28,7 +28,7 @@
   <div class="flex gap-4">
     <h3>{title}</h3>
     <div class="flex-auto" />
-    <a href={`/${$page.params.lang}${listUrl}`} class="flex items-center">
+    <a href={listUrl} class="flex items-center">
       <button class="clean">
         <span class=" m:text14-700">{__t('common.2', $page.params.lang)}</span>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

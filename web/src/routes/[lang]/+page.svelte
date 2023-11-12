@@ -122,8 +122,8 @@
 {#if data.notice && data.press}
   <section>
     <div class="gap-20 w-limit section-content">
-      <CardNews title="Notice" listUrl="/investors/notice" posts={data.notice.data} />
-      <CardNews title="News" listUrl="/investors/news" posts={data.press.data} />
+      <CardNews title="Notice" listUrl={`/${lang}/investors/notice`} posts={data.notice.data} />
+      <CardNews title="News" listUrl={`/${lang}/investors/news`} posts={data.press.data} />
     </div>
   </section>
 {/if}

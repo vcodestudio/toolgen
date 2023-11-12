@@ -35,6 +35,26 @@
     ['year5', __e(lang, '5년')],
     ['year10', __e(lang, '10년')],
   ]
+
+  let biz_content
+
+  function clearArrows() {
+    const arrows = biz_content.querySelectorAll('img')
+    arrows.forEach(a => {
+      let arrow = document.createElement('span')
+      switch (a.alt) {
+        case '상승':
+          arrow.textContent = '▲'
+          break
+        case '하락':
+          arrow.textContent = '▼'
+          break
+      }
+      // replace image with text
+      a.parentNode.replaceChild(arrow, a)
+    })
+    return ''
+  }
 </script>
 
 <Section>
@@ -60,7 +80,7 @@
         <button class="square" class:navy={section.type == t} on:click={e => (section.type = t)}>{name}</button>
       {/each}
     </div>
-    <div class={section.type ?? 'normal'}>
+    <div class={section.type ?? 'normal'} id="b_cont" bind:this={biz_content}>
       {#if section.type == 'chart'}
         <div class="flex items-center gap-2">
           {#each dates as [d, name]}
@@ -78,10 +98,12 @@
         </div>
       {:else if section.type == 'trade'}
         {@html data.trade}
+        {setTimeout(clearArrows, 0)}
       {:else if section.type == 'hoga'}
         {@html data.hoga}
       {:else if section.type == 'daily'}
         {@html data.daily}
+        {setTimeout(clearArrows, 0)}
       {:else if section.type == 'foreign'}
         <table>
           <thead>
@@ -113,5 +135,8 @@
 <style>
   :global(table td img) {
     display: inline-block;
+  }
+  :global(#b_cont table img) {
+    display: none;
   }
 </style>
