@@ -57,7 +57,7 @@
       {/each}
     </div>
     <div>
-      <p class="text16-400 fg-sub">Copyright 2023 (C) ToolGen, Inc. All Rights Reserved.</p>
+      <p class="text16-400 fg-sub">Copyright 2023 ToolGen, Inc. All Rights Reserved.</p>
     </div>
   </div>
 </footer>
