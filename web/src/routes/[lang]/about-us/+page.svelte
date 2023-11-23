@@ -102,7 +102,7 @@
         m:p-4 m:-translate-y-[100%]
         "
       >
-        <h1 class="m:text24">
+        <h1 class="text-[4.5rem] m:text-[3.5rem] phone:text-[1.5rem]">
           Innovate Genome<br />
           Edit Your Life
         </h1>
