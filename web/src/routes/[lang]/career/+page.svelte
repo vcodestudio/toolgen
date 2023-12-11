@@ -43,8 +43,11 @@
     }}
   >
     {#each data?.page[1]?.imgs?.data ?? [] as item}
-      <div class="swiper-slide">
-        <img class="block w-full object-cover h-[550px] m:h-[450px] p:h-[250px]" src={item.attributes.url} alt="..." />
+      <div class="flex flex-col gap-2 swiper-slide h-[550px] m:h-[450px] p:h-[250px]">
+        <img class="flex-1 block object-cover w-full h-0" src={item.attributes.url} alt="..." />
+        {#if item.attributes.caption ?? false}
+          <p class="flex-none font-bold text-center text-gray-800">{item.attributes.caption}</p>
+        {/if}
       </div>
     {/each}
   </Slider>
