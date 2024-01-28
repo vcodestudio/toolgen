@@ -20,7 +20,8 @@
 
   function createChart1(data) {
     let years = []
-    for (let i = 2020; i < new Date().getFullYear(); i++) {
+    // 2020 ~ new Date().getFullYear()
+    for (let i = 2020; i < 2023; i++) {
       years.push(i)
     }
     let data_ = data.map(a => a.slice(0, 4))
@@ -46,7 +47,8 @@
   }
   function createChart2(data) {
     // create 1st row. 2020 ~ (curYear - 1)
-    let curYear = new Date().getFullYear()
+    // let curYear = new Date().getFullYear()
+    let curYear = 2023
     let table = []
     let row1 = [__e(lang, '항목')]
     for (let i = 2020; i < curYear; i++) {
@@ -58,7 +60,7 @@
       let row = [key]
       data.forEach(d => {
         let value = d.find(a => a[0] === key)
-        row.push(digit(value[1]))
+        if (value[1]) row.push(digit(value[1]))
       })
       table.push(row)
     })

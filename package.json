@@ -19,6 +19,7 @@
     "crypto": "^1.0.1"
   },
   "dependencies": {
-    "mysql2": "^3.6.3"
+    "mysql2": "^3.6.3",
+    "sharp": "^0.33.2"
   }
 }
