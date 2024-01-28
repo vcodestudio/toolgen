@@ -19,11 +19,12 @@
     "@strapi/plugin-users-permissions": "4.7.0",
     "@strapi/provider-upload-aws-s3": "^4.12.5",
     "@strapi/strapi": "4.7.0",
-    "better-sqlite3": "7.4.6",
+    "better-sqlite3": "^7.4.6",
     "codemirror": "5.65.11",
     "fs": "^0.0.1-security",
     "mysql2": "^3.6.3",
     "qs": "^6.11.2",
+    "sqlite3": "^5.1.7",
     "strapi-plugin-populate-deep": "^3.0.0"
   },
   "author": {
