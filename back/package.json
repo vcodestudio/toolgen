@@ -1,14 +1,18 @@
 {
   "name": "strapi",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "description": "A Strapi application",
+  "license": "MIT",
+  "author": {
+    "name": "A Strapi developer"
+  },
   "scripts": {
-    "dev": "strapi start",
-    "start": "strapi develop",
     "build": "strapi build",
-    "strapi": "strapi",
-    "generate": "strapi generate"
+    "dev": "strapi start",
+    "generate": "strapi generate",
+    "start": "strapi develop",
+    "strapi": "strapi"
   },
   "dependencies": {
     "@_sh/strapi-plugin-ckeditor": "^2.0.4",
@@ -19,23 +23,18 @@
     "@strapi/plugin-users-permissions": "4.7.0",
     "@strapi/provider-upload-aws-s3": "^4.12.5",
     "@strapi/strapi": "4.7.0",
-    "better-sqlite3": "^7.4.6",
+    "better-sqlite3": "^7.6.2",
     "codemirror": "5.65.11",
     "fs": "^0.0.1-security",
-    "mysql2": "^3.6.3",
     "qs": "^6.11.2",
-    "sqlite3": "^5.1.7",
+    "strapi-plugin-local-image-sharp": "^1.7.0",
     "strapi-plugin-populate-deep": "^3.0.0"
-  },
-  "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "6727560a-1a99-489e-870d-287457d0f16c"
   },
   "engines": {
     "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "strapi": {
+    "uuid": "6727560a-1a99-489e-870d-287457d0f16c"
+  }
 }
