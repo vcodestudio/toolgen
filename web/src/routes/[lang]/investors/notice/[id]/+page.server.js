@@ -6,6 +6,7 @@ export const load = async ({ params }) => {
     filters: {
       id: params.id,
     },
+    populate: ['*', 'files'],
   })
 
   if (data) {
