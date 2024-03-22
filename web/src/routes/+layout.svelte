@@ -11,7 +11,7 @@
   onMount(() => {
     setScreen()
     window.addEventListener('resize', setScreen)
-    console.log(data)
+    console.log('pop', data.popup)
   })
 
   $: title = data.original?.title || 'TOOLGEN'

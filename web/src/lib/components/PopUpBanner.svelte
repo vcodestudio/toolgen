@@ -3,7 +3,7 @@
 
   export let data
 
-  $: src = data?.img?.data[0]?.attributes?.url ?? ''
+  $: src = data?.img?.data?.length ? data?.img?.data[0]?.attributes?.url ?? '' : ''
   $: link = data?.link ?? ''
   $: html = data?.html ?? ''
   $: desc = data?.desc ?? ''
@@ -38,15 +38,17 @@
     id="popup"
   >
     <div class="flex flex-col gap-2 p-4">
-      {#if html && html.length}
+      {#if html && html?.length}
         {@html html}
       {:else}
         {#if desc && desc.length}
           <p>{desc}</p>
         {/if}
-        <a href={link} class="block" target="_blank">
-          <img class="block w-full h-auto" {src} alt="..." />
-        </a>
+        {#if src.length}
+          <a href={link} class="block" target="_blank">
+            <img class="block w-full h-auto" {src} alt="..." />
+          </a>
+        {/if}
       {/if}
     </div>
     <div class="flex gap-0 border-t border-[navy] h-[3em]">
