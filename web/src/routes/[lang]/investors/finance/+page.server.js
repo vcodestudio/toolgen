@@ -1,11 +1,11 @@
-export function load({ cookies }) {
+export function load({ cookies, fetch }) {
   let data = []
   // 2021년부터 현재 년도까지
   for (let i = 2020; i < new Date().getFullYear(); i++) {
     data.push({ year: i })
   }
   data.forEach(async item => {
-    const res = arrangeData(item.year).then(res => {
+    const res = arrangeData(item.year, fetch).then(res => {
       return res
     })
     item.data = res ?? {}
@@ -20,7 +20,7 @@ export function load({ cookies }) {
 3분기보고서 : 11014
 사업보고서 : 11011
 */
-async function getData(year) {
+async function getData(year, fetch) {
   const url = 'https://opendart.fss.or.kr/api/fnlttSinglAcntAll.json'
   const param = {
     crtfc_key: '86252bea0cdeb028b25c3b340422cc1b66fe45dc',
@@ -56,8 +56,8 @@ function extractData(data, accountName) {
   }
 }
 
-async function arrangeData(year) {
-  const res = await getData(year)
+async function arrangeData(year, fetch) {
+  const res = await getData(year, fetch)
   const data = res.list
   // 데이터를 추출하는 함수를 정의합니다.
 

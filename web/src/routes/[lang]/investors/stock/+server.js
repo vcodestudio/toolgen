@@ -1,7 +1,7 @@
 import { JSDOM } from 'jsdom'
 import {json} from "@sveltejs/kit"
 
-export const POST = async ({request, url}) => {
+export const POST = async ({request, url, fetch}) => {
   const code = '199800'
   const req = await fetch(`https://finance.naver.com/item/sise.naver?code=${code}`)
   const buffer = await req.arrayBuffer()

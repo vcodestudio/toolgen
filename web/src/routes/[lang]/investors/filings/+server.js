@@ -1,7 +1,7 @@
 import { formatDate } from '$lib/utils.js'
 import {json} from "@sveltejs/kit"
 
-export async function POST({ request }) {
+export async function POST({ request, fetch }) {
     // response return
     const req = await request.json();
     
@@ -30,7 +30,21 @@ export async function POST({ request }) {
         return keyValuePairs.join('&')
     }
 
-    const res = await fetch(`${path}?${objToQuery(queryParams)}`)
+    const controller = new AbortController();
+    const signal = controller.signal;
+    const timeoutId = setTimeout(() => {
+        controller.abort();
+    }, 10000);
+
+    const reqUrl = `${path}?${objToQuery(queryParams)}`;
+    const res = await fetch(reqUrl, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        signal,
+    });
+    console.log(reqUrl);
     const data = await res.json()
     return json(data);
 }
