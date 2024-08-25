@@ -51,7 +51,7 @@ export async function POST({ request, fetch, url }) {
         "toolgen.com"
     ];
     let res;
-    if(ipcheck.includes(url.hostname)) {
+    if(ipcheck.find(a=>url.hostname.includes(a))) {
         const extUrl = "http://3.39.51.113";
 
         res = await fetch(`${extUrl}${url.pathname}`, {
