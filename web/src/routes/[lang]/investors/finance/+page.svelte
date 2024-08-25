@@ -90,17 +90,18 @@
   })
 </script>
 
-{#if !data}
-  loading
-{:else}
-  <Section>
+<Section>
+  {#if !data}
+    <h3 class="text-center">Loading</h3>
+  {:else}
     <div class="grid grid-cols-2 gap-x-[5em] gap-y-[2.5em] phone:grid-cols-1">
       {#each chart_1 as item}
         <Chart title={item.title} data={item.data} />
       {/each}
     </div>
-  </Section>
-{/if}
+  {/if}
+</Section>
+
 <Section>
   <Table data={chart_2} />
 </Section>

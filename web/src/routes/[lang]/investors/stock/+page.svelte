@@ -148,7 +148,7 @@
     </div>
   {:else}
     <div class="pb-4 item">
-      <h3 class="text-center">불러오는 중</h3>
+      <h3 class="text-center">Loading</h3>
     </div>
   {/if}
 </Section>

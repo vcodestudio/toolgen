@@ -114,7 +114,7 @@
     </div>
     {#if !postLoaded}
       <div class="pb-4 border-b item">
-        <p class="text-center">불러오는 중</p>
+        <p class="text-center">Loading</p>
       </div>
     {:else if !posts.length}
       <div class="pb-4 border-b item">
