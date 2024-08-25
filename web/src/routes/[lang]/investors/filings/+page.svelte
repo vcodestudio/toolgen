@@ -40,6 +40,7 @@
 
   async function loadPosts(query) {
     postLoaded = false
+    // location.pathname
     const res = await fetch(location.pathname, {
       method: 'POST',
       headers: {

@@ -10,7 +10,7 @@
     "dev": "pm2 start ecosystem.config.dev.js",
     "logs": "pm2 logs",
     "start-web_": "cd web && npm run preview -- --host --port 5173",
-    "start-web": "cd web && npm run dev",
+    "start-web": "cd web && npm run dev -- --host",
     "start-back": "cd back && npm start",
     "start-all": "run-p --silent start-back start-web"
   },

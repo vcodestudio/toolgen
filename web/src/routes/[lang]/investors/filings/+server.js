@@ -17,7 +17,7 @@ export async function handle({ event, resolve }) {
     return response;
 }
 
-export async function POST({ request, fetch }) {
+export async function POST({ request, fetch, url }) {
     // response return
     const req = await request.json();
     
@@ -45,22 +45,31 @@ export async function POST({ request, fetch }) {
         }
         return keyValuePairs.join('&')
     }
+    const ipcheck = [
+        "10.0.0.35",
+        "43.202.127.135"
+    ];
+    let res;
+    if(ipcheck.includes(url.hostname)) {
+        const extUrl = "http://3.39.51.113";
 
-    const controller = new AbortController();
-    const signal = controller.signal;
-    const timeoutId = setTimeout(() => {
-        controller.abort();
-    }, 10000);
-
-    const reqUrl = `${path}?${objToQuery(queryParams)}`;
-    const res = await fetch(reqUrl, {
-        method: 'GET',
-        headers: {
+        res = await fetch(`${extUrl}${url.pathname}`, {
+            method: 'POST',
+            headers: {
             'Content-Type': 'application/json',
-        },
-        signal,
-    });
-    console.log(reqUrl);
-    const data = await res.json()
+            },
+            body: JSON.stringify({ query }),
+        });
+    } else {
+        const reqUrl = `${path}?${objToQuery(queryParams)}`;
+        res = await fetch(reqUrl, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+    }
+
+      const data = await res.json()
     return json(data);
 }

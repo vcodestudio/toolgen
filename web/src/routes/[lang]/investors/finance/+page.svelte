@@ -6,7 +6,7 @@
   import { page } from '$app/stores'
   import { __e } from '$lib/utils'
 
-  export let data
+  let data
 
   let lang = $page.params.lang
 
@@ -72,6 +72,15 @@
   }
 
   onMount(async () => {
+    const res = await fetch(location.pathname, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ query: { lang } }),
+    })
+    data = await res.json()
+    console.log(data.data)
     // get all promises data in data
     let datas = data.data.map(a => a.data)
     Promise.all(datas).then(values => {
@@ -81,9 +90,9 @@
   })
 </script>
 
-{#await data}
+{#if !data}
   loading
-{:then data}
+{:else}
   <Section>
     <div class="grid grid-cols-2 gap-x-[5em] gap-y-[2.5em] phone:grid-cols-1">
       {#each chart_1 as item}
@@ -91,7 +100,7 @@
       {/each}
     </div>
   </Section>
-{/await}
+{/if}
 <Section>
   <Table data={chart_2} />
 </Section>
