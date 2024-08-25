@@ -6,12 +6,6 @@ function rn() {
 module.exports = {
   apps: [
     {
-      name: "backend",
-      script: "npm",
-      args: "start",
-      cwd: "./back",
-    },
-    {
       name: "frontend",
       script: "npm",
       args: "start",
