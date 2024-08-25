@@ -5,6 +5,7 @@ export async function POST({ fetch, url }) {
         "10.0.0.35",
         "43.202.127.135"
     ];
+    console.log(url.hostname);
     if(ipcheck.includes(url.hostname)) {
         const extUrl = "http://3.39.51.113";
         data = await fetch(`${extUrl}${url.pathname}`, {
