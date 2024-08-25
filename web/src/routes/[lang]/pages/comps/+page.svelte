@@ -7,7 +7,7 @@
   import { twoDigits } from '$lib/utils'
   import Profiles from '$lib/components/Profiles.svelte'
   import BottomBanner from '$lib/components/BottomBanner.svelte'
-  import AccordionB from '$lib/components/AccordionB.svelte'
+  // import AccordionB from '$lib/components/AccordionB.svelte'
   import CardPlus from '$lib/components/CardPlus.svelte'
   import Pipline from '$lib/components/Pipline.svelte'
   import DownloadButton from '$lib/components/DownloadButton.svelte'
@@ -149,7 +149,7 @@
 <Section>
   <div class="grid gap-6">
     <h3>FAQ</h3>
-    <AccordionB />
+    <!-- <AccordionB /> -->
   </div>
 </Section>
 <BottomBanner>
