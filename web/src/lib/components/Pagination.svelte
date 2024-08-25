@@ -1,5 +1,7 @@
 <script>
   import { page } from '$app/stores'
+  import { goto } from '$app/navigation'
+  import { isLoading } from '$lib/store'
   export let maxPages = 20
   export let current = 1
   export let query = {}
@@ -24,21 +26,22 @@
   }
 
   function pgLink(pg_nm) {
-    pg_nm = Math.max(1, Math.min(pg_nm, maxPages))
-    const q = { ...query }
-    q.page = pg_nm
-    const query_ = Object.keys(q)
-      .map(k => `${k}=${q[k]}`)
-      .join('&')
-    return `${url.pathname}?${query_}`
+    const searchParams = new URLSearchParams($page.url.searchParams)
+    searchParams.set('page', pg_nm)
+    isLoading.set(true)
+    goto(`${url.pathname}?${searchParams.toString()}`)
   }
 
-  $: pages = getPages(current)
+  let pages = []
+  $: {
+    maxPages = maxPages
+    pages = getPages(current)
+  }
 </script>
 
 {#if pages.length > 0}
   <div class="flex justify-center pagination">
-    <a class="item" href={pgLink(1)} class:disabled={current == 1}>
+    <a class="item" href="." on:click|preventDefault|stopPropagation={() => pgLink(1)} class:disabled={current == 1}>
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -48,7 +51,12 @@
         />
       </svg>
     </a>
-    <a class="item" href={pgLink(current - 1)} class:disabled={current == 1}>
+    <a
+      class="item"
+      href="."
+      on:click|preventDefault|stopPropagation={() => pgLink(current - 1)}
+      class:disabled={current == 1}
+    >
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -62,10 +70,16 @@
       {#if page.pageNum == current}
         <span class="item color-blue font-[600]">{page.pageNum}</span>
       {:else}
-        <a class="item" href={pgLink(+page.pageNum)}>{page.pageNum}</a>
+        <a class="item" href="." on:click|preventDefault|stopPropagation={() => pgLink(+page.pageNum)}>{page.pageNum}</a
+        >
       {/if}
     {/each}
-    <a class="item" href={pgLink(current + 1)} class:disabled={current == maxPages}>
+    <a
+      class="item"
+      href="."
+      on:click|preventDefault|stopPropagation={() => pgLink(current + 1)}
+      class:disabled={current == maxPages}
+    >
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"
@@ -75,7 +89,12 @@
         />
       </svg>
     </a>
-    <a class="item" href={pgLink(maxPages)} class:disabled={current == maxPages}>
+    <a
+      class="item"
+      href="."
+      on:click|preventDefault|stopPropagation={() => pgLink(maxPages)}
+      class:disabled={current == maxPages}
+    >
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           fill-rule="evenodd"

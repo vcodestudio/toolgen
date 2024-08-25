@@ -5,9 +5,11 @@
   import { __e } from '$lib/utils'
 
   import { formatDate } from '$lib/utils.js'
+  import { onMount } from 'svelte'
+
+  import { isLoading } from '$lib/store'
 
   export let data
-  let posts = data.body.list
   let lang = $page.params.lang
 
   // get 1 years ago YYYYMMDD
@@ -25,15 +27,39 @@
     date.setDate(date.getDate() - days)
     return formatDate(date, 'YYYYMMDD')
   }
-
+  let file_body = {}
+  let pgLoaded = false
+  let postLoaded = false
+  $: posts = file_body.list ?? []
+  $: total_page = file_body.total_page ?? 1
+  $: page_no = file_body.page_no ?? 1
+  $: page_count = file_body.page_count ?? 15
   $: {
-    posts = data.body.list
+    if (pgLoaded) loadPosts(data.query)
   }
+
+  async function loadPosts(query) {
+    postLoaded = false
+    const res = await fetch(location.pathname, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ query }),
+    })
+    file_body = await res.json()
+    postLoaded = true
+    isLoading.set(false)
+  }
+
+  onMount(() => {
+    pgLoaded = true
+  })
 </script>
 
 <Section>
   <!-- filter -->
-  <div class="grid gap-[1.5rem]">
+  <div class="grid gap-[1.5rem]" class:opacity-50={$isLoading}>
     <div class="flex items-center gap-4 p:flex-col p:items-start p:gap-2">
       <h3 class="flex-auto">{__e(lang, '기간별 조회')}</h3>
       <p class="fg-sub">{__e(lang, '본 자료는 금융감독원 전자공시시스템 (http://dart.fss.or.kr)의 검색결과입니다.')}</p>
@@ -77,7 +103,7 @@
       </div>
       {#each posts as item, i}
         <a class="item" href={`https://dart.fss.or.kr/dsaf001/main.do?rcpNo=${item.rcept_no}`} target="_blank">
-          <p>{i + 1 + data.body.page_count * (data.body.page_no - 1)}</p>
+          <p>{i + 1 + page_count * (page_no - 1)}</p>
           <p class="text-left">{item.report_nm}</p>
           <p>{item.flr_nm}</p>
           <p>{item.rcept_dt}</p>
@@ -85,6 +111,15 @@
         </a>
       {/each}
     </div>
-    <Pagination maxPages={data.body.total_page} current={data.body.page_no ?? 1} query={data.query} />
+    {#if !postLoaded}
+      <div class="pb-4 border-b item">
+        <p class="text-center">불러오는 중</p>
+      </div>
+    {:else if !posts.length}
+      <div class="pb-4 border-b item">
+        <p class="text-center">검색결과가 없습니다.</p>
+      </div>
+    {/if}
+    <Pagination maxPages={total_page} current={page_no ?? 1} query={data.query} />
   </div>
 </Section>
