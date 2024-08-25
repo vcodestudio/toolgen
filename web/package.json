@@ -6,7 +6,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "start_": "vite preview --host --port 5173",
-    "start": "vite dev"
+    "start": "vite dev --host"
   },
   "devDependencies": {
     "@fontsource/fira-mono": "^4.5.10",
