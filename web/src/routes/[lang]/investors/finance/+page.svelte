@@ -46,9 +46,9 @@
     return charts
   }
   function createChart2(data) {
-    // create 1st row. 2020 ~ (curYear - 1)
-    // let curYear = new Date().getFullYear()
-    let curYear = 2023
+    const date = new Date()
+    const koreaTime = new Date(date.toLocaleString('en-US', { timeZone: 'Asia/Seoul' }))
+    const curYear = koreaTime.getFullYear()
     let table = []
     let row1 = [__e(lang, '항목')]
     for (let i = 2020; i < curYear; i++) {
