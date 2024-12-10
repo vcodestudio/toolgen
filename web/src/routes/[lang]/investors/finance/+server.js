@@ -4,9 +4,10 @@ export async function POST({ fetch, url }) {
     const ipcheck = [
         "10.0.0.35",
         "43.202.127.135",
-        "toolgen.com"
+        // "toolgen.com"
     ];
     if(ipcheck.find(a=>url.hostname.includes(a))) {
+        // 아래주소?
         const extUrl = "http://3.39.51.113";
         data = await fetch(`${extUrl}${url.pathname}`, {
             method: 'POST',

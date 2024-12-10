@@ -12,7 +12,8 @@
     "start-web_": "cd web && npm run preview -- --host --port 5173",
     "start-web": "cd web && npm run dev -- --host",
     "start-back": "cd back && npm start",
-    "start-all": "run-p --silent start-back start-web"
+    "start-all": "run-p --silent start-back start-web",
+    "start-prod": "run-p --silent start-back start-web_"
   },
   "keywords": [],
   "author": "",
