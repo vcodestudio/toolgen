@@ -48,7 +48,7 @@ export async function POST({ request, fetch, url }) {
     const ipcheck = [
         "10.0.0.35",
         "43.202.127.135",
-        // "toolgen.com"
+        "toolgen.com"
     ];
     let res;
     if(ipcheck.find(a=>url.hostname.includes(a))) {
