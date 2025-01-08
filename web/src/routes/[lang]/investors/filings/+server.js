@@ -1,6 +1,8 @@
 import { formatDate } from '$lib/utils.js'
 import {json} from "@sveltejs/kit"
 
+const lambdaURL = "https://ybeh9zmzxb.execute-api.ap-northeast-2.amazonaws.com/get-data";
+
 export async function handle({ event, resolve }) {
     const origin = event.request.headers.get('origin');
     const allowedOrigin = ['https://toolgen.com', 'http://toolgen.com']; // 허용할 도메인
@@ -45,31 +47,16 @@ export async function POST({ request, fetch, url }) {
         }
         return keyValuePairs.join('&')
     }
-    const ipcheck = [
-        // "10.0.0.35",
-        // "43.202.127.135",
-        // "toolgen.com"
-    ];
-    let res;
-    if(ipcheck.find(a=>url.hostname.includes(a))) {
-        const extUrl = "http://3.39.51.113";
 
-        res = await fetch(`${extUrl}${url.pathname}`, {
-            method: 'POST',
-            headers: {
+    const reqUrl = `${path}?${objToQuery(queryParams)}`;
+    const res = await fetch(lambdaURL, {
+        method: 'POST',
+        headers: {
             'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ query }),
-        });
-    } else {
-        const reqUrl = `${path}?${objToQuery(queryParams)}`;
-        res = await fetch(reqUrl, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-    }
+            'Access-Control-Allow-Origin': '*',
+        },
+        body: JSON.stringify({url: reqUrl})
+    });
 
     const data = await res.json()
     return json(data);

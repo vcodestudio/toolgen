@@ -1,36 +1,21 @@
 import {json} from "@sveltejs/kit"
+
+const lambdaURL = "https://ybeh9zmzxb.execute-api.ap-northeast-2.amazonaws.com/get-data";
+
 export async function POST({ fetch, url }) {
     let data = []
-    const ipcheck = [
-        "10.0.0.35",
-        "43.202.127.135",
-        "toolgen.com"
-    ];
-    if(ipcheck.find(a=>url.hostname.includes(a))) {
-        // 툴젠 베타서버
-        const extUrl = "http://3.39.51.113";
-        data = await fetch(`${extUrl}${url.pathname}`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-        data = await data.json()
-        data = data.data;
-    } else {
-        // 2021년부터 현재 년도까지
-        for (let i = 2020; i < new Date().getFullYear(); i++) {
-          data.push({ year: i })
-        }
-        let promises = data.map(async item => {
-            return await arrangeData(item.year, fetch)
-        });
-        let results = await Promise.all(promises);
-        data = data.map((item, index) => {
-            item.data = results[index];
-            return item;
-            });
+    // 2021년부터 현재 년도까지
+    for (let i = 2020; i < new Date().getFullYear(); i++) {
+      data.push({ year: i })
     }
+    let promises = data.map(async item => {
+        return await arrangeData(item.year, fetch)
+    });
+    let results = await Promise.all(promises);
+    data = data.map((item, index) => {
+        item.data = results[index];
+        return item;
+        });
     return json({data})
   }
   /*
@@ -54,7 +39,14 @@ export async function POST({ fetch, url }) {
   
     let res
     try {
-      res = await fetch(parse)
+      res = await fetch(lambdaURL, {
+        method:"POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+        body: JSON.stringify({url: parse})
+      })
     } catch (e) {
       res = await fetch('/dummy/data.json')
     }
