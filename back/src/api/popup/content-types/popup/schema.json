@@ -10,30 +10,19 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
-    "link": {
-      "type": "string"
-    },
-    "html": {
-      "type": "richtext"
-    },
-    "img": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "active": {
-      "type": "boolean"
-    },
-    "desc": {
-      "type": "string"
+    "popups": {
+      "type": "component",
+      "repeatable": true,
+      "component": "popup.popup-item",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
     }
   }
 }

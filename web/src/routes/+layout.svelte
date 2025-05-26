@@ -15,7 +15,7 @@
   })
 
   $: title = data.original?.title || 'TOOLGEN'
-  $: popup = data.popup?.data?.attributes ?? false
+  $: popups = data.popup?.data?.attributes?.popups ?? []
 </script>
 
 <svelte:head>
@@ -28,7 +28,11 @@
   <slot />
 </main>
 <Popup />
-{#if popup && popup.active}
+{#if popups.filter(p => p.active).length}
+<div class="fixed left-0 px-2 z-[10000] top-1/2 -translate-y-1/2 flex gap-4 max-w-[100vw] overflow-x-auto items-start">
+{#each popups.filter(p => p.active) as popup}
   <PopUpBanner data={popup} />
-{/if}
-<Footer meta={data.setting.data.attributes.footer} />
+  {/each}
+</div>
+  {/if}
+<Footer meta={data.setting?.data?.attributes?.footer ?? []} />

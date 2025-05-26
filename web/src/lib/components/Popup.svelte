@@ -72,7 +72,7 @@
       }
     }}
   >
-    <div class="panel items-center {$popup.type}">
+    <div class="panel items-center {$popup.type} max-h-[90vh] overflow-y-auto">
       <a
         class="clean exit pc"
         href="/"

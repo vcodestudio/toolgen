@@ -34,10 +34,11 @@
 
 {#if enabled}
   <div
-    class="fixed left-4 z-[10000] bg-white border border-[navy] phone:left-[50%] phone:-translate-x-1/2 phone:w-[calc(100%-2rem)] top-1/2 min-w-[350px] max-w-[450px] -translate-y-1/2"
+    class=" bg-white border border-[navy] min-w-[350px] max-w-[450px]"
     id="popup"
   >
-    <div class="flex flex-col gap-2 p-4">
+  <div class="relative">
+    <div class="flex flex-col gap-2 p-4 max-h-[500px] overflow-y-auto pb-[8rem]">
       {#if html && html?.length}
         {@html html}
       {:else}
@@ -50,7 +51,12 @@
           </a>
         {/if}
       {/if}
+
     </div>
+    <div class="absolute bottom-0 left-0 w-full h-[8rem] pointer-events-none bg-gradient-to-t from-white to-transparent">
+
+    </div>
+  </div>
     <div class="flex gap-0 border-t border-[navy] h-[3em]">
       <a class="justify-center flex-1 button clean" href="#" on:click|preventDefault={setCookie}>
         <p class="w-full text-center">오늘하루 그만보기</p>

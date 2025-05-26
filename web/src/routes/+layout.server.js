@@ -16,6 +16,7 @@ export const load = async ({ params, url }) => {
     ko: 'ko-KR',
     eng: 'en',
   }
+
   const data = await LoadPost({
     post_type: 'pages',
     filters: {
@@ -40,7 +41,7 @@ export const load = async ({ params, url }) => {
       // 'presses',
     ],
   })
-  const data_ = extractContent(data)
+  const data_ = data?.error ? [] : extractContent(data)
 
   const footer = await LoadPost({
     post_type: 'setting',
@@ -48,16 +49,20 @@ export const load = async ({ params, url }) => {
     populate: ['footer'],
   })
 
+  // 팝업: 싱글타입 + 다국어 + 배열(popups) 구조에 맞게 locale 적용
   const popup = await LoadPost({
     post_type: 'popup',
-    populate: ['*', 'img'],
-  })
+    locale: langs[params.lang],
+    populate: ['popups', 'popups.img'],
+  });
+
+  console.log('popup', popup)
 
   return {
     pathname,
     page: data_,
-    original: data.data[0]?.attributes,
-    setting: footer,
-    popup,
+    original: data?.data?.[0]?.attributes ?? {},
+    setting: footer?.error ? { data: { attributes: { footer: [] } } } : footer,
+    popup: popup?.error ? { data: { attributes: { popups: [] } } } : popup,
   }
 }

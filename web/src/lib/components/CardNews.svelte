@@ -9,6 +9,7 @@
   export let title = 'Card Posts'
   export let listUrl = '/'
   export let posts = [1, 1, 1, 1, 1]
+  $: safePosts = Array.isArray(posts) ? posts : (posts ? [posts] : [])
 
   let slide
 
@@ -44,7 +45,7 @@
   </div>
   <div class="w-full h-full" bind:this={slide}>
     <div class="items-stretch swiper-wrapper">
-      {#each posts as post, idx}
+      {#each safePosts as post, idx}
         {#if idx + 1 < 5}
           <a
             href="/{$page.params.lang}{listUrl}/{post.id}"

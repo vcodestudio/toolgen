@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_popup_popup_items",
+  "info": {
+    "displayName": "Popup Item",
+    "icon": "window-restore"
+  },
+  "options": {},
+  "attributes": {
+    "link": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
+    },
+    "html": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
+    },
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
+    },
+    "active": {
+      "type": "boolean",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
+    },
+    "desc": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": { "localized": true }
+      }
+    }
+  }
+} 
