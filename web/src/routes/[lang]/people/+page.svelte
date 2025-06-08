@@ -9,9 +9,10 @@
 
   import * as qs from 'qs'
 
-  export let data
+    export let data
+  
   $: posts = data.page
-
+  
   onMount(() => {
     // console.log('page', posts)
     window.qs = qs
@@ -45,11 +46,10 @@
             }
           }}
         >
-          <div class="thumb">
+          <div class="thumb relative overflow-hidden">
             <!-- test_ports -->
-            <!-- {item.thumbnail?.data.attributes.url} -->
-            <!-- <img class="block object-cover w-full h-full" src={test_ports[i][0]} alt={item.name} /> -->
-            <img class="block object-cover w-full h-full" src={item.thumbnail?.data?.attributes?.url} alt={item.name} />
+            <img class="block w-full h-auto absolute top-0 left-0" src={item.thumbnail?.data?.attributes.url} alt={item.name} />
+            
           </div>
           <div class="flex flex-col items-start justify-start flex-auto gap-0 p-4 py-6 fill-blue desc">
             <div class="flex items-end gap-2">
@@ -78,9 +78,9 @@
       <div class="swiper-slide">
         <div class="flex items-center gap-6 phone:flex-col">
           <div class="thumb relative w-[180px] h-[180px] rounded-full overflow-hidden flex-none">
-            <!-- {item.thumb?.data.attributes.url} -->
-            <!-- <img class="block object-cover w-full h-full" src={test_sls[i]} alt={item.name} /> -->
-            <img class="block object-cover w-full h-full" src={item.thumb?.data.attributes.url} alt={item.name} />
+            {#if item.thumb?.data?.attributes?.url}
+              <img class="block object-cover w-full h-full" src={item.thumb.data.attributes.url} alt={item.name} />
+            {/if}
           </div>
           <div class="flex flex-col flex-auto gap-6 phone:gap-2">
             <div class="flex items-center gap-2 phone:justify-center">
